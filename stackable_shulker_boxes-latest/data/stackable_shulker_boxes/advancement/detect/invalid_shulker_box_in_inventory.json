@@ -1,0 +1,32 @@
+{
+    "criteria": {
+        "invalid_shulker_box_in_inventory": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": "#stackable_shulker_boxes:shulker_boxes",
+                        "components": {
+                            "minecraft:max_stack_size": 1
+                        },
+                        "predicates": {
+                            "container": {
+                                "items": {
+                                    "size": 0
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "invalid_shulker_box_in_inventory"
+        ]
+    ],
+    "rewards": {
+        "function": "stackable_shulker_boxes:detect/invalid_shulker_box_in_inventory/main"
+    }
+}
