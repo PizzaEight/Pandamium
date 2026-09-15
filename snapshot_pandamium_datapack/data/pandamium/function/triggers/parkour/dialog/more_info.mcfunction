@@ -24,17 +24,6 @@ data modify storage pandamium:local functions."pandamium:triggers/parkour/*".dia
 # Forgotten Caverns
 
 data modify storage pandamium:local functions."pandamium:triggers/parkour/*".dialog.body append value {type:"minecraft:plain_message",contents:[{text:"",color:"dark_aqua"},{text:" Deathless Run: ",color:"gray"}, "",{text:"N/A",color:"white"}],width:500}
-    after_action: "close", \
-    action: {label:"Done"} \
-}
-
-data modify storage pandamium:local functions."pandamium:triggers/parkour/*".dialog.title set from storage pandamium:dictionary parkour.parkour_4.name
-
-data modify storage pandamium:local functions."pandamium:triggers/parkour/*".dialog.external_title set from storage pandamium:dictionary parkour.parkour_4.name
-
-# Forgotten Caverns
-
-data modify storage pandamium:local functions."pandamium:triggers/parkour/*".dialog.body append value {type:"minecraft:plain_message",contents:[{text:"",color:"dark_aqua"},{text:" Deathless",color:"gray"},": ",{text:"N/A",color:"white"}],width:500}
 
 data modify storage pandamium:local functions."pandamium:triggers/parkour/*".dialog.body[-1].contents[0].text set from storage pandamium:dictionary parkour.parkour_3.name
 
