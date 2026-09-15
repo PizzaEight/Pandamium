@@ -31,6 +31,41 @@
               "offsetY": 1,
               "predicate": {
                 "block": {
+                  "blocks": "#pandamium:vanilla_heads"
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "play_head_2": {
+      "trigger": "minecraft:default_block_use",
+      "conditions": {
+        "location": {
+          "type": "minecraft:all_of",
+          "terms": [
+            {
+              "type": "minecraft:location_check",
+              "predicate": {
+                "block": {
+                  "blocks": "minecraft:note_block"
+                }
+              }
+            },
+            {
+              "type": "minecraft:location_check",
+              "offsetY": 1,
+              "predicate": {
+                "block": {
+                  "blocks": "minecraft:player_head",
+                  "predicates": {
+                    "minecraft:custom_data": {
+                      "pandamium": {
+                        "id": "mob_head"
+                      }
+                    }
+                  }
                   "blocks": "#minecraft:skulls"
                 }
               }
@@ -43,6 +78,7 @@
 
   "requirements": [
     [
+      "play_head","play_head_2"
       "play_head"
     ]
   ],

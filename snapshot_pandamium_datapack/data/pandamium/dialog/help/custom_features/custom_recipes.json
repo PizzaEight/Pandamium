@@ -1,0 +1,104 @@
+{
+  "type": "minecraft:notice",
+  "title": "Custom Recipes",
+  "external_title": "Custom Recipes",
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "Custom Recipes",
+        "bold": true,
+        "color": "dark_green"
+      },
+      "width": 500
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "                                                      ",
+        "underlined": true,
+        "color": "white"
+      },
+      "width": 500
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": [
+        {
+          "text": "",
+          "bold": false,
+          "color": "gold"
+        },
+        {
+          "text": "For ease of building & crafting",
+          "bold": true,
+          "color": "gold"
+        },
+        "\n\n",
+        {
+          "text": "Pandamium has custom recipes designed to make crafting and building easier.",
+          "color": "gray"
+        },
+        "\n\n",
+        {
+          "text": "Some recipes also allow you to obtain items that are normally unobtainable in vanilla Minecraft.",
+          "color": "gray"
+        },
+        "\n\n",
+        {
+          "text": "Full Recipe List",
+          "bold": true,
+          "color": "gold"
+        },
+        "\n\n",
+        {
+          "text": "For the complete list of custom recipes, visit our ",
+          "color": "gray"
+        },
+        {
+          "text": "Website",
+          "bold": true,
+          "color": "#5865F2",
+          "underlined": true,
+          "hover_event": {
+          "action": "show_text",
+          "value": {
+            "text": "Click to visit our Website's page on recipes"
+          }
+        },
+          "click_event": {
+            "action": "open_url",
+            "url": "https://www.pandamium.com/recipes"
+          }
+        },
+        {
+          "text": ".",
+          "color": "gray"
+        }
+      ],
+      "width": 500
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "                                                      ",
+        "underlined": true,
+        "color": "white"
+      },
+      "width": 500
+    }
+  ],
+  "can_close_with_escape": true,
+  "pause": false,
+  "after_action": "none",
+  "action": {
+    "label": {
+      "translate": "gui.back"
+    },
+    "action": {
+      "type": "minecraft:run_command",
+      "command": "trigger help set 8"
+    }
+  }
+}
+

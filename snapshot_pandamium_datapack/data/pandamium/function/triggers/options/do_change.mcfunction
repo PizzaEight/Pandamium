@@ -21,6 +21,7 @@ execute if score @s options matches -4 if score @s disable_attack_indicator matc
 execute if score @s options matches -4 if score @s disable_attack_indicator matches 1 run tellraw @s [{text:"",color:"green"},{text:"[Options]",color:"dark_green"}," Set option ",{text:"Attack Indicator",color:"aqua"}," to ",{text:"Off",bold:true,color:"yellow"},"!"]
 scoreboard players reset @s[scores={disable_attack_indicator=0}] disable_attack_indicator
 execute if score @s options matches -5 store success score @s hide_parkour_timer unless score @s hide_parkour_timer matches 1
+execute if score @s options matches -5 run function pandamium:triggers/parkour/dialog/main_menu
 execute if score @s options matches -5 if score @s hide_parkour_timer matches 0 run tellraw @s [{text:"",color:"green"},{text:"[Options]",color:"dark_green"}," Set option ",{text:"Show Parkour Timer",color:"aqua"}," to ",{text:"On",bold:true,color:"yellow"},"!"]
 execute if score @s options matches -5 if score @s hide_parkour_timer matches 1 run tellraw @s [{text:"",color:"green"},{text:"[Options]",color:"dark_green"}," Set option ",{text:"Show Parkour Timer",color:"aqua"}," to ",{text:"Off",bold:true,color:"yellow"},"!"]
 scoreboard players reset @s[scores={hide_parkour_timer=0}] hide_parkour_timer
@@ -71,6 +72,7 @@ execute if score @s options matches -14 if score @s optn.disable_dynamic_trigger
 execute if score @s options matches -14 if score @s optn.disable_dynamic_triggers.home_names matches 1 run tellraw @s [{text:"",color:"green"},{text:"[Options]",color:"dark_green"}," Set option ",{text:"Dynamic Home Triggers",color:"aqua"}," to ",{text:"Off",bold:true,color:"yellow"},"!"]
 execute if score @s options matches -15 if score @s parkour.checkpoint matches 0.. run tellraw @s [{text:"[Options]",color:"dark_red"},{text:" You may not change this option during a run!",color:"red"}]
 execute if score @s options matches -15 unless score @s parkour.checkpoint matches 0.. store success score @s optn.parkour.restart_on_fall unless score @s optn.parkour.restart_on_fall matches 1
+execute if score @s options matches -15 run function pandamium:triggers/parkour/dialog/main_menu
 execute if score @s options matches -15 unless score @s parkour.checkpoint matches 0.. if score @s optn.parkour.restart_on_fall matches 0 run tellraw @s [{text:"",color:"green"},{text:"[Options]",color:"dark_green"}," Set option ",{text:"New Attempt on Fall",color:"aqua"}," to ",{text:"Off",bold:true,color:"yellow"},"!"]
 execute if score @s options matches -15 unless score @s parkour.checkpoint matches 0.. if score @s optn.parkour.restart_on_fall matches 1 run tellraw @s [{text:"",color:"green"},{text:"[Options]",color:"dark_green"}," Set option ",{text:"New Attempt on Fall",color:"aqua"}," to ",{text:"On",bold:true,color:"yellow"},"!"]
 execute if score @s options matches -16 run scoreboard players add @s optn.disable_receiving_mail 1

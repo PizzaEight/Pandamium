@@ -1,0 +1,179 @@
+{
+  "type": "minecraft:notice",
+  "title": "Voting & Rewards",
+  "external_title": "Voting & Rewards",
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "Voting & Rewards",
+        "bold": true,
+        "color": "dark_green"
+      },
+      "width": 500
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "                                                      ",
+        "underlined": true,
+        "color": "white"
+      },
+      "width": 500
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "Voting",
+        "bold": true,
+        "color": "gold"
+      }
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": [
+        {
+          "text": "Voting helps support Pandamium and contributes towards your rank progression.\n\n",
+          "color": "gray"
+        },
+        {
+          "text": "/trigger vote\n",
+          "color": "aqua"
+        },
+        {
+          "text": "  Provides links to the voting websites.\n\n",
+          "color": "white"
+        },
+        {
+          "text": "You can vote up to 5 times per day. Each vote normally gives you 1 reward credit.\n\n",
+          "color": "gray"
+        },
+        {
+          "text": "During the first week of each month, votes give 2 reward credits instead."
+          ,
+          "color": "gray"
+        }
+      ],
+      "width": 500
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "Reward Credits",
+        "bold": true,
+        "color": "gold"
+      }
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": [
+        {
+          "text": "/trigger vote_shop\n",
+          "color": "white"
+        },
+        {
+          "text": "  Opens the reward shop where you can spend your vote credits.\n\n",
+          "color": "gray"
+        },
+        {
+          "text": "/trigger gift\n",
+          "color": "white"
+        },
+        {
+          "text": "\n  Gift a vote credit to another player."
+          ,
+          "color": "gray"
+        }
+      ],
+      "width": 500
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "Ranks",
+        "bold": true,
+        "color": "gold"
+      }
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": [
+        {
+          "text": "Your votes also contribute towards rank progression. Ranks are earned through a combination of playtime and votes.\n\n",
+          "color": "gray"
+        },
+        {
+          "text": "Guest",
+          "color": "dark_gray"
+        },
+        {
+          "text": " = 2 homes\n",
+          "color": "white"
+        },
+        {
+          "text": "Player",
+          "color": "green"
+        },
+        {
+          "text": " — 5 hours + 5 votes = 3 homes\n",
+          "color": "white"
+        },
+        {
+          "text": "Member",
+          "color": "green"
+        },
+        {
+          "text": " — 25 hours + 25 votes = 5 homes\n",
+          "color": "white"
+        },
+        {
+          "text": "Elder",
+          "color": "aqua"
+        },
+        {
+          "text": " — 125 hours + 125 votes = 10 homes\n",
+          "color": "white"
+        },
+        {
+          "text": "Veteran",
+          "color": "dark_aqua"
+        },
+        {
+          "text": " — 500 hours + 500 votes = 15 homes\n",
+          "color": "white"
+        },
+        {
+          "text": "Elite",
+          "color": "blue"
+        },
+        {
+          "text": " — 2500 hours + 2500 votes = 20 homes"
+          ,
+          "color": "white"
+        }
+      ],
+      "width": 500
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "                                                      ",
+        "underlined": true,
+        "color": "white"
+      },
+      "width": 500
+    }
+  ],
+  "can_close_with_escape": true,
+  "pause": false,
+  "after_action": "none",
+  "action": {
+    "label": {
+      "translate": "gui.back"
+    },
+    "action": {
+      "type": "minecraft:run_command",
+      "command": "trigger help"
+    }
+  }
+}

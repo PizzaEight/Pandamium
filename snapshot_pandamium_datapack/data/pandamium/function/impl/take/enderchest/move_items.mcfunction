@@ -12,4 +12,4 @@ data modify storage do:io input set value [{nbt:"username",storage:"pandamium:te
 function do:text/resolve
 data modify block ~ ~ ~ CustomName set from storage do:io output
 # set signs
-setblock ~-1 ~ ~ oak_wall_sign[facing=west]{front_text:{color:"yellow",has_glowing_text:1b,messages:[{nbt:"username",storage:"pandamium:temp",interpret:true,bold:true,font:"minecraft:uniform",color:"white"},{bold:true,text:"Ctrl+Click",click_event:{action:"run_command",command:"function pandamium:impl/take/sign_interact/main"}},"to Return Items","& Remove Chest"]},is_waxed:1b}
+setblock ~-1 ~ ~ oak_wall_sign[facing=west]{allow_op_features:true,front_text:{color:"yellow",has_glowing_text:1b,messages:[{nbt:"username",storage:"pandamium:temp",interpret:true,bold:true,font:"minecraft:uniform",color:"white"},{bold:true,text:"Ctrl+Click",click_event:{action:"run_command",command:"function pandamium:impl/take/sign_interact/main"}},"to Return Items","& Remove Chest"]},is_waxed:1b}

@@ -1,0 +1,116 @@
+{
+  "type": "minecraft:notice",
+  "title": "Supporter Commands",
+  "external_title": "Supporter Commands",
+  "body": [
+    {
+"type": "minecraft:plain_message",
+"contents": {
+"text": "Here are all the Supporter commands you can use anywhere on the server:",
+"bold": true,
+"color": "dark_green"
+},
+"width": 500
+},
+    {
+      "type": "minecraft:plain_message",
+      "contents": [
+        {
+          "text": "/trigger dye\n",
+          "color": "white"
+        },
+        {
+          "text": "  Make worn leather armor more colorful.\n\n",
+          "color": "gray"
+        },
+        {
+          "text": "/trigger enderchest\n",
+          "color": "white"
+        },
+        {
+          "text": "\n  Swap between your inventory and enderchest.\n\n",
+          "color": "gray"
+        },
+        {
+          "text": "/trigger flair\n",
+          "color": "white"
+        },
+        {
+          "text": "\n  Add a little emoji or item next to your name.\n\n",
+          "color": "gray"
+        },
+        {
+          "text": "/trigger frame_visibility\n",
+          "color": "white"
+        },
+        {
+          "text": "\n  Make item frames invisible.\n\n",
+          "color": "gray"
+        },
+        {
+          "text": "/trigger hat\n",
+          "color": "white"
+        },
+        {
+          "text": "\n  Wear the item in your hand on your head.\n\n",
+          "color": "gray"
+        },
+        {
+          "text": "/trigger item_font\n",
+          "color": "white"
+        },
+        {
+          "text": "\n  Change the font and color of custom item names.\n\n",
+          "color": "gray"
+        },
+        {
+          "text": "/trigger trails\n",
+          "color": "white"
+        },
+        {
+          "text": "\n  Select from a list of custom trails and death effects.\n\n",
+          "color": "gray"
+        },
+        {
+          "text": "/trigger pose\n",
+          "color": "white"
+        },
+        {
+          "text": "\n  Customize armor stand poses while looking at them.\n\n",
+          "color": "gray"
+        },
+        {
+          "text": "/trigger sign_font\n",
+          "color": "white"
+        },
+        {
+          "text": "\n  Change the font and color of text on signs."
+          ,
+          "color": "gray"
+        }
+      ],
+      "width": 500
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "                                                      ",
+        "underlined": true,
+        "color": "white"
+      },
+      "width": 500
+    }
+  ],
+  "can_close_with_escape": true,
+  "pause": false,
+  "after_action": "none",
+  "action": {
+    "label": {
+      "translate": "gui.back"
+    },
+    "action": {
+      "type": "minecraft:run_command",
+      "command": "trigger help set 5"
+    }
+  }
+}

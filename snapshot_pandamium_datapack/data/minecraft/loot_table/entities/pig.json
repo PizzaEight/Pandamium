@@ -18,6 +18,48 @@
 					"children": [
 						{
 							"type": "minecraft:loot_table",
+							"value": "pandamium:items/heads/mobs/pig/cold_pig_mini",
+							"condition": {
+								"entity": "this",
+								"predicate": {
+									"components": {
+										"minecraft:pig/variant": "cold",
+										"minecraft:pig/sound_variant": "mini"
+									}
+								},
+								"type": "minecraft:entity_properties"
+							}
+						},
+						{
+							"type": "minecraft:loot_table",
+							"value": "pandamium:items/heads/mobs/pig/pig_mini",
+							"condition": {
+								"entity": "this",
+								"predicate": {
+									"components": {
+										"minecraft:pig/variant": "temperate",
+										"minecraft:pig/sound_variant": "mini"
+									}
+								},
+								"type": "minecraft:entity_properties"
+							}
+						},
+						{
+							"type": "minecraft:loot_table",
+							"value": "pandamium:items/heads/mobs/pig/warm_pig_mini",
+							"condition": {
+								"entity": "this",
+								"predicate": {
+									"components": {
+										"minecraft:pig/variant": "warm",
+										"minecraft:pig/sound_variant": "mini"
+									}
+								},
+								"type": "minecraft:entity_properties"
+							}
+						},
+						{
+							"type": "minecraft:loot_table",
 							"value": "pandamium:items/heads/mobs/pig/cold_pig",
 							"condition": {
 								"entity": "this",

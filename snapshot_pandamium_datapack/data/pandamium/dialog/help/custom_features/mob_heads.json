@@ -1,0 +1,121 @@
+{
+  "type": "minecraft:notice",
+  "title": "More Mob Heads",
+  "external_title": "More Mob Heads",
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "More Mob Heads",
+        "bold": true,
+        "color": "dark_green"
+      },
+      "width": 500
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "                                                      ",
+        "underlined": true,
+        "color": "white"
+      },
+      "width": 500
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": [
+        {
+          "text": "",
+          "bold": false,
+          "color": "gold"
+        },
+        {
+          "text": "Custom Mob Heads",
+          "bold": true,
+          "color": "gold"
+        },
+        "\n\n",
+        {
+          "text": "If any mob on Pandamium is killed by a ",
+          "color": "gray"
+        },
+        {
+          "text": "charged creeper",
+          "color": "dark_aqua"
+        },
+        {
+          "text": ", it will drop a Custom Mob Head.",
+          "color": "gray"
+        },
+        "\n\n",
+        {
+          "text": "Mobs with multiple variants can drop a unique head for each variant.",
+          "color": "gray"
+        },
+        "\n\n",
+        {
+          "text": "All Mob Heads can be placed and played on top of a note block to make a sound.",
+          "color": "gray"
+        },
+        "\n\n",
+        {
+          "text": "Additionally, wearing a mob head of any mob will make that type of mob target you at half distance.",
+          "color": "gray"
+        },
+        "\n\n",
+        {
+          "text": "Collect Them All",
+          "bold": true,
+          "color": "gold"
+        },
+        "\n\n",
+        {
+          "text": "For the complete list of heads, previews, and answers to frequently asked questions, visit our ",
+          "color": "gray"
+        },
+        {
+          "text": "Website",
+          "bold": true,
+          "color": "blue",
+          "underlined": true,
+        "hover_event": {
+          "action": "show_text",
+          "value": {
+            "text": "Click to visit our Website's page on Mob Heads"
+          }
+        },
+          "click_event": {
+            "action": "open_url",
+            "url": "https://www.pandamium.com/mob-heads"
+          }
+        },
+        {
+          "text": ".",
+          "color": "gray"
+        }
+      ],
+      "width": 500
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "                                                      ",
+        "underlined": true,
+        "color": "white"
+      },
+      "width": 500
+    }
+  ],
+  "can_close_with_escape": true,
+  "pause": false,
+  "after_action": "none",
+  "action": {
+    "label": {
+      "translate": "gui.back"
+    },
+    "action": {
+      "type": "minecraft:run_command",
+      "command": "trigger help set 8"
+    }
+  }
+}

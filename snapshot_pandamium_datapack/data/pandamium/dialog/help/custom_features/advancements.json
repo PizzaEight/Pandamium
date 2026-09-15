@@ -1,0 +1,111 @@
+{
+  "type": "minecraft:notice",
+  "title": "Advancements",
+  "external_title": "Advancements",
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "Advancements",
+        "bold": true,
+        "color": "dark_green"
+      },
+      "width": 500
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "                                                      ",
+        "underlined": true,
+        "color": "white"
+      },
+      "width": 500
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": [
+        {
+          "text": "",
+          "bold": false,
+          "color": "gold"
+        },
+        {
+          "text": "Custom Advancements",
+          "bold": true,
+          "color": "gold"
+        },
+        "\n\n",
+        {
+          "text": "Pandamium adds many custom advancements to the vanilla advancement trees.",
+          "color": "gray"
+        },
+        "\n\n",
+        {
+          "text": "These advancements are inspired by the legacy achievements from older versions of Minecraft.",
+          "color": "gray"
+        },
+        "\n\n",
+        {
+          "text": "They provide additional challenges to complete while playing and are intended to bring some nostalgia to longtime Minecraft players.",
+          "color": "gray"
+        },
+        "\n\n",
+        {
+          "text": "Additionally, Pandamium has a new advancement tree called Pandamium.",
+          "color": "gray"
+        },
+        "\n\n",
+        {
+          "text": "There you will find advancements related to custom pandamium features.",
+          "color": "gray"
+        },
+        "\n\n",
+        {
+          "text": "If one cannot be obtained anymore it will be moved to a Legacy Pandamium advancement tree.",
+          "color": "gray"
+        },
+        "\n\n",
+        {
+          "text": "Advancement Help",
+          "bold": true,
+          "color": "gold"
+        },
+        "\n\n",
+        {
+          "text": "Use ",
+          "color": "gray"
+        },
+        {
+          "text": "/trigger help.advancements",
+          "color": "aqua"
+        },
+        {
+          "text": " to see your progress on all the advancement with multiple requirements.",
+          "color": "gray"
+        }
+      ],
+      "width": 500
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "                                                      ",
+        "underlined": true,
+        "color": "white"
+      },
+      "width": 500
+    }
+  ],
+  "can_close_with_escape": true,
+  "pause": false,
+  "after_action": "none",
+  "action": {
+    "label": {
+      "translate": "gui.back"
+    },
+    "action": {
+      "type": "minecraft:run_command",
+      "command": "trigger help set 8"
+    }
+  }
+}

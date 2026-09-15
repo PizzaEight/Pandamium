@@ -5,7 +5,7 @@ execute unless loaded ~ ~ ~ run return run tellraw @s [{text:"[Enderman Farm]",c
 execute unless block ~ ~ ~ #pandamium:no_solid_collision run return run tellraw @s [{text:"[Enderman Farm]",color:"dark_red"},{text:" Failed to set ",color:"red",extra:[{text:"Enderman Farm",color:"yellow"}," warp here! There is not enough space for players to stand here."]}]
 execute unless block ~ ~1 ~ #pandamium:no_solid_collision run return run tellraw @s [{text:"[Enderman Farm]",color:"dark_red"},{text:" Failed to set ",color:"red",extra:[{text:"Enderman Farm",color:"yellow"}," warp here! There is not enough space for players to stand here."]}]
 execute unless block ~ ~-1 ~ #pandamium:warp_platform_cannot_replace align xyz run loot spawn ~.5 ~ ~.5 mine ~ ~-1 ~ diamond_pickaxe[enchantments={silk_touch:1}]
-execute unless block ~ ~-1 ~ #pandamium:warp_platform_cannot_replace run setblock ~ ~-1 ~ obsidian strict
+execute unless block ~ ~-1 ~ #pandamium:warp_platform_cannot_replace run setblock ~ ~-1 ~ bedrock strict
 execute unless block ~ ~-1 ~ #pandamium:warp_platform_cannot_replace run return run tellraw @s [{text:"[Enderman Farm]",color:"dark_red"},{text:" Failed to set ",color:"red",extra:[{text:"Enderman Farm",color:"yellow"}," warp here! Could not place obsidian below you."]}]
 data modify storage pandamium:global enderman_farm_warp set value {protected: 0b, dimension: "minecraft:the_end", source: "warp enderman_farm"}
 scoreboard players set <enderman_farm_warp.protected> global 0

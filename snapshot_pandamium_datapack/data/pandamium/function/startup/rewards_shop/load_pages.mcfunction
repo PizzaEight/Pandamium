@@ -89,7 +89,7 @@ function pandamium:startup/rewards_shop/load_pages/append_own_player_head {dialo
 function pandamium:startup/rewards_shop/load_pages/append_item {dialog_name: "misc", reward_id: "endermite_minecart"}
 data modify storage pandamium:rewards_shop dialogs.main_menu.dialog.actions append value {label:"Miscellaneous Rewards",tooltip:["Common rewards and unique items",{color:"dark_gray",text:"\n• Golden Apple\n• Name Tag\n• 5 Experience Bottles\n• Book and Quill\n• Diamond\n• Mending Book\n• Ominous Bottle\n• Blindness Splash Potion\n• Bedrock Breaker\n• Dwarven Potion\n• Swift Sneak III Book\n• Enchanted Golden Apple\n• Your Head"},{color:"gray",text:"\nAnd More!"}],width:150,action:{type:"minecraft:run_command",command:"trigger rewards_shop set 101"}}
 ##
-## autumn Drop 2026
+## Wilderness Bound
 ##
 data modify storage pandamium:rewards_shop dialogs.autumn_drop_2026.dialog set value {\
 	"type": "minecraft:confirmation",\
@@ -106,7 +106,7 @@ data modify storage pandamium:rewards_shop dialogs.autumn_drop_2026.dialog set v
 				},\
 				{\
 					"bold": true,\
-					"text": "\n\n\nAutumn Drop 2026\n"\
+					"text": "\n\n\nWilderness Bound\n"\
 				},\
 				{\
 					"bold": false,\
@@ -138,7 +138,7 @@ data modify storage pandamium:rewards_shop dialogs.autumn_drop_2026.dialog set v
 function pandamium:startup/rewards_shop/load_pages/append_item {dialog_name: "autumn_drop_2026", reward_id: "4_straw_beds"}
 function pandamium:startup/rewards_shop/load_pages/append_item {dialog_name: "autumn_drop_2026", reward_id: "abandoned_camp_map"}
 function pandamium:startup/rewards_shop/load_pages/append_item {dialog_name: "autumn_drop_2026", reward_id: "autumn_drop_2026_loot_bundle"}
-data modify storage pandamium:rewards_shop dialogs.main_menu.dialog.actions append value {label:'"Autumn 2026" Drop',tooltip:['A selection of items from the "Autumn 2026" game drop',{color:"dark_gray",text:"\n• 4 Straw Beds\n• Abandoned Camp Map\n• Autumn Drop 2026 Loot Bundle"}],width:150,action:{type:"minecraft:run_command",command:"trigger rewards_shop set 102"}}
+data modify storage pandamium:rewards_shop dialogs.main_menu.dialog.actions append value {label:'"Wilderness Bound" Drop',tooltip:['A selection of items from the "Wilderness Bound" game drop',{color:"dark_gray",text:"\n• 4 Straw Beds\n• Abandoned Camp Map\n• Wilderness Bound Loot Bundle"}],width:150,action:{type:"minecraft:run_command",command:"trigger rewards_shop set 102"}}
 
 ##
 ## All

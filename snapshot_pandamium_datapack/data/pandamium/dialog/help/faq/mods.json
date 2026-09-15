@@ -1,0 +1,151 @@
+{
+  "type": "minecraft:notice",
+  "title": "Mods",
+  "external_title": "Mods",
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "Mods",
+        "bold": true,
+        "color": "dark_green"
+      },
+      "width": 500
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "                                                      ",
+        "underlined": true,
+        "color": "white"
+      },
+      "width": 500
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "What Is Allowed",
+        "bold": true,
+        "color": "gold"
+      }
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": [
+        {
+          "text": "You are allowed to use Mods to enhance your experience.",
+          "color": "gray"
+        },
+        "\n\n",
+        {
+          "text": "However, you are not allowed to use mods that allow you to cheat,\ngetting an unfair advantage over other players.",
+          "color": "red"
+        },
+        "\n\n",
+        {
+          "text": "For Example:",
+          "color": "aqua",
+          "bold": true
+        }
+      ],
+      "width": 500
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "Litematica",
+        "bold": true,
+        "color": "gold"
+      }
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": [
+        {
+          "text": "",
+          "bold": false,
+          "color": "gold"
+        },
+        {
+          "text": "Litematica is allowed on Pandamium for its visual features.",
+          "color": "gray"
+        },
+        "\n\n",
+        {
+          "text": "Schematic holograms are allowed, so you can use them to see where blocks need to be placed.",
+          "color": "gray"
+        },
+        "\n\n",
+        {
+          "text": "Placement Restriction mode is also allowed.",
+          "color": "gray"
+        },
+        "\n\n",
+        {
+          "text": "However, Easy Place mode is strictly prohibited.",
+          "color": "red"
+        },
+        "\n\n",
+        {
+          "text": "Printer and other auto-building features are also strictly prohibited.",
+          "color": "red"
+        },
+        "\n\n",
+        {
+          "text": "In general, mods must not automatically place blocks, perform impossible movements, or otherwise automate building.",
+          "color": "gray"
+        }
+      ],
+      "width": 500
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "Minimap Mods",
+        "bold": true,
+        "color": "gold"
+      }
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": [
+        {
+          "text": "Client-side Minimap mods are allowed.",
+          "color": "gray"
+        },
+        "\n\n",
+        {
+          "text": "However, a minimap may not be used to reveal the location of ores or structures underground.",
+          "color": "red"
+        },
+        "\n\n",
+        {
+          "text": "If you are using a Minimap Mod that does that you will need to disable Cave Mode.",
+          "color": "gray"
+        }
+      ],
+      "width": 500
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "                                                      ",
+        "underlined": true,
+        "color": "white"
+      },
+      "width": 500
+    }
+  ],
+  "can_close_with_escape": true,
+  "pause": false,
+  "after_action": "none",
+  "action": {
+    "label": {
+      "translate": "gui.back"
+    },
+    "action": {
+      "type": "minecraft:run_command",
+      "command": "trigger help set 3"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "minecraft:slots": {
+      "weapon.mainhand": {
+        "items": "minecraft:written_book",
+        "predicates": {
+          "minecraft:custom_data": "{pandamium:{id:guidebook}}"
+        }
+      }
+    }
+  }
+}

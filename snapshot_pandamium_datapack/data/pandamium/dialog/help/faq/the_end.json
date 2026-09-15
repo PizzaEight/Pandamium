@@ -1,0 +1,99 @@
+{
+  "type": "minecraft:notice",
+  "title": "The End",
+  "external_title": "The End",
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "The End",
+        "bold": true,
+        "color": "dark_green"
+      },
+      "width": 500
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "                                                      ",
+        "underlined": true,
+        "color": "gray"
+      },
+      "width": 500
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": [
+        {
+          "text": "",
+          "bold": false,
+          "color": "gold"
+        },
+        {
+          "text": "Monthly Reset",
+          "bold": true,
+          "color": "gold"
+        },
+        "\n\n",
+        {
+          "text": "The first 1.000.000 blocks in the End reset at the beginning of every month, including the Ender Dragon boss fight.",
+          "color": "gray"
+        },
+        "\n\n",
+        {
+          "text": "This gives more players a chance to explore End Cities, collect their loot, and obtain Dragon Eggs.",
+          "color": "gray"
+        },
+        "\n\n",
+        {
+          "text": "Players can build after the initial 1.000.000 blocks in the End without having to worry about their blocks resetting.",
+          "color": "gray"
+        },
+        "\n\n",
+        {
+          "text": "Enhanced Dragon Fight",
+          "bold": true,
+          "color": "gold"
+        },
+        "\n\n",
+        {
+          "text": "The first Dragon Fight of each month is enhanced with an additional challenge.",
+          "color": "gray"
+        },
+        "\n\n",
+        {
+          "text": "The details of the enhanced fight can change from month to month.",
+          "color": "gray"
+        },
+        "\n\n",
+        {
+          "text": "The exact timing of the monthly reset depends on the availability of the server admins.",
+          "color": "gray"
+        }
+      ],
+      "width": 500
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "                                                      ",
+        "underlined": true,
+        "color": "gray"
+      },
+      "width": 500
+    }
+  ],
+  "can_close_with_escape": true,
+  "pause": false,
+  "after_action": "none",
+  "action": {
+    "label": {
+      "translate": "gui.back"
+    },
+    "action": {
+      "type": "minecraft:run_command",
+      "command": "trigger help set 3"
+    }
+  }
+}
+

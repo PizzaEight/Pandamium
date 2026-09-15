@@ -1,0 +1,52 @@
+{
+	"type": "minecraft:multi_action",
+	"title": "Commands",
+	"external_title": "Commands",
+	"body": {
+		"type": "minecraft:plain_message",
+		"contents": "Commands",
+		"width": 400
+	},
+	"pause": false,
+	"after_action": "none",
+	"columns": 1,
+	"actions": [
+		{
+			"label": "How Commands Work",
+			"action": {
+				"type": "minecraft:run_command",
+				"command": "trigger help set 13"
+			}
+		},
+		{
+			"label": "General",
+			"action": {
+				"type": "minecraft:run_command",
+				"command": "trigger help set 21"
+			}
+		},
+		{
+			"label": "Informational",
+			"action": {
+				"type": "minecraft:run_command",
+				"command": "trigger help set 22"
+			}
+		},
+		{
+			"label": "Supporter",
+			"action": {
+				"type": "minecraft:run_command",
+				"command": "trigger help set 23"
+			}
+		}
+	],
+	"exit_action": {
+						"label": {
+							"translate": "gui.done"
+						},
+						"action": {
+							"type": "minecraft:show_dialog",
+							"dialog": "pandamium:trigger_help"
+						}
+					}
+}

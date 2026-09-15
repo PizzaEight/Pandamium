@@ -58,7 +58,7 @@ execute in minecraft:overworld run function pandamium:impl/queue/tick
 #> Clean Up Garbage
 data remove storage pandamium:local functions
 #> Stopping the Server
-execute in minecraft:overworld run execute if score <seconds_until_restart> global matches 0..4 summon marker if function pandamium:utils/discard_marker run function pandamium:impl/server_restart_countdown/kick_arbitrary_player
+execute in minecraft:overworld run execute if score <seconds_until_restart> global matches ..0 summon marker if function pandamium:utils/discard_marker run function pandamium:impl/server_restart_countdown/kick_arbitrary_player
 execute if score <stop_server> global matches 1 run kick @a The server has been closed. Check our Discord server to learn why.
 execute in minecraft:overworld run execute if score <stop_server> global matches 1 run function pandamium:impl/database/cache/every_tick/main
 execute if score <stop_server> global matches 1 run stop

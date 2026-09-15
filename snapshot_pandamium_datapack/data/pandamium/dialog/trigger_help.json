@@ -1,0 +1,108 @@
+{
+	"type": "minecraft:multi_action",
+	"title": "Help",
+	"external_title": "Help",
+	"body": {
+		"type": "minecraft:plain_message",
+		"contents": "What would you like help with?",
+		"width": 400
+	},
+	"pause": false,
+	"after_action": "none",
+	"columns": 2,
+	"actions": [
+		{
+			"label": "Getting Started",
+			"action": {
+				"type": "minecraft:run_command",
+				"command": "trigger help set 2"
+			}
+		},
+		{
+			"label": "FAQ",
+			"action": {
+				"type": "minecraft:run_command",
+				"command": "trigger help set 3"
+			}
+		},
+		{
+			"label": "Rules",
+			"action": {
+				"type": "minecraft:run_command",
+				"command": "trigger help set 4"
+			}
+		},
+		{
+			"label": "Commands",
+			"action": {
+				"type": "minecraft:run_command",
+				"command": "trigger help set 5"
+			}
+		},
+		{
+			"label": "Ranks",
+			"action": {
+				"type": "minecraft:run_command",
+				"command": "trigger help set 6"
+			}
+		},
+		{
+			"label": "Voting & Rewards",
+			"action": {
+				"type": "minecraft:run_command",
+				"command": "trigger help set 7"
+			}
+		},
+		{
+			"label": "Custom Features",
+			"action": {
+				"type": "minecraft:run_command",
+				"command": "trigger help set 8"
+			}
+		},
+		{
+			"label": "All Menus",
+			"action": {
+				"type": "minecraft:show_dialog",
+				"dialog": "pandamium:help/all_menus"
+			}
+		},
+		{
+			"label": {"color":"aqua","text": "Supporting Us"},
+			"action": {
+				"type": "minecraft:run_command",
+				"command": "trigger help set 25"
+			}
+		},
+		{
+			"label": {"color":"aqua","text": "Contacting Us"},
+			"action": {
+				"type": "minecraft:run_command",
+				"command": "trigger help set 9"
+			}
+		},
+		{
+      "label": {"color":"dark_aqua","text": "Visit Our Website"},
+      "action": {
+        "type": "minecraft:open_url",
+        "url": "https://www.pandamium.com/"
+      }
+    },
+	{
+      "label": {"color":"dark_aqua","text": "Join Our Discord"},
+      "action": {
+        "type": "minecraft:open_url",
+        "url": "http://discord.pandamium.eu/"
+      }
+    }
+	],
+	"exit_action": {
+						"label": {
+							"translate": "gui.done"
+						},
+						"action": {
+							"type": "minecraft:run_command",
+							"command": "/trigger help set -1000"
+						}
+					}
+}

@@ -1,0 +1,218 @@
+
+{
+  "type": "minecraft:notice",
+  "title": "How Commands Work",
+  "external_title": "How Commands Work",
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "How Commands Work",
+        "bold": true,
+        "color": "dark_green"
+      },
+      "width": 500
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "                                                      ",
+        "underlined": true,
+        "color": "white"
+      },
+      "width": 500
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": [
+        {
+          "text": "",
+          "bold": false,
+          "color": "gold"
+        },
+        {
+          "text": "Why /trigger?",
+          "bold": true,
+          "color": "gold"
+        },
+        "\n\n",
+        {
+          "text": "Pandamium is a vanilla Minecraft server, so we cannot add normal custom commands.",
+          "color": "gray"
+        },
+        "\n\n",
+        {
+          "text": "Instead, the server uses Minecraft's ",
+          "color": "gray"
+        },
+        {
+          "text": "trigger",
+          "color": "aqua"
+        },
+        {
+          "text": " system to provide custom commands through the datapack.",
+          "color": "gray"
+        }
+      ],
+      "width": 500
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "Basic Commands",
+        "bold": true,
+        "color": "gold"
+      }
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": [
+        {
+          "text": "",
+          "bold": false,
+          "color": "gold"
+        },
+        {
+          "text": "/trigger <trigger>",
+          "color": "aqua"
+        },
+        "\n\n",
+        {
+          "text": "This is used for triggers that do not require a value. For example:",
+          "color": "gray"
+        },
+        "\n\n",
+        {
+          "text": "/trigger homes",
+          "color": "white"
+        },
+        "\n",
+        {
+          "text": "Lists your homes.",
+          "color": "gray"
+        },
+        "\n\n",
+        {
+          "text": "/trigger vote",
+          "color": "white"
+        },
+        "\n",
+        {
+          "text": "Provides the voting links.",
+          "color": "gray"
+        }
+      ],
+      "width": 500
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "Commands With Values",
+        "bold": true,
+        "color": "gold"
+      }
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": [
+        {
+          "text": "",
+          "bold": false,
+          "color": "gold"
+        },
+        {
+          "text": "/trigger <trigger> set <value>",
+          "color": "aqua"
+        },
+        "\n\n",
+        {
+          "text": "Some triggers use a number to tell the datapack what action you want to perform.",
+          "color": "gray"
+        },
+        "\n\n",
+        {
+          "text": "For example:",
+          "color": "gray"
+        },
+        "\n\n",
+        {
+          "text": "/trigger tpa set <id>",
+          "color": "white"
+        },
+        "\n",
+        {
+          "text": "Sends a teleport request to the specified player ID.",
+          "color": "gray"
+        },
+        "\n\n",
+        {
+          "text": "/trigger sethome set <home>",
+          "color": "white"
+        },
+        "\n",
+        {
+          "text": "Creates or replaces the specified home.",
+          "color": "gray"
+        }
+      ],
+      "width": 500
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "Important",
+        "bold": true,
+        "color": "gold"
+      }
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": [
+        {
+          "text": "",
+          "bold": false,
+          "color": "gold"
+        },
+        {
+          "text": "Not every trigger accepts a value, and the available values depend on the trigger.",
+          "color": "gray"
+        },
+        "\n\n",
+        {
+          "text": "You can see what each individual command does in the ",
+          "color": "gray"
+        },
+        {
+          "text": "Commands",
+          "color": "aqua"
+        },
+        {
+          "text": " section of the Help Menu.",
+          "color": "gray"
+        }
+      ],
+      "width": 500
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "                                                      ",
+        "underlined": true,
+        "color": "white"
+      },
+      "width": 500
+    }
+  ],
+  "can_close_with_escape": true,
+  "pause": false,
+  "after_action": "none",
+  "action": {
+    "label": {
+      "translate": "gui.back"
+    },
+    "action": {
+      "type": "minecraft:run_command",
+      "command": "trigger help set 5"
+    }
+  }
+}

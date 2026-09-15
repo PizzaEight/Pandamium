@@ -1,6 +1,6 @@
 # arguments: lower, mean, type, stat
 # adjust bounds
-$execute store success score <in_lower_half> variable if predicate {type:"minecraft:entity_properties",entity:"this",predicate:{"minecraft:type_specific/player":{stats:[{type:"$(type)",stat:"$(stat)",value:{min:"$(lower_bound)",max:"$(mean)"}}]}}}
+$execute store success score <in_lower_half> variable if predicate {type:"minecraft:entity_properties",entity:"this",predicate:{"minecraft:type_specific/player":{stats:[{type:"$(type)",stat:"$(stat)",value:{min:$(lower_bound),max:$(mean)}}]}}}
 execute if score <in_lower_half> variable matches 1 run scoreboard players operation <upper_bound> variable = <mean> variable
 execute if score <in_lower_half> variable matches 0 run scoreboard players operation <lower_bound> variable = <mean> variable
 execute if score <in_lower_half> variable matches 0 store result storage pandamium:local "impl/get/statistic/".lower_bound int 1 run scoreboard players add <lower_bound> variable 1

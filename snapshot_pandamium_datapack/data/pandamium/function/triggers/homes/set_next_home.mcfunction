@@ -1,4 +1,5 @@
 function pandamium:utils/database/players/load/self
+scoreboard players set @s dialog_surface 1
 execute if score @s available_homes matches 1.. unless data storage pandamium.db.players:io selected.entry.data.homes.1 run return run scoreboard players set @s sethome 1
 execute if score @s available_homes matches 2.. unless data storage pandamium.db.players:io selected.entry.data.homes.2 run return run scoreboard players set @s sethome 2
 execute if score @s available_homes matches 3.. unless data storage pandamium.db.players:io selected.entry.data.homes.3 run return run scoreboard players set @s sethome 3
@@ -24,5 +25,6 @@ execute if score @s available_homes matches 22.. unless data storage pandamium.d
 execute if score @s available_homes matches 23.. unless data storage pandamium.db.players:io selected.entry.data.homes.23 run return run scoreboard players set @s sethome 23
 execute if score @s available_homes matches 24.. unless data storage pandamium.db.players:io selected.entry.data.homes.24 run return run scoreboard players set @s sethome 24
 execute if score @s available_homes matches 25.. unless data storage pandamium.db.players:io selected.entry.data.homes.25 run return run scoreboard players set @s sethome 25
-tellraw @s [{color:"dark_red",text:"[Homes]"},{color:"red",text:" You have no free home slots!"}]
+scoreboard players reset @s dialog_surface
+dialog show @s {type:"minecraft:notice",title:"Homes",body:{type:"minecraft:plain_message",contents:[{text:"You have no free home slots!",color:"red"}],width:400}}
 scoreboard players reset @s homes

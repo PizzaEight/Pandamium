@@ -1,0 +1,123 @@
+
+{
+  "type": "minecraft:notice",
+  "title": "Contacting Us",
+  "external_title": "Contacting Us",
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "Contacting Us",
+        "bold": true,
+        "color": "dark_green"
+      },
+      "width": 500
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "                                                      ",
+        "underlined": true,
+        "color": "white"
+      },
+      "width": 500
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": [
+        {
+          "text": "Need Help?",
+          "bold": true,
+          "color": "gold"
+        },
+        "\n\n",
+        {
+          "text": "If you need help, have found an issue, or need to contact the Pandamium staff, the best place to reach us is our ",
+          "bold": false,
+          "color": "gray"
+        },
+        {
+          "text": "Discord",
+          "bold": false,
+          "color": "#5865F2",
+          "underlined": false,
+          "hover_event": {
+          "action": "show_text",
+          "value": {
+            "text": "Click to join the Discord Server"
+          }
+        },
+          "click_event": {
+            "action": "open_url",
+            "url": "http://discord.pandamium.eu/"
+          }
+        },
+        {
+          "text": ".",
+          "color": "gray"
+        },
+        "\n\n",
+        {
+          "text": "For staff assistance, open a ticket in the ",
+          "bold": false,
+          "color": "gray"
+        },
+        {
+          "text": "#help-tickets",
+          "bold": false,
+          "color": "dark_aqua"
+        },
+        {
+          "text": " channel.",
+          "color": "gray"
+        },
+        "\n\n",
+        {
+          "text": "Owner Contact Email",
+          "bold": true,
+          "color": "gold"
+        },
+        "\n\n",
+        {
+          "text": "pandamiummc.contact@gmail.com",
+          "bold": false,
+          "color": "white"
+        },
+        "\n\n",
+        {
+          "text": "Affiliation",
+          "bold": true,
+          "color": "gold"
+        },
+        "\n\n",
+        {
+          "text": "Pandamium and all of its hosted platforms/servers are not affiliated with Mojang AB or Microsoft.",
+          "bold": false,
+          "color": "gray"
+        }
+      ],
+      "width": 500
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "                                                      ",
+        "underlined": true,
+        "color": "white"
+      },
+      "width": 500
+    }
+  ],
+  "can_close_with_escape": true,
+  "pause": false,
+  "after_action": "none",
+  "action": {
+    "label": {
+      "translate": "gui.back"
+    },
+    "action": {
+      "type": "minecraft:run_command",
+      "command": "trigger help"
+    }
+  }
+}

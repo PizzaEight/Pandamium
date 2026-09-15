@@ -9,6 +9,21 @@ data modify storage pandamium:local functions."pandamium:triggers/parkour/*".dia
     external_title: "Course Stats", \
     body: [], \
     pause: false, \
+    after_action: "none", \
+    action: { \
+		label: { \
+							translate: "gui.back" \
+						}, \
+						action: { \
+							type: "minecraft:run_command", \
+								command: "trigger parkour" \
+						} \
+	} \
+}
+
+# Forgotten Caverns
+
+data modify storage pandamium:local functions."pandamium:triggers/parkour/*".dialog.body append value {type:"minecraft:plain_message",contents:[{text:"",color:"dark_aqua"},{text:" Deathless Run: ",color:"gray"}, "",{text:"N/A",color:"white"}],width:500}
     after_action: "close", \
     action: {label:"Done"} \
 }

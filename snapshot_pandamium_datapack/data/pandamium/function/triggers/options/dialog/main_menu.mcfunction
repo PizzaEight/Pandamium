@@ -1,6 +1,6 @@
 #> Opens the dialog-based main Options menu (replaces the old chat menu opener).
 # Built at runtime because some entries are permission-gated:
-#   - Gameplay / Privacy & Accessibility: always available
+#   - Gameplay / Privacy / Accessibility: always available
 #   - Staff / Server: helper+ only
 #   - Alts: only for players with alt accounts
 data modify storage pandamium:local functions."pandamium:triggers/options/*".dialog set value \
@@ -18,8 +18,12 @@ data modify storage pandamium:local functions."pandamium:triggers/options/*".dia
             action: {type:"minecraft:run_command",command:"trigger options set -100001"} \
         }, \
         { \
-            label: "Privacy & Accessibility...", \
+            label: "Accessibility...", \
             action: {type:"minecraft:run_command",command:"trigger options set -100002"} \
+        }, \
+         { \
+            label: "Privacy...", \
+            action: {type:"minecraft:run_command",command:"trigger options set -100003"} \
         } \
     ], \
     "exit_action": {\

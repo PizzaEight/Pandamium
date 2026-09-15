@@ -1,0 +1,59 @@
+{
+	"type": "minecraft:multi_action",
+	"title": "Custom Features",
+	"external_title": "Custom Features",
+	"body": {
+		"type": "minecraft:plain_message",
+		"contents": "Custom Features",
+		"width": 400
+	},
+	"pause": false,
+	"after_action": "none",
+	"columns": 1,
+	"actions": [
+		{
+			"label": "Advancements",
+			"action": {
+				"type": "minecraft:run_command",
+				"command": "trigger help set 10"
+			}
+		},
+		{
+			"label": "Custom Recipes",
+			"action": {
+				"type": "minecraft:run_command",
+				"command": "trigger help set 11"
+			}
+		},
+		{
+			"label": "Mob Heads",
+			"action": {
+				"type": "minecraft:run_command",
+				"command": "trigger help set 12"
+			}
+		},
+		{
+			"label": "Mini Blocks",
+			"action": {
+				"type": "minecraft:run_command",
+				"command": "trigger help set 14"
+			}
+		},
+		{
+			"label": "Other",
+			"action": {
+				"type": "minecraft:run_command",
+				"command": "trigger help set 15"
+			}
+		}
+	],
+	"exit_action": {
+						"label": {
+							"translate": "gui.done"
+						},
+						"action": {
+							"type": "minecraft:show_dialog",
+							"dialog": "pandamium:trigger_help"
+						}
+					}
+}
