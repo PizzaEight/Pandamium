@@ -66,6 +66,7 @@
                       }
                     }
                   }
+                  "blocks": "#minecraft:skulls"
                 }
               }
             }
@@ -78,6 +79,7 @@
   "requirements": [
     [
       "play_head","play_head_2"
+      "play_head"
     ]
   ],
 

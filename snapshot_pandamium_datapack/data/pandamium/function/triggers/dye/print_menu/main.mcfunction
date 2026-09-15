@@ -74,6 +74,7 @@ data remove storage pandamium:text result
 data remove storage do:io input
 data remove storage do:io output
 data modify storage pandamium:text result set value {text:"[Animated Gradients]"}
+data modify storage pandamium:text input set value "[Animated Gradients]"
 function pandamium:impl/font/custom_styles/gradient/main
 tellraw @s [" ",{storage:"pandamium:text",nbt:"result",interpret:true,hover_event:{action:"show_text",value:[{text:"Click to pick gradient dye colours",color:"white"},{text:"\n\n⚠ Warning: This will constantly trigger nearby sculk sensors.\n• You can prevent this by sneaking, which temporarily cancels the animation.",color:"red"}]},click_event:{action:"run_command",command:"trigger dye set 101"}}]
 tellraw @s [{text:"\nToggle: ",color:"green"},{text:"[Off]",color:"red",hover_event:{action:"show_text",value:[{text:"Click to toggle your custom dye ",color:"red"},{text:"Off",bold:true}]},click_event:{action:"run_command",command:"trigger dye set -401"}},"  |  ",{text:"[On]",color:"green",hover_event:{action:"show_text",value:[{text:"Click to toggle your custom dye ",color:"green"},{text:"On",bold:true}]},click_event:{action:"run_command",command:"trigger dye set -402"}}]
