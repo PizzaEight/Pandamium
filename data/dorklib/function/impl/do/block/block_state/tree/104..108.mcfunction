@@ -1,5 +1,0 @@
-execute if block ~ ~ ~ minecraft:blue_candle run return run function dorklib:impl/do/block/block_state/tree/blue_candle
-execute if block ~ ~ ~ minecraft:blue_candle_cake run return run function dorklib:impl/do/block/block_state/tree/blue_candle_cake
-execute if block ~ ~ ~ minecraft:blue_carpet run return run data modify storage do:io output set value {Name:"minecraft:blue_carpet"}
-execute if block ~ ~ ~ minecraft:blue_concrete run return run data modify storage do:io output set value {Name:"minecraft:blue_concrete"}
-execute if block ~ ~ ~ minecraft:blue_concrete_powder run return run data modify storage do:io output set value {Name:"minecraft:blue_concrete_powder"}

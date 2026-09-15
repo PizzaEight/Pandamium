@@ -1,2 +1,0 @@
-schedule function mob_heads:detect/remove_warning_from_mini_block_with_warning_timed 1t
-advancement revoke @s only pandamium:detect/craft_mini_block_with_warning

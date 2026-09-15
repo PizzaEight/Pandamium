@@ -1,4 +1,0 @@
-execute if block ~ ~ ~ minecraft:polished_basalt run return run function dorklib:impl/do/block/block_state/tree/polished_basalt
-execute if block ~ ~ ~ minecraft:polished_blackstone run return run data modify storage do:io output set value {Name:"minecraft:polished_blackstone"}
-execute if block ~ ~ ~ minecraft:polished_blackstone_brick_slab run return run function dorklib:impl/do/block/block_state/tree/polished_blackstone_brick_slab
-execute if block ~ ~ ~ minecraft:polished_blackstone_brick_stairs run return run function dorklib:impl/do/block/block_state/tree/polished_blackstone_brick_stairs

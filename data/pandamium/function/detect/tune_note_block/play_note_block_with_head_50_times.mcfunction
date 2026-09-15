@@ -1,1 +1,0 @@
-$advancement grant @s only pandamium:pandamium/mob_heads/play_noteblock_with_head_50_times play_note_block_with_head_$(play_note_block)_times

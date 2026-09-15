@@ -1,5 +1,0 @@
-execute if block ~ ~ ~ minecraft:warped_sign run return run function dorklib:impl/do/block/block_state/tree/warped_sign
-execute if block ~ ~ ~ minecraft:warped_slab run return run function dorklib:impl/do/block/block_state/tree/warped_slab
-execute if block ~ ~ ~ minecraft:warped_stairs run return run function dorklib:impl/do/block/block_state/tree/warped_stairs
-execute if block ~ ~ ~ minecraft:warped_stem run return run function dorklib:impl/do/block/block_state/tree/warped_stem
-execute if block ~ ~ ~ minecraft:warped_trapdoor run return run function dorklib:impl/do/block/block_state/tree/warped_trapdoor

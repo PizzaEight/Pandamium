@@ -1,4 +1,0 @@
-execute if predicate {type:"minecraft:location_check",predicate:{block:{blocks:["stripped_spruce_log","stripped_spruce_wood","stripped_warped_hyphae","stripped_warped_stem"]}}} run return run function dorklib:impl/do/block/block_state/tree/985..988
-execute if predicate {type:"minecraft:location_check",predicate:{block:{blocks:["structure_block","structure_void","sugar_cane","sunflower","suspicious_gravel"]}}} run return run function dorklib:impl/do/block/block_state/tree/989..993
-execute if predicate {type:"minecraft:location_check",predicate:{block:{blocks:["suspicious_sand","sweet_berry_bush","tall_dry_grass","tall_grass"]}}} run return run function dorklib:impl/do/block/block_state/tree/994..997
-execute if predicate {type:"minecraft:location_check",predicate:{block:{blocks:["tall_seagrass","target","terracotta","test_block","test_instance_block"]}}} run return run function dorklib:impl/do/block/block_state/tree/998..1002

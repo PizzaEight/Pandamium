@@ -1,2 +1,0 @@
-# arguments: id
-$execute if data storage pandamium:temp entry_info.data.items[{private:{id:$(id)}}] run data modify storage pandamium:temp entry_info.data.items[{private:{id:$(id)}}].__viewable__ set value 1b

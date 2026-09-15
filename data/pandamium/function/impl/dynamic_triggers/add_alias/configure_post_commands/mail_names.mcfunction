@@ -1,3 +1,0 @@
-# arguments: alias, user_id, user_name
-$data modify storage pandamium:temp alias_entry.post_commands append value 'execute as $(user_name) unless predicate pandamium:player/is_vanished unless score @s optn.disable_receiving_mail matches 1 as @a[scores={optn.enable_dynamic_triggers.mail_names=1},predicate=!pandamium:player/is_jailed] unless score @s id matches $(user_id) unless predicate {type:"minecraft:all_of",terms:["pandamium:player/gameplay_rank/guest",{type:"minecraft:int_value_check",value:{type:"score",target:{"type":"minecraft:fixed",name:"$(user_name)"},score:"optn.disable_receiving_mail"},test:2}]} run scoreboard players enable @s $(alias)'
-return 1

@@ -1,3 +1,0 @@
-# arguments: x, y, z, slot
-execute unless data storage pandamium.db.stored_items:io selected run return fail
-return run execute in pandamium:staff_world run function pandamium:impl/database/stored_items/modify/get_item/give_to_self with storage pandamium.db.stored_items:io selected.entry

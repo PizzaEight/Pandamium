@@ -1,1 +1,0 @@
-op @s[type=player]

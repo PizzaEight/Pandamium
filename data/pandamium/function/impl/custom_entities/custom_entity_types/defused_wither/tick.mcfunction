@@ -1,2 +1,0 @@
-execute on vehicle if entity @s[type=wither,nbt=!{Invul:1},tag=pandamium.defused] run return fail
-execute unless predicate pandamium:in_spawn run function pandamium:impl/custom_entities/custom_entity_types/defused_wither/controller_create_explosion

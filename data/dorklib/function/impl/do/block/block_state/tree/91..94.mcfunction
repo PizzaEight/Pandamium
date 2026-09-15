@@ -1,4 +1,0 @@
-execute if block ~ ~ ~ minecraft:black_shulker_box run return run function dorklib:impl/do/block/block_state/tree/black_shulker_box
-execute if block ~ ~ ~ minecraft:black_stained_glass run return run data modify storage do:io output set value {Name:"minecraft:black_stained_glass"}
-execute if block ~ ~ ~ minecraft:black_stained_glass_pane run return run function dorklib:impl/do/block/block_state/tree/black_stained_glass_pane
-execute if block ~ ~ ~ minecraft:black_terracotta run return run data modify storage do:io output set value {Name:"minecraft:black_terracotta"}

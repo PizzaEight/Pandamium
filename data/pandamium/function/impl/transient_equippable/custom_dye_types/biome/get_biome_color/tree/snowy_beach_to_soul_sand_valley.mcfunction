@@ -1,2 +1,0 @@
-execute if predicate {type:"minecraft:location_check",predicate:{biomes:["minecraft:snowy_beach","minecraft:snowy_plains"]}} run return run function pandamium:impl/transient_equippable/custom_dye_types/biome/get_biome_color/tree/snowy_beach_to_snowy_plains
-execute if predicate {type:"minecraft:location_check",predicate:{biomes:["minecraft:snowy_slopes","minecraft:snowy_taiga","minecraft:soul_sand_valley"]}} run return run function pandamium:impl/transient_equippable/custom_dye_types/biome/get_biome_color/tree/snowy_slopes_to_soul_sand_valley

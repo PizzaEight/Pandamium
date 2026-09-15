@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:entity_scores",
-  "entity": "this",
-  "scores": {
-    "last_joined.datetime": {
-      "max": 833647200
-    }
-  }
-}

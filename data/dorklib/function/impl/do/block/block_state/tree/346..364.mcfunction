@@ -1,4 +1,0 @@
-execute if predicate {type:"minecraft:location_check",predicate:{block:{blocks:["deepslate_tile_stairs","deepslate_tile_wall","deepslate_tiles","detector_rail"]}}} run return run function dorklib:impl/do/block/block_state/tree/346..349
-execute if predicate {type:"minecraft:location_check",predicate:{block:{blocks:["diamond_block","diamond_ore","diorite","diorite_slab","diorite_stairs"]}}} run return run function dorklib:impl/do/block/block_state/tree/350..354
-execute if predicate {type:"minecraft:location_check",predicate:{block:{blocks:["diorite_wall","dirt","dirt_path","dispenser","dragon_egg"]}}} run return run function dorklib:impl/do/block/block_state/tree/355..359
-execute if predicate {type:"minecraft:location_check",predicate:{block:{blocks:["dragon_head","dragon_wall_head","dried_ghast","dried_kelp_block","dripstone_block"]}}} run return run function dorklib:impl/do/block/block_state/tree/360..364

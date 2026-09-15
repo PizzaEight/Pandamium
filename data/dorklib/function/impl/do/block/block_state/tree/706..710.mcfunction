@@ -1,5 +1,0 @@
-execute if block ~ ~ ~ minecraft:pale_oak_wood run return run function dorklib:impl/do/block/block_state/tree/pale_oak_wood
-execute if block ~ ~ ~ minecraft:pearlescent_froglight run return run function dorklib:impl/do/block/block_state/tree/pearlescent_froglight
-execute if block ~ ~ ~ minecraft:peony run return run function dorklib:impl/do/block/block_state/tree/peony
-execute if block ~ ~ ~ minecraft:petrified_oak_slab run return run function dorklib:impl/do/block/block_state/tree/petrified_oak_slab
-execute if block ~ ~ ~ minecraft:piglin_head run return run function dorklib:impl/do/block/block_state/tree/piglin_head

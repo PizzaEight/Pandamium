@@ -1,2 +1,0 @@
-execute if predicate {type:"minecraft:location_check",predicate:{biomes:["minecraft:old_growth_pine_taiga","minecraft:old_growth_spruce_taiga"]}} run return run function pandamium:impl/transient_equippable/custom_dye_types/biome/get_biome_color/tree/old_growth_pine_taiga_to_old_growth_spruce_taiga
-execute if predicate {type:"minecraft:location_check",predicate:{biomes:["minecraft:pale_garden","minecraft:plains"]}} run return run function pandamium:impl/transient_equippable/custom_dye_types/biome/get_biome_color/tree/pale_garden_to_plains

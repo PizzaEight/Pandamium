@@ -1,4 +1,0 @@
-data modify storage do:io output set value {Name:"minecraft:brown_glazed_terracotta",properties:{facing:"north"}}
-execute if block ~ ~ ~ brown_glazed_terracotta[facing=south] run data modify storage do:io output.Properties.facing set value "south"
-execute if block ~ ~ ~ brown_glazed_terracotta[facing=west] run data modify storage do:io output.Properties.facing set value "west"
-execute if block ~ ~ ~ brown_glazed_terracotta[facing=east] run data modify storage do:io output.Properties.facing set value "east"

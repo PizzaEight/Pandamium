@@ -1,8 +1,0 @@
-data modify entity @s data.custom_entity_type set value "defused_wither_skull"
-tag @s add pandamium.custom_entity.type.defused_wither_skull
-tag @s add pandamium.custom_entity.brain
-tag @s add pandamium.ticking
-data modify entity @s Rotation set from entity @n[type=snowball,tag=pandamium.defusing,distance=..0.01,limit=1] Rotation
-ride @s mount @e[type=snowball,tag=pandamium.defusing,distance=..0.01,limit=1]
-execute on vehicle if entity @s[tag=pandamium.dangerous] on passengers run data merge entity @s {item_display:"fixed",transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,1f,0f,0f],translation:[0.0f,0.0f,0.0f],scale:[1f,1f,1f]},item:{id:"minecraft:player_head",count:1,components:{"minecraft:profile":{properties:[{name:"textures",value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDM2ODJiMDYyMDNiOWRlNGMyODU0MTA3MWEyNmNkYzM0MGRkMjVkNGMzNzJiNzAyM2VjMmY0MTIwMjFkNjJmNyJ9fX0="}]}}}}
-execute on vehicle if entity @s[tag=!pandamium.dangerous] on passengers run data merge entity @s {item_display:"fixed",transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0.0f,0.0f,0.0f],scale:[1f,1f,1f]},item:{id:"minecraft:player_head",count:1,components:{"minecraft:profile":{properties:[{name:"textures",value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjM3YzU4MTRhOTJmOGVjMGY2YWU5OTMzYWJlOTU0MmUxNjUxOTA3NjhlNzYwNDc4NTQzYWViZWVkNDAyN2MyNyJ9fX0="}]}}}}

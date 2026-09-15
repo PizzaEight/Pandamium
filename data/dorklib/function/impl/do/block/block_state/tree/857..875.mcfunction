@@ -1,4 +1,0 @@
-execute if predicate {type:"minecraft:location_check",predicate:{block:{blocks:["red_sand","red_sandstone","red_sandstone_slab","red_sandstone_stairs"]}}} run return run function dorklib:impl/do/block/block_state/tree/857..860
-execute if predicate {type:"minecraft:location_check",predicate:{block:{blocks:["red_sandstone_wall","red_shulker_box","red_stained_glass","red_stained_glass_pane","red_terracotta"]}}} run return run function dorklib:impl/do/block/block_state/tree/861..865
-execute if predicate {type:"minecraft:location_check",predicate:{block:{blocks:["red_tulip","red_wall_banner","red_wool","redstone_block","redstone_lamp"]}}} run return run function dorklib:impl/do/block/block_state/tree/866..870
-execute if predicate {type:"minecraft:location_check",predicate:{block:{blocks:["redstone_ore","redstone_torch","redstone_wall_torch","redstone_wire","reinforced_deepslate"]}}} run return run function dorklib:impl/do/block/block_state/tree/871..875

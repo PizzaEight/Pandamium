@@ -1,1 +1,0 @@
-function pandamium:impl/custom_entities/custom_entity_types/fading_glow/summon

@@ -1,4 +1,0 @@
-execute if predicate {type:"minecraft:location_check",predicate:{block:{blocks:["activator_rail","air","allium","amethyst_block"]}}} run return run function dorklib:impl/do/block/block_state/tree/18..21
-execute if predicate {type:"minecraft:location_check",predicate:{block:{blocks:["amethyst_cluster","ancient_debris","andesite","andesite_slab","andesite_stairs"]}}} run return run function dorklib:impl/do/block/block_state/tree/22..26
-execute if predicate {type:"minecraft:location_check",predicate:{block:{blocks:["andesite_wall","anvil","attached_melon_stem","attached_pumpkin_stem"]}}} run return run function dorklib:impl/do/block/block_state/tree/27..30
-execute if predicate {type:"minecraft:location_check",predicate:{block:{blocks:["azalea","azalea_leaves","azure_bluet","bamboo","bamboo_block"]}}} run return run function dorklib:impl/do/block/block_state/tree/31..35

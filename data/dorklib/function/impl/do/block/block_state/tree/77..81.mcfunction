@@ -1,5 +1,0 @@
-execute if block ~ ~ ~ minecraft:birch_slab run return run function dorklib:impl/do/block/block_state/tree/birch_slab
-execute if block ~ ~ ~ minecraft:birch_stairs run return run function dorklib:impl/do/block/block_state/tree/birch_stairs
-execute if block ~ ~ ~ minecraft:birch_trapdoor run return run function dorklib:impl/do/block/block_state/tree/birch_trapdoor
-execute if block ~ ~ ~ minecraft:birch_wall_hanging_sign run return run function dorklib:impl/do/block/block_state/tree/birch_wall_hanging_sign
-execute if block ~ ~ ~ minecraft:birch_wall_sign run return run function dorklib:impl/do/block/block_state/tree/birch_wall_sign

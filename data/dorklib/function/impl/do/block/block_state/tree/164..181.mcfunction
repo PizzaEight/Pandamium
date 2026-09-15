@@ -1,4 +1,0 @@
-execute if predicate {type:"minecraft:location_check",predicate:{block:{blocks:["cave_air","cave_vines","cave_vines_plant","chain_command_block"]}}} run return run function dorklib:impl/do/block/block_state/tree/164..167
-execute if predicate {type:"minecraft:location_check",predicate:{block:{blocks:["cherry_button","cherry_door","cherry_fence","cherry_fence_gate","cherry_hanging_sign"]}}} run return run function dorklib:impl/do/block/block_state/tree/168..172
-execute if predicate {type:"minecraft:location_check",predicate:{block:{blocks:["cherry_leaves","cherry_log","cherry_planks","cherry_pressure_plate"]}}} run return run function dorklib:impl/do/block/block_state/tree/173..176
-execute if predicate {type:"minecraft:location_check",predicate:{block:{blocks:["cherry_sapling","cherry_shelf","cherry_sign","cherry_slab","cherry_stairs"]}}} run return run function dorklib:impl/do/block/block_state/tree/177..181
