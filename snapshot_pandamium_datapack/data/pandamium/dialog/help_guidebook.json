@@ -50,7 +50,7 @@
 			}
 		},
 		{
-			"label": "Voting",
+			"label": "Voting & Rewards",
 			"action": {
 				"type": "minecraft:run_command",
 				"command": "trigger help set 7"
@@ -64,7 +64,21 @@
 			}
 		},
 		{
-			"label": "Contact Us",
+			"label": "All Menus",
+			"action": {
+				"type": "minecraft:show_dialog",
+				"dialog": "pandamium:help/all_menus"
+			}
+		},
+		{
+			"label": {"color":"aqua","text": "Supporting Us"},
+			"action": {
+				"type": "minecraft:run_command",
+				"command": "trigger help set 25"
+			}
+		},
+		{
+			"label": {"color":"aqua","text": "Contacting Us"},
 			"action": {
 				"type": "minecraft:run_command",
 				"command": "trigger help set 9"
