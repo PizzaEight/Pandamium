@@ -63,63 +63,6 @@ data modify storage pandamium:local functions."pandamium:triggers/playtime/dialo
 
 data modify storage pandamium:local functions."pandamium:triggers/playtime/dialog/*".dialog.body[-1].contents[9] set from storage pandamium:temp str_reward_credits
 
-# ============================================================
-
-# Locations
-
-# ============================================================
-
-# --- Last position ---
-
-execute if score @s last_position.y matches -2147483648.. run execute store result storage pandamium:temp str_lp_x int 1 run scoreboard players get @s last_position.x
-
-execute if score @s last_position.y matches -2147483648.. run data modify storage pandamium:temp str_lp_x set string storage pandamium:temp str_lp_x
-
-execute if score @s last_position.y matches -2147483648.. run execute store result storage pandamium:temp str_lp_y int 1 run scoreboard players get @s last_position.y
-
-execute if score @s last_position.y matches -2147483648.. run data modify storage pandamium:temp str_lp_y set string storage pandamium:temp str_lp_y
-
-execute if score @s last_position.y matches -2147483648.. run execute store result storage pandamium:temp str_lp_z int 1 run scoreboard players get @s last_position.z
-
-execute if score @s last_position.y matches -2147483648.. run data modify storage pandamium:temp str_lp_z set string storage pandamium:temp str_lp_z
-
-execute if score @s last_position.y matches -2147483648.. run execute store result score <dimension> variable run scoreboard players get @s last_position.d
-
-execute if score @s last_position.y matches -2147483648.. run function pandamium:utils/get/dimension_name/from_score
-
-# --- Last set spawnpoint ---
-
-execute if score @s spawnpoint_x matches -2147483648.. run execute store result storage pandamium:temp str_sp_x int 1 run scoreboard players get @s spawnpoint_x
-
-execute if score @s spawnpoint_x matches -2147483648.. run data modify storage pandamium:temp str_sp_x set string storage pandamium:temp str_sp_x
-
-execute if score @s spawnpoint_x matches -2147483648.. run execute store result storage pandamium:temp str_sp_y int 1 run scoreboard players get @s spawnpoint_y
-
-execute if score @s spawnpoint_x matches -2147483648.. run data modify storage pandamium:temp str_sp_y set string storage pandamium:temp str_sp_y
-
-execute if score @s spawnpoint_x matches -2147483648.. run execute store result storage pandamium:temp str_sp_z int 1 run scoreboard players get @s spawnpoint_z
-
-execute if score @s spawnpoint_x matches -2147483648.. run data modify storage pandamium:temp str_sp_z set string storage pandamium:temp str_sp_z
-
-execute if score @s spawnpoint_x matches -2147483648.. run execute store result score <dimension> variable run scoreboard players get @s spawnpoint_d
-
-execute if score @s spawnpoint_x matches -2147483648.. run function pandamium:utils/get/dimension_name/from_score
-
-# --- Last death location ---
-
-execute if data entity @s LastDeathLocation run execute store result storage pandamium:temp str_dl_x int 1 run data get entity @s LastDeathLocation.pos[0]
-
-execute if data entity @s LastDeathLocation run data modify storage pandamium:temp str_dl_x set string storage pandamium:temp str_dl_x
-
-execute if data entity @s LastDeathLocation run execute store result storage pandamium:temp str_dl_y int 1 run data get entity @s LastDeathLocation.pos[1]
-
-execute if data entity @s LastDeathLocation run data modify storage pandamium:temp str_dl_y set string storage pandamium:temp str_dl_y
-
-execute if data entity @s LastDeathLocation run execute store result storage pandamium:temp str_dl_z int 1 run data get entity @s LastDeathLocation.pos[2]
-
-execute if data entity @s LastDeathLocation run data modify storage pandamium:temp str_dl_z set string storage pandamium:temp str_dl_z
-
-execute if data entity @s LastDeathLocation run function pandamium:utils/get/dimension_name/from_string_id
 
 # --- Last join date ---
 
@@ -138,40 +81,6 @@ function pandamium:utils/datetime/get_datetime_text {args:_}
 execute store result storage pandamium:temp str_year int 1 run scoreboard players get <year> variable
 
 data modify storage pandamium:temp str_year set string storage pandamium:temp str_year
-
-# --- Build Locations body ---
-
-data modify storage pandamium:local functions."pandamium:triggers/playtime/dialog/*".dialog.body append value {"type":"minecraft:plain_message","contents":[{"text":"","color":"yellow","bold":false},{"text":"Locations","color":"gold","bold":true},{"text":"\n\nLast Position: ","color":"gold"},{"text":"N/A","color":"yellow"},{"text":" ","color":"gray"},{"text":"N/A","color":"yellow"},{"text":" ","color":"gray"},{"text":"N/A","color":"yellow"},{"text":" in ","color":"gray"},{"text":"N/A","color":"yellow"},{"text":"\nLast Set Spawnpoint: ","color":"gold"},{"text":"N/A","color":"yellow"},{"text":" ","color":"gray"},{"text":"N/A","color":"yellow"},{"text":" ","color":"gray"},{"text":"N/A","color":"yellow"},{"text":" in ","color":"gray"},{"text":"N/A","color":"yellow"},{"text":"\nLast Death Location: ","color":"gold"},{"text":"N/A","color":"yellow"},{"text":" ","color":"gray"},{"text":"N/A","color":"yellow"},{"text":" ","color":"gray"},{"text":"N/A","color":"yellow"},{"text":" in ","color":"gray"},{"text":"N/A","color":"yellow"}],"width":500}
-
-# --- Insert last position ---
-
-execute if score @s last_position.y matches -2147483648.. run data modify storage pandamium:local functions."pandamium:triggers/playtime/dialog/*".dialog.body[-1].contents[3] set from storage pandamium:temp str_lp_x
-
-execute if score @s last_position.y matches -2147483648.. run data modify storage pandamium:local functions."pandamium:triggers/playtime/dialog/*".dialog.body[-1].contents[5] set from storage pandamium:temp str_lp_y
-
-execute if score @s last_position.y matches -2147483648.. run data modify storage pandamium:local functions."pandamium:triggers/playtime/dialog/*".dialog.body[-1].contents[7] set from storage pandamium:temp str_lp_z
-
-execute if score @s last_position.y matches -2147483648.. run data modify storage pandamium:local functions."pandamium:triggers/playtime/dialog/*".dialog.body[-1].contents[9] set from storage pandamium:temp dimension_name
-
-# --- Insert spawnpoint ---
-
-execute if score @s spawnpoint_x matches -2147483648.. run data modify storage pandamium:local functions."pandamium:triggers/playtime/dialog/*".dialog.body[-1].contents[11] set from storage pandamium:temp str_sp_x
-
-execute if score @s spawnpoint_x matches -2147483648.. run data modify storage pandamium:local functions."pandamium:triggers/playtime/dialog/*".dialog.body[-1].contents[13] set from storage pandamium:temp str_sp_y
-
-execute if score @s spawnpoint_x matches -2147483648.. run data modify storage pandamium:local functions."pandamium:triggers/playtime/dialog/*".dialog.body[-1].contents[15] set from storage pandamium:temp str_sp_z
-
-execute if score @s spawnpoint_x matches -2147483648.. run data modify storage pandamium:local functions."pandamium:triggers/playtime/dialog/*".dialog.body[-1].contents[17] set from storage pandamium:temp dimension_name
-
-# --- Insert death location ---
-
-execute if data entity @s LastDeathLocation run data modify storage pandamium:local functions."pandamium:triggers/playtime/dialog/*".dialog.body[-1].contents[19] set from storage pandamium:temp str_dl_x
-
-execute if data entity @s LastDeathLocation run data modify storage pandamium:local functions."pandamium:triggers/playtime/dialog/*".dialog.body[-1].contents[21] set from storage pandamium:temp str_dl_y
-
-execute if data entity @s LastDeathLocation run data modify storage pandamium:local functions."pandamium:triggers/playtime/dialog/*".dialog.body[-1].contents[23] set from storage pandamium:temp str_dl_z
-
-execute if data entity @s LastDeathLocation run data modify storage pandamium:local functions."pandamium:triggers/playtime/dialog/*".dialog.body[-1].contents[25] set from storage pandamium:temp dimension_name
 
 # ============================================================
 
