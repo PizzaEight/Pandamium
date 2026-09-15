@@ -1,0 +1,128 @@
+{
+  "type": "minecraft:notice",
+
+  "title": "Introduction",
+
+  "external_title": "Introduction",
+
+  "body": [
+
+    {
+      "type": "minecraft:plain_message",
+
+      "contents": {
+        "text": "Welcome to Pandamium!",
+        "bold": true,
+        "color": "gold"
+      },
+
+      "width": 500
+    },
+
+    {
+      "type": "minecraft:plain_message",
+
+      "contents": {
+        "text": "                                                      ",
+        "underlined": true,
+        "color": "white"
+      },
+
+      "width": 500
+    },
+
+    {
+      "type": "minecraft:plain_message",
+
+      "contents": {
+        "text": "Introduction",
+        "bold": true,
+        "color": "dark_green"
+      }
+    },
+
+    {
+      "type": "minecraft:plain_message",
+
+      "contents": [
+        {
+          "text": "",
+          "bold": false,
+          "color": "white"
+        },
+
+        {
+          "text": "Pandamium Snapshot Server\n\n",
+          "bold": true,
+          "color": "aqua"
+        },
+
+        {
+          "text": "This is a vanilla survival server with a custom datapack for homes, TPA, & more!\n\n",
+          "color": "gray"
+        },
+
+        {
+          "text": "Need help?\n\n",
+          "bold": true,
+          "color": "aqua"
+        },
+
+        {
+          "text": "The Help Menu gives you basic information about the server, such as rules, commands, and answers to FAQs.\n\n",
+          "color": "gray"
+        },
+
+        {
+          "text": "It can be accessed by typing /trigger help in chat or by opening your Guidebook\n\n",
+          "color": "green"
+        },
+
+        {
+          "text": "Need more help?\n\n",
+          "bold": true,
+          "color": "aqua"
+        },
+
+        {
+          "text": "For more help, contact a staff member!"
+
+          ,
+          "color": "gray"
+        }
+      ],
+
+      "width": 500
+    },
+
+    {
+      "type": "minecraft:plain_message",
+
+      "contents": {
+        "text": "                                                      ",
+        "underlined": true,
+        "color": "white"
+      },
+
+      "width": 500
+    }
+
+  ],
+
+  "can_close_with_escape": false,
+
+  "pause": false,
+
+  "after_action": "none",
+
+  "action": {
+    "label": {
+      "text": "Next"
+    },
+
+    "action": {
+							"type": "minecraft:run_command",
+							"command": "/trigger help set 1001"
+						}
+  }
+}

@@ -11,7 +11,7 @@ execute as @n[type=snowball,tag=!pandamium.fixing_motion_1,tag=!pandamium.fixing
 tag @n[type=snowball,tag=!pandamium.fixing_motion_1,tag=!pandamium.fixing_motion_2,tag=!pandamium.fixing_motion_3,distance=0..4,tag=pandamium.wither_skull] add pandamium.fixing_motion_3
 schedule function pandamium:impl/custom_entities/custom_entity_types/defused_wither_skull/keep_motion_3 2t append
 
-summon creeper ~ ~-0.5 ~ {CustomName:"a skull from Wither",ignited:true,Fuse:0s,Tags:["pandamium.ignore","pandamium.wither_skull"],Silent:1b,ExplosionRadius:1b,Team:"wither_skull"}
+summon creeper ~ ~-0.5 ~ {DeathLootTable:"empty",CustomName:"a skull from Wither",ignited:true,Fuse:0s,Tags:["pandamium.ignore","pandamium.wither_skull"],Silent:1b,ExplosionRadius:1b,Team:"wither_skull"}
 execute if block ~ ~ ~ #pandamium:no_solid_collision positioned ~ ~-1.5 ~ as @p[gamemode=!creative,gamemode=!spectator,distance=0..1.5] run damage @s 10 minecraft:wither_skull by @n[type=wither]
 execute if block ~ ~ ~ #pandamium:no_solid_collision positioned ~ ~-1.5 ~ as @n[type=!player,type=!wither,tag=!pandamium.wither_skull,distance=0..2,type=!item_display] run damage @s 10 minecraft:wither_skull by @n[type=wither]
 execute if block ~ ~ ~ #pandamium:no_solid_collision positioned ~ ~-1.5 ~ as @p[gamemode=!creative,gamemode=!spectator,distance=0..1.5] run effect give @s minecraft:wither 40 1

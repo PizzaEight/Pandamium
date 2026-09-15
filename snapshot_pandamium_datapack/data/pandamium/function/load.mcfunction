@@ -15,6 +15,7 @@ scoreboard objectives add id dummy
 scoreboard objectives add global dummy
 scoreboard objectives add variable dummy
 scoreboard objectives add constant dummy
+scoreboard objectives add dialog_surface dummy
 scoreboard objectives add db.players.index dummy
 execute unless score <next_id> global matches 2.. run scoreboard players set <next_id> global 2
 execute unless score <next_auto_action_id> global matches 1..20 run scoreboard players set <next_auto_action_id> global 1
@@ -33,6 +34,7 @@ scoreboard players set <db.players.latest_data_version> global 9
 scoreboard players set <db.mail.latest_data_version> global 2
 scoreboard players set <db.entities.latest_data_version> global 1
 # Useful Constants
+scoreboard objectives add pandamium.mob_head_plays dummy
 scoreboard objectives add pandamium.temp dummy
 scoreboard players set #three pandamium.temp 3
 scoreboard players set #two pandamium.temp 2
@@ -126,11 +128,8 @@ scoreboard objectives add last_position.d dummy
 scoreboard players reset * sidebar
 scoreboard objectives add sidebar dummy {bold:true,color:"blue",font:"minecraft:uniform",text:"Pandamium"}
 scoreboard objectives modify sidebar numberformat styled {color:"red",font:"minecraft:uniform"}
-scoreboard players display name <sidebar.mob_cap> sidebar {color:"gray",font:"minecraft:uniform",text:"Mob Cap:"}
-scoreboard players display name <sidebar.mob_count> sidebar {color:"gray",font:"minecraft:uniform",text:"Mobs:"}
-scoreboard players display name <sidebar.item_count> sidebar {color:"gray",font:"minecraft:uniform",text:"Items:"}
-scoreboard players display name <sidebar.player_count> sidebar {color:"gray",font:"minecraft:uniform",text:"Players:"}
-execute unless score <disable_force_sidebar> global matches 1 run scoreboard objectives setdisplay sidebar sidebar
+# The sidebar is only enabled during a server restart countdown (see misc/update_sidebar)
+scoreboard objectives setdisplay sidebar
 scoreboard objectives add tablist_value dummy
 scoreboard objectives setdisplay list tablist_value
 # Triggers
@@ -411,8 +410,11 @@ execute as @a run scoreboard players set @s detect.leave_game 1
 # can never block a fresh rebuild, and the maps are never left empty across restarts.
 execute in minecraft:overworld run data modify storage pandamium:queue entries append value {action:"rebuild_players_indexes",meta:{do_bossbar:1b}}
 # Rebuild the usernames map from the players database (used for name search)
-execute in minecraft:overworld unless data storage pandamium:queue entries[{action:"refresh_usernames_map"}] run data modify storage pandamium:queue entries append value {action:"refresh_usernames_map",meta:{do_bossbar:1b},usernames:[]}
-execute in minecraft:overworld unless data storage pandamium:queue entries[{action:"refresh_usernames_map"}] run data modify storage pandamium:queue entries[-1].usernames append from storage pandamium.db.players:data entries[].username
+# Always enqueue (no dedup): the action is idempotent (init clears the trie, main rebuilds
+# every name), so a stale interrupted entry can never leave the map stuck with only a few
+# names across restarts, and a fresh reload from disk always repopulates every player.
+execute in minecraft:overworld run data modify storage pandamium:queue entries append value {action:"refresh_usernames_map",meta:{do_bossbar:1b},usernames:[]}
+execute in minecraft:overworld run data modify storage pandamium:queue entries[-1].usernames append from storage pandamium.db.players:data entries[].username
 # Teams
 execute in minecraft:overworld run function pandamium:startup/initialise_teams/main
 team add wither_skull

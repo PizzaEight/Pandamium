@@ -1,3 +1,3 @@
-data remove entity @s Pose
+data merge entity @s {Pose:{Head:[],RightArm:[],LeftArm:[],Body:[],RightLeg:[],LeftLeg:[]}}
 execute store success score <returned> variable run tellraw @a[tag=source,limit=1] [{text:"[Pose]",color:"dark_green"},{text:" Reset ",color:"aqua"},{text:" target's pose!",color:"green"}]
 scoreboard players set <sound> variable 1

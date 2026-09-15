@@ -43,6 +43,15 @@
 	],
 	"pause": false,
 	"after_action": "none",
+	"exit_action": {
+						"label": {
+							"translate": "gui.done"
+						},
+						"action": {
+							"type": "minecraft:run_command",
+							"command": "/trigger help set -1000"
+						}
+					},
 	"columns": 2,
 	"actions": [
 		{
@@ -63,9 +72,9 @@
 				"text": "View general information about Pandamium"
 			},
 			"action": {
-				"type": "run_command",
-				"command": "/trigger help"
-			}
+							"type": "minecraft:show_dialog",
+							"dialog": "pandamium:help"
+						}
 		},
 		{
 			"label": {
@@ -185,7 +194,7 @@
 				"command": "/trigger parkour"
 			}
 		},
-		{
+				{
 			"label": "Voting",
 			"tooltip": {
 				"text": "View the server's voting options"
@@ -198,11 +207,31 @@
 		{
 			"label": "Rewards Shop",
 			"tooltip": {
-				"text": "Spend your rewards credits on items"
+				"text": "Spend your reward credits on items"
 			},
 			"action": {
 				"type": "run_command",
 				"command": "trigger rewards_shop"
+			}
+		},
+								{
+			"label": "World Info",
+			"tooltip": {
+				"text": "View information about the world"
+			},
+			"action": {
+				"type": "run_command",
+				"command": "trigger options set -100005"
+			}
+		},
+		{
+			"label": "Your Statistics",
+			"tooltip": {
+				"text": "View your playtime, votes, etc."
+			},
+			"action": {
+				"type": "run_command",
+				"command": "trigger options set -100006"
 			}
 		},
 		{

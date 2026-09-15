@@ -1,0 +1,312 @@
+{
+"type": "minecraft:notice",
+"title": "General Commands",
+"external_title": "General Commands",
+"body": [
+{
+"type": "minecraft:plain_message",
+"contents": {
+"text": "Here are all the general commands you can use anywhere on the server:",
+"bold": true,
+"color": "dark_green"
+},
+"width": 500
+},
+{
+"type": "minecraft:plain_message",
+"contents": {
+"text": "                                                      ",
+"underlined": true,
+"color": "white"
+},
+"width": 500
+},
+{
+"type": "minecraft:plain_message",
+"contents": {
+"text": "General Commands",
+"bold": true,
+"color": "gold"
+}
+},
+{
+"type": "minecraft:plain_message",
+"contents": [
+{
+"text": "/trigger rtp",
+"color": "white"
+},
+"\n",
+{
+"text": "  Randomly teleports you into the wilderness.",
+"color": "gray"
+},
+            "\n\n",
+            {
+                "text": "/trigger tpa",
+                "color": "white"
+            },
+            "\n",
+            {
+                "text": "  Request to teleport to someone.",
+                "color": "gray"
+            },
+
+            "\n\n",
+            {
+                "text": "/trigger spawn",
+                "color": "white"
+            },
+            "\n",
+            {
+                "text": "  Teleports you to the server spawn.",
+                "color": "gray"
+            },
+
+            "\n\n",
+            {
+                "text": "/trigger enderman_farm",
+                "color": "white"
+            },
+            "\n",
+            {
+                "text": "  Teleport to the public Enderman farm in the End.",
+                "color": "gray"
+            },
+
+            "\n\n",
+            {
+                "text": "/trigger sethome",
+                "color": "white"
+            },
+            "\n",
+            {
+                "text": "  Sets a new home at your current location.",
+                "color": "gray"
+            },
+
+            "\n\n",
+            {
+                "text": "/trigger home",
+                "color": "white"
+            },
+            "\n",
+            {
+                "text": "  Teleports you to your home (or a specific home ID).",
+                "color": "gray"
+            },
+
+            "\n\n",
+            {
+                "text": "/trigger homes",
+                "color": "white"
+            },
+            "\n",
+            {
+                "text": "  Opens a menu with all your set homes.",
+                "color": "gray"
+            },
+
+            "\n\n",
+            {
+                "text": "/trigger namehome",
+                "color": "white"
+            },
+            "\n",
+            {
+                "text": "  Allows you to set a custom name for your home.",
+                "color": "gray"
+            },
+
+            "\n\n",
+            {
+                "text": "/trigger delhome",
+                "color": "white"
+            },
+            "\n",
+            {
+                "text": "  Deletes a specific home.",
+                "color": "gray"
+            },
+
+            "\n\n",
+            {
+                "text": "/trigger options",
+                "color": "white"
+            },
+            "\n",
+            {
+                "text": " Manage your options on the server to customize your experience.",
+                "color": "gray"
+            },
+
+            "\n\n",
+            {
+                "text": "/trigger respawn",
+                "color": "white"
+            },
+            "\n",
+            {
+                "text": "  Instantly kills you to return to your spawn point.",
+                "color": "gray"
+            },
+
+            "\n\n",
+            {
+                "text": "/trigger mail",
+                "color": "white"
+            },
+            "\n",
+            {
+                "text": "  Send items/messages to offline players.",
+                "color": "gray"
+            },
+
+            "\n\n",
+            {
+                "text": "/trigger vote",
+                "color": "white"
+            },
+            "\n",
+            {
+                "text": "  Get links to the voting websites.",
+                "color": "gray"
+            },
+
+            "\n\n",
+            {
+                "text": "/trigger vote_shop",
+                "color": "white"
+            },
+            "\n",
+            {
+                "text": "  Opens the reward shop where you can buy items with vote credits.",
+                "color": "gray"
+            },
+
+            "\n\n",
+            {
+                "text": "/trigger gift",
+                "color": "white"
+            },
+            "\n",
+            {
+                "text": "  Gift a vote credit to another player.",
+                "color": "gray"
+            },
+
+            "\n\n",
+            {
+                "text": "/trigger clear_inventory",
+                "color": "white"
+            },
+            "\n",
+            {
+                "text": "  Clears your current inventory.",
+                "color": "gray"
+            },
+
+            "\n\n",
+            {
+                "text": "/trigger afk",
+                "color": "white"
+            },
+            "\n",
+            {
+                "text": "  Makes you appear AFK in tab.",
+                "color": "gray"
+            },
+            "\n\n",
+            {
+                "text": "/trigger sit",
+                "color": "white"
+            },
+            "\n",
+            {
+                "text": "  Makes you sit on the ground.",
+                "color": "gray"
+            },
+
+            "\n\n",
+            {
+                "text": "/trigger guidebook",
+                "color": "white"
+            },
+            "\n",
+            {
+                "text": "  Gives you a guidebook to the server.",
+                "color": "gray"
+            },
+
+            "\n\n",
+            {
+                "text": "/trigger parkour",
+                "color": "white"
+            },
+            "\n",
+            {
+                "text": "  See your Parkour times and teleport options.",
+                "color": "gray"
+            },
+
+            "\n\n",
+            {
+                "text": "/trigger parkour.quit",
+                "color": "white"
+            },
+            "\n",
+            {
+                "text": "  Quit the parkour you are currently on.",
+                "color": "gray"
+            },
+
+            "\n\n",
+            {
+                "text": "/trigger parkour.restart",
+                "color": "white"
+            },
+            "\n",
+            {
+                "text": "  Restart the parkour you are currently on.",
+                "color": "gray"
+            },
+
+            "\n\n",
+            {
+                "text": "/trigger parkour.warp.Forgotten_Caverns",
+                "color": "white"
+            },
+            "\n",
+            {
+                "text": "  Teleport to the Forgotten Caverns parkour.",
+                "color": "gray"
+            },
+
+            "\n\n",
+            {
+                "text": "/trigger parkour.warp.Jack_o_Giggle",
+                "color": "white"
+            },
+            "\n",
+            {
+                "text": "  Teleport to the Jack o' Giggle parkour.",
+                "color": "gray"
+            }
+        ],
+        "width": 500
+    }
+],
+"can_close_with_escape": true,
+"pause": false,
+"after_action": "none",
+"action": {
+    "label": {
+        "translate": "gui.back"
+    },
+    "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger help set 5"
+    }
+}
+
+}

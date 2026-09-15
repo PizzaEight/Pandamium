@@ -1,6 +1,8 @@
 scoreboard players reset @s detect.use.written_book
 advancement revoke @s only pandamium:detect/use_written_book
 execute store result score <mainhand> variable if predicate pandamium:holding/written_book_in_mainhand
+execute if predicate pandamium:holding/guidebook_in_mainhand run trigger help set 24
+execute if predicate pandamium:holding/guidebook_in_offhand unless predicate pandamium:holding/guidebook_in_mainhand run trigger help set 24
 execute if score <mainhand> variable matches 1 unless predicate pandamium:holding/replaceable_guidebook_in_mainhand run return 0
 execute if score <mainhand> variable matches 0 unless predicate pandamium:holding/replaceable_guidebook_in_offhand run return 0
 execute if score <mainhand> variable matches 1 store result score <held_version> variable run data get entity @s SelectedItem.components."minecraft:custom_data".pandamium.guidebook.version

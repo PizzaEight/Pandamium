@@ -39,8 +39,88 @@
 				"minecraft:custom_data": {
 					"pandamium": {
 						"mini_block": {
-							"item": "chain_command_block",
-							"type": "chain_command_block"
+							"item": "test_bock"
+						}
+					}
+				}
+			}
+		},
+		"on_pass": {
+			"type": "minecraft:set_components",
+			"components": {
+				"minecraft:rarity": "rare"
+			}
+		}
+	},
+	{
+		"type": "minecraft:filtered",
+		"item_filter": {
+			"predicates": {
+				"minecraft:custom_data": {
+					"pandamium": {
+						"mini_block": {
+							"item": "test_instance_block"
+						}
+					}
+				}
+			}
+		},
+		"on_pass": {
+			"type": "minecraft:set_components",
+			"components": {
+				"minecraft:rarity": "rare"
+			}
+		}
+	},
+	{
+		"type": "minecraft:filtered",
+		"item_filter": {
+			"predicates": {
+				"minecraft:custom_data": {
+					"pandamium": {
+						"mini_block": {
+							"item": "structure_block"
+						}
+					}
+				}
+			}
+		},
+		"on_pass": {
+			"type": "minecraft:set_components",
+			"components": {
+				"minecraft:rarity": "rare"
+			}
+		}
+	},
+	{
+		"type": "minecraft:filtered",
+		"item_filter": {
+			"predicates": {
+				"minecraft:custom_data": {
+					"pandamium": {
+						"mini_block": {
+							"item": "test_bock"
+						}
+					}
+				}
+			}
+		},
+		"on_pass": {
+			"type": "minecraft:set_components",
+			"components": {
+				"minecraft:rarity": "rare"
+			}
+		}
+	},
+	{
+		"type": "minecraft:filtered",
+		"item_filter": {
+			"predicates": {
+				"minecraft:custom_data": {
+					"pandamium": {
+						"mini_block": {
+							"item": "command_block_minecart",
+							"type": "command_block_minecart"
 						}
 					}
 				}

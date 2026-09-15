@@ -1,0 +1,135 @@
+{
+  "type": "minecraft:notice",
+  "title": "Lost Legacy Data",
+  "external_title": "Lost Legacy Data",
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "Lost Legacy Data",
+        "bold": true,
+        "color": "dark_green"
+      },
+      "width": 500
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "                                                      ",
+        "underlined": true,
+        "color": "white"
+      },
+      "width": 500
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": [
+        {
+          "text": "",
+          "bold": false,
+          "color": "gold"
+        },
+        {
+          "text": "Changed Your Minecraft Name?",
+          "bold": true,
+          "color": "gold"
+        },
+        "\n\n",
+        {
+          "text": "If you last joined Pandamium before early 2023 and have since changed your Minecraft username, you may have lost some of your old data.",
+          "color": "gray"
+        },
+        "\n\n",
+        {
+          "text": "This can include things such as your ",
+          "color": "gray"
+        },
+        {
+          "text": "statistics and homes",
+          "color": "dark_aqua"
+        },
+        {
+          "text": ".",
+          "color": "gray"
+        },
+        "\n\n",
+        {
+          "text": "Why Did This Happen?",
+          "bold": true,
+          "color": "gold"
+        },
+        "\n\n",
+        {
+          "text": "Older Pandamium data was associated with player usernames. Minecraft username changes could therefore prevent the old data from being associated with your new name.",
+          "color": "gray"
+        },
+        "\n\n",
+        {
+          "text": "What Can I Do?",
+          "bold": true,
+          "color": "gold"
+        },
+        "\n\n",
+        {
+          "text": "Contact a staff member through the Pandamium ",
+          "color": "gray"
+        },
+        {
+          "text": "Discord",
+          "bold": true,
+          "color": "#5865F2",
+          "underlined": true,
+          "hover_event": {
+          "action": "show_text",
+          "value": {
+            "text": "Click to join the Discord Server"
+          }
+        },
+          "click_event": {
+            "action": "open_url",
+            "url": "http://discord.pandamium.eu/"
+          }
+        },
+        {
+          "text": " and open a ticket in ",
+          "color": "gray"
+        },
+        {
+          "text": "#help-tickets",
+          "color": "dark_aqua"
+        },
+        {
+          "text": ".",
+          "color": "gray"
+        },
+        "\n\n",
+        {
+          "text": "Let the staff know that you have changed your username and lost legacy data so they can look into it.",
+          "color": "gray"
+        }
+      ],
+      "width": 500
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "                                                      ",
+        "underlined": true,
+        "color": "gray"
+      },
+      "width": 500
+    }
+  ],
+  "can_close_with_escape": true,
+  "pause": false,
+  "after_action": "none",
+  "action": {
+    "label": {
+      "translate": "gui.back"
+    },
+    "action": {
+      "type": "minecraft:run_command",
+      "command": "trigger help set 3"
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+	"type": "minecraft:multi_action",
+	"title": "FAQ",
+	"external_title": "FAQ",
+	"body": {
+		"type": "minecraft:plain_message",
+		"contents": "Frequently Asked Questions",
+		"width": 400
+	},
+	"pause": false,
+	"after_action": "none",
+	"columns": 1,
+	"actions": [
+		{
+			"label": "Towns",
+			"action": {
+				"type": "minecraft:run_command",
+				"command": "trigger help set 17"
+			}
+		},
+		{
+			"label": "Mods",
+			"action": {
+				"type": "minecraft:run_command",
+				"command": "trigger help set 19"
+			}
+		},
+		{
+			"label": "Lost Legacy Data",
+			"action": {
+				"type": "minecraft:run_command",
+				"command": "trigger help set 20"
+			}
+		},
+		{
+			"label": "The End",
+			"action": {
+				"type": "minecraft:run_command",
+				"command": "trigger help set 16"
+			}
+		},
+		{
+			"label": "Explosions",
+			"action": {
+				"type": "minecraft:run_command",
+				"command": "trigger help set 18"
+			}
+		}
+	],
+	"exit_action": {
+						"label": {
+							"translate": "gui.done"
+						},
+						"action": {
+							"type": "minecraft:show_dialog",
+							"dialog": "pandamium:trigger_help"
+						}
+					}
+}

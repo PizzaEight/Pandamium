@@ -22,7 +22,7 @@
 							"condition": {
 								"entity": "this",
 								"predicate": {
-									"nbt": "{CustomName:'\"Toast\"'}"
+									"minecraft:nbt": "{CustomName:\"Toast\"}"
 								},
 								"type": "minecraft:entity_properties"
 							}

@@ -2,9 +2,9 @@
 # - Increment version index; 
 # - Set a suitable version name
 # - Set the current date (year,month,day)
-data modify storage pandamium:global guidebook.version_index set value 116
-data modify storage pandamium:global guidebook.version_name set value '2.4.9'
-data modify storage pandamium:global guidebook.date_updated set value [2025,2,2]
+data modify storage pandamium:global guidebook.version_index set value 117
+data modify storage pandamium:global guidebook.version_name set value '2.5'
+data modify storage pandamium:global guidebook.date_updated set value [2026,14,9]
 # ^^^
 # - Update the set_guidebook item modifier to reflect the above changes
 # then check that they're formatted correctly on the last page.

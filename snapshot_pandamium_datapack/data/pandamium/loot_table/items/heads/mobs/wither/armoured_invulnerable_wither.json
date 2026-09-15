@@ -16,7 +16,7 @@
 							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:rarity": "rare",
-								"minecraft:note_block_sound": "minecraft:entity.wither.ambient",
+								"minecraft:note_block_sound": "minecraft:entity.wither.shoot",
 								"minecraft:mob_visibility": {
 									"targeting_entity_types": "minecraft:wither",
 									"visibility": 0.5

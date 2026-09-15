@@ -33,7 +33,7 @@ function pandamium:player/teams/update_base
 # update locator bar
 function pandamium:player/update_locator_bar
 # warn about keep-inventory
-execute if score <disable_keep_inventory> variable matches 1 unless score @s disable_keep_inventory matches 1 run return run dialog show @s {type:"minecraft:confirmation",title:"",body:{type:"minecraft:plain_message",contents:"Are you sure you want to disable Keep-Inventory?\n\nDoing this will cause you to drop all of your inventory onto the ground whenever you die (permanently if you fall into the void)!",width:400},yes:{label:"I Understand The Risks",action:{type:"run_command",command:"/trigger options set -2"}},no:{label:"Cancel"}}
+execute if score <disable_keep_inventory> variable matches 1 unless score @s disable_keep_inventory matches 1 run return run dialog show @s {type:"minecraft:confirmation",title:"",body:{type:"minecraft:plain_message",contents:"Are you sure you want to disable Keep-Inventory?\n\nDoing this will cause you to drop all of your inventory onto the ground whenever you die (permanently if you fall into the void)!",width:400},yes:{label:"I Understand The Risks",action:{type:"run_command",command:"/trigger options set 1"}},no:{label:"Cancel"}}
 execute if score <disable_keep_inventory> variable matches 0 run scoreboard players reset @s disable_keep_inventory
 execute if score <disable_keep_inventory> variable matches 1 run scoreboard players set @s disable_keep_inventory 1
 # return to the dialog-based options menu

@@ -1,0 +1,162 @@
+{
+  "type": "minecraft:notice",
+  "title": "Other Features",
+  "external_title": "Other Features",
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "Other Features",
+        "bold": true,
+        "color": "dark_green"
+      },
+      "width": 500
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "                                                      ",
+        "underlined": true,
+        "color": "white"
+      },
+      "width": 500
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": [
+        {
+          "text": "",
+          "bold": false,
+          "color": "gold"
+        },
+        {
+          "text": "Mob Statues",
+          "bold": true,
+          "color": "gold"
+        },
+        "\n\n",
+        {
+          "text": "On Pandamium, some mobs can be created by placing a pumpkin on certain blocks, like vanilla golems",
+          "color": "gray"
+        },
+        "\n\n",
+        {
+          "text": "Illusioner",
+          "bold": true,
+          "color": "dark_aqua"
+        },
+        {
+          "text": "\nCan be spawned by placing a pumpkin on top of 2 lapis blocks",
+          "color": "gray"
+        },
+        "\n\n",
+        {
+          "text": "Creaking",
+          "bold": true,
+          "color": "dark_aqua"
+        },
+        {
+          "text": "\nCan be spawned by placing a pale oak log, a creaking heart, and a pumpkin on top",
+          "color": "gray"
+        },
+        "\n\n",
+        {
+          "text": "Shulker",
+          "bold": true,
+          "color": "dark_aqua"
+        },
+        {
+          "text": "\nCan be spawned by placing a purpur block, shulker box of any color, and a pumpkin on top",
+          "color": "gray"
+        },
+        {
+          "text": "The spawned shulker's color depends on the color of shulker box you placed",
+          "color": "gray",
+          "italic": true
+        }
+      ],
+      "width": 500
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": [
+        {
+          "text": "",
+          "bold": false,
+          "color": "gold"
+        },
+        {
+          "text": "\nLock Name/Disable Sound of Mobs",
+          "bold": true,
+          "color": "gold"
+        },
+        "\n\n",
+        {
+          "text": "Using a name tag with the name \"#\" on any mob will open a menu, allowing you to Disable its sounds or Lock its name so someone cant then change it",
+          "color": "gray"
+        }
+      ],
+      "width": 500
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": [
+        {
+          "text": "",
+          "bold": false,
+          "color": "gold"
+        },
+        {
+          "text": "Bedrock Breaker",
+          "bold": true,
+          "color": "gold"
+        },
+        "\n\n",
+        {
+          "text": "Bedrock Breaker Pickaxes can be bought from the vote shop\n",
+          "color": "gray"
+        },
+        {
+          "text": "/trigger vote_shop",
+          "color": "aqua"
+        },
+        {
+          "text": "\nAnd allow you to break bedrock, except for the exit end portal and end gateways.",
+          "color": "gray"
+        },
+        "\n\n",
+        {
+          "text": "Breaking a bedrock block at the bottom of the world turns it into a Barrier block.",
+          "color": "gray"
+        },
+        "\n\n",
+        {
+          "text": "Shift Left Clicking on said Barrier blocks turns them back into bedrock.",
+          "color": "gray"
+        }
+      ],
+      "width": 500
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "                                                      ",
+        "underlined": true,
+        "color": "white"
+      },
+      "width": 500
+    }
+  ],
+  "can_close_with_escape": true,
+  "pause": false,
+  "after_action": "none",
+  "action": {
+    "label": {
+      "translate": "gui.back"
+    },
+    "action": {
+      "type": "minecraft:run_command",
+      "command": "trigger help set 8"
+    }
+  }
+}

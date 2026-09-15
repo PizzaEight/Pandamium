@@ -1,0 +1,102 @@
+{
+  "type": "minecraft:notice",
+  "title": "Getting Started",
+  "external_title": "Getting Started",
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "Welcome to Pandamium!",
+        "bold": true,
+        "color": "dark_green"
+      },
+      "width": 500
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "                                                      ",
+        "underlined": true,
+        "color": "white"
+      },
+      "width": 500
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "Getting Started",
+        "bold": true,
+        "color": "gold"
+      }
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": [
+        {
+          "text": "",
+          "bold": false,
+          "color": "white"
+        },
+        {
+          "text": "Random Teleporter\n",
+          "bold": true,
+          "color": "aqua"
+        },
+        {
+          "text": "Use /trigger rtp to teleport to a random location in the wilderness. The teleporter chooses a location within 25,000 blocks of spawn in the X and Z directions.\n\n",
+          "color": "gray"
+        },
+        {
+          "text": "Choosing a Base\n",
+          "bold": true,
+          "color": "aqua"
+        },
+        {
+          "text": "For a long-term base, consider building outside the RTP range. The farther you are from spawn, the less likely your base is to be stumbled upon by another player.\n\n",
+          "color": "gray"
+        },
+        {
+          "text": "Nether Travel\n",
+          "bold": true,
+          "color": "aqua"
+        },
+        {
+          "text": "The Nether can be used to travel large distances quickly. A portal at spawn provides access to the Nether, allowing you to travel far beyond the Overworld RTP range.\n\n",
+          "color": "gray"
+        },
+        {
+          "text": "Getting Settled\n",
+          "bold": true,
+          "color": "aqua"
+        },
+        {
+          "text": "Once you find a good location, use /trigger sethome to save it. You can then use /trigger home to return to your base later."
+          ,
+          "color": "gray"
+        }
+      ],
+      "width": 500
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "                                                      ",
+        "underlined": true,
+        "color": "white"
+      },
+      "width": 500
+    }
+  ],
+  "can_close_with_escape": true,
+  "pause": false,
+  "after_action": "none",
+  "action": {
+    "label": {
+      "translate": "gui.back"
+    },
+    "action": {
+      "type": "minecraft:run_command",
+      "command": "trigger help"
+    }
+  }
+}

@@ -39,26 +39,11 @@
                                     "type": "minecraft:filtered",
                                     "item_filter": {
                                         "predicates": {
-                                            "minecraft:custom_data": "{pandamium:{version:0}}"
+                                            "minecraft:custom_data": "{pandamium:{version:1}}"
                                         }
                                     },
-                                    "on_pass": [
+                                    "on_fail": [
                                         "pandamium:update_mini_block_rarity"
-                                    ]
-                                },
-                                {
-                                    "type": "minecraft:set_custom_data",
-                                    "tag": "{pandamium:{version:0}}"
-                                },
-                                {
-                                    "type": "minecraft:copy_custom_data",
-                                    "source": "block_entity",
-                                    "ops": [
-                                        {
-                                            "source": "pandamium.version",
-                                            "target": "pandamium.version",
-                                            "op": "replace"
-                                        }
                                     ]
                                 },
                                 "pandamium:update_mini_block_food"

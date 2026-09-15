@@ -1,0 +1,137 @@
+{
+"type": "minecraft:notice",
+"title": "Informational Commands",
+"external_title": "Informational Commands",
+"body": [
+{
+"type": "minecraft:plain_message",
+"contents": {
+"text": "Here are all the informational commands you can use anywhere on the server:",
+"bold": true,
+"color": "dark_green"
+},
+"width": 500
+},
+{
+"type": "minecraft:plain_message",
+"contents": {
+"text": "                                                      ",
+"underlined": true,
+"color": "white"
+},
+"width": 500
+},
+    {
+        "type": "minecraft:plain_message",
+        "contents": {
+            "text": "Informational Commands",
+            "bold": true,
+            "color": "gold"
+        }
+    },
+    {
+        "type": "minecraft:plain_message",
+        "contents": [
+            {
+                "text": "/trigger world_info",
+                "color": "white"
+            },
+            "\n",
+            {
+                "text": "  Stats on players and entities per dimension.",
+                "color": "gray"
+            },
+
+
+            "\n\n",
+            {
+                "text": "/trigger help",
+                "color": "white"
+            },
+            "\n",
+            {
+                "text": "  Opens the help menu!",
+                "color": "gray"
+            },
+
+            "\n\n",
+            {
+                "text": "/trigger help.advancements",
+                "color": "white"
+            },
+            "\n",
+            {
+                "text": "  See your progress on certain advancements.",
+                "color": "gray"
+            },
+
+            "\n\n",
+            {
+                "text": "/trigger leaderboards",
+                "color": "white"
+            },
+            "\n",
+            {
+                "text": "  See playtime and voting leaderboards in chat.",
+                "color": "gray"
+            },
+
+            "\n\n",
+            {
+                "text": "/trigger news",
+                "color": "white"
+            },
+            "\n",
+            {
+                "text": "  Shows you all the recent changes to minecraft.",
+                "color": "gray"
+            },
+
+            "\n\n",
+            {
+                "text": "/trigger playtime",
+                "color": "white"
+            },
+            "\n",
+            {
+                "text": "  Shows your total playtime on the server.",
+                "color": "gray"
+            },
+            "\n\n",
+            {
+                "text": "/trigger discord",
+                "color": "white"
+            },
+            "\n",
+            {
+                "text": "  Provides the Pandamium Discord link.",
+                "color": "gray"
+            },
+                        "\n\n",
+            {
+                "text": "/trigger patreon",
+                "color": "white"
+            },
+            "\n",
+            {
+                "text": "  Provides the Pandamium Patreon link.",
+                "color": "gray"
+            }
+        ],
+        "width": 500
+    }
+],
+"can_close_with_escape": true,
+"pause": false,
+"after_action": "none",
+"action": {
+    "label": {
+        "translate": "gui.back"
+    },
+    "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger help set 5"
+    }
+}
+
+}

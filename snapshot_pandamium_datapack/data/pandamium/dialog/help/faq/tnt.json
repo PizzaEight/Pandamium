@@ -1,0 +1,109 @@
+{
+  "type": "minecraft:notice",
+  "title": "TNT & Explosions",
+  "external_title": "TNT & Explosions",
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "TNT & Explosions",
+        "bold": true,
+        "color": "dark_green"
+      },
+      "width": 500
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "                                                      ",
+        "underlined": true,
+        "color": "gray"
+      },
+      "width": 500
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": [
+        {
+          "text": "",
+          "bold": false,
+          "color": "gold"
+        },
+        {
+          "text": "Explosion Protection",
+          "bold": true,
+          "color": "gold"
+        },
+        "\n\n",
+        {
+          "text": "Explosion block damage is disabled on Pandamium, explosive blocks and entities only do entity damage.",
+          "color": "gray"
+        },
+        "\n\n",
+        {
+          "text": "This protects players and their builds from mass griefing caused by explosions and withers.",
+          "color": "gray"
+        },
+        "\n\n",
+        {
+          "text": "Will Explosions Be Re-enabled?",
+          "bold": true,
+          "color": "gold"
+        },
+        "\n\n",
+        {
+          "text": "We have not found a satisfying and safe way to reintroduce explosion block damage yet.",
+          "color": "gray"
+        },
+        "\n\n",
+        {
+          "text": "It is something the staff are aware that players want, but protecting newer players' bases remains important.",
+          "color": "gray"
+        },
+        "\n\n",
+        {
+          "text": "Alternative Block-Breaking Farms",
+          "bold": true,
+          "color": "gold"
+        },
+        "\n\n",
+        {
+          "text": "If you need an automated way to break blocks, you can push blocks into a wither while it fires a skull.",
+          "color": "gray"
+        },
+        "\n",
+        {
+          "text": "This can break blocks instantly and is possible in vanilla Minecraft.",
+          "color": "gray"
+        },
+        "\n\n",
+        {
+          "text": "Additionally in Pandamium Crying Obsidian cannot be broken by withers, and wither skulls cannot pass through water making the process of building such farms easier.",
+          "color": "gray"
+        }
+      ],
+      "width": 500
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "                                                      ",
+        "underlined": true,
+        "color": "gray"
+      },
+      "width": 500
+    }
+  ],
+  "can_close_with_escape": true,
+  "pause": false,
+  "after_action": "none",
+  "action": {
+    "label": {
+      "translate": "gui.back"
+    },
+    "action": {
+      "type": "minecraft:run_command",
+      "command": "trigger help set 3"
+    }
+  }
+}

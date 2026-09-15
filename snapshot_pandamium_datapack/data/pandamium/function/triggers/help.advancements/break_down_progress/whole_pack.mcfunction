@@ -13,7 +13,14 @@ data modify storage pandamium:local functions."pandamium:triggers/help.advanceme
       ],\
       "width": 500\
     }\
-  ]\
+  ],\
+	"exit_action": { \
+		"label": "Done", \
+		"action": { \
+			"type": "minecraft:run_command", \
+			"command": "trigger help.advancements set 1" \
+		} \
+	} \
 }
 execute if score <total_missing> variable matches 1.. run data modify storage pandamium:local functions."pandamium:triggers/help.advancements/*".dialog.body[0].contents append value [{italic:true,text:"\nThe "},"???",{italic:true,text:" remaining wolf types to tame are:"}]
 execute store result storage pandamium:local functions."pandamium:triggers/help.advancements/*".dialog.body[0].contents[1].text int 1 run scoreboard players get <total_completed> variable

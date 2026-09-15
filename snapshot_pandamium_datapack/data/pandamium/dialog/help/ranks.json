@@ -18,7 +18,7 @@
 		"type": "minecraft:plain_message",
 		"contents": 
 		{
-			"text":"Here are all the Ranks available:",
+			"text":"Ranks:",
 			"bold": true,
 			"color": "gold"
 		},
@@ -34,11 +34,40 @@
 		},
         "width":500
 	},
+			{
+		"type": "minecraft:plain_message",
+		"contents": 
+		{
+			"text":"To rank up you must play on the server for a certain amount of hours\n and vote for the same amount of times",
+			"color": "white"
+		},
+        "width":500
+	},
+	{
+		"type": "minecraft:plain_message",
+		"contents": [
+		{
+			"text":"You start as a ",
+			"color": "gray"
+		},
+		{
+			"text":"guest",
+			"color": "dark_gray",
+			"bold": true
+		},
+		{
+			"text":" with 2 homes and can rank up to get more",
+			"color": "gray"
+		}
+	],
+		
+        "width":500
+	},
     {
 		"type": "minecraft:plain_message",
 		"contents": 
 		{
-			"text":"Guest",
+			"text":"\nGuest",
 			"bold": true,
 			"color": "gray"
 		}
@@ -165,12 +194,18 @@
 	},
     {
 		"type": "minecraft:plain_message",
-		"contents": 
+		"contents": [
 		{
-			"text":"Perks: 10 Homes",
+			"text":"Perks: 10 Homes\n\n",
+			"italic": false,
+			"color": "white"
+		},
+		{
+			"text":"The option to toggle chat reminders off",
 			"italic": false,
 			"color": "white"
 		}
+	]
 	},
     {
 		"type": "minecraft:plain_message",
@@ -202,12 +237,18 @@
 	},
     {
 		"type": "minecraft:plain_message",
-		"contents": 
+		"contents": [
 		{
-			"text":"Perks: 15 Homes",
+			"text":"Perks: 15 Homes\n",
+			"italic": false,
+			"color": "white"
+		},
+		{
+			"text":"\nCan request to be put at spawn through a mannequin and a custom banner",
 			"italic": false,
 			"color": "white"
 		}
+	]
 	},
     {
 		"type": "minecraft:plain_message",
@@ -296,7 +337,7 @@
         "hover_event": {
           "action": "show_text",
           "value": {
-            "text": "Click Here to support us on Patreon"
+            "text": "Click to visit our Patreon page"
           }
         }
       },

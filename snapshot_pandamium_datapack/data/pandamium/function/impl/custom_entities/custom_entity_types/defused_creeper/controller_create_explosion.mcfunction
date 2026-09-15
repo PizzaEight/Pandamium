@@ -1,7 +1,7 @@
 #> pk_no_cr:mode/proper/controller_create_explosion
 
 # Summon the bomb creeper
-summon creeper ~ ~-1.5 ~ {ignited:true,Fuse:0s,Tags:["pandamium.ignore","pandamium.creeper"],Silent:1b}
+summon creeper ~ ~-1.5 ~ {DeathLootTable:"empty",ignited:true,Fuse:0s,Tags:["pandamium.ignore","pandamium.creeper"],Silent:1b}
 
 # A powered creeper is represented by luck's effect being ambient
 execute if entity @s[tag=pandamium.powered] run data modify entity @e[type=creeper,tag=pandamium.creeper,distance=..2,limit=1] powered set value 1b

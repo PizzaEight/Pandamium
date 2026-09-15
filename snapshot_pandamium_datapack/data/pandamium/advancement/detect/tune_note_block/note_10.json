@@ -5,15 +5,32 @@
       "trigger": "minecraft:any_block_use",
       "conditions": {
         "location": {
-          "type": "minecraft:location_check",
-          "predicate": {
-            "block": {
-              "blocks": "minecraft:note_block",
-              "state": {
-                "note": "10"
+          "type": "minecraft:all_of",
+          "terms": [
+            {
+              "type": "minecraft:location_check",
+              "predicate": {
+                "block": {
+                  "blocks": "minecraft:note_block",
+                  "state": {
+                    "note": "10"
+                  }
+                }
+              }
+            },
+            {
+              "type": "minecraft:inverted",
+              "term": {
+                "type": "minecraft:location_check",
+                "offsetY": 1,
+                "predicate": {
+                  "block": {
+                    "blocks": "#minecraft:skulls"
+                  }
+                }
               }
             }
-          }
+          ]
         }
       }
     }

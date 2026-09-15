@@ -1,6 +1,6 @@
 execute if score @s help.advancements matches ..-1 run return run tellraw @s [{text:"[Help]",color:"dark_red"},{text:" That is not a valid option!",color:"red"}]
-execute if score @s help.advancements matches 1..99 run return run function pandamium:triggers/help.advancements/dialog/main_menu
-execute if score @s help.advancements matches 900 run return run function pandamium:triggers/help.advancements/print_menu
+execute if score @s help.advancements matches 1..99 unless score @s help.advancements matches 2 run return run function pandamium:triggers/help.advancements/dialog/main_menu
+execute if score @s help.advancements matches 2 run return run function pandamium:triggers/help.advancements/print_menu
 execute unless score @s help.advancements matches 101..199 unless score @s help.advancements matches 201..299 run return run tellraw @s [{text:"[Help]",color:"dark_red"},{text:" That is not a valid option!",color:"red"}]
 scoreboard players operation <type> variable = @s help.advancements
 scoreboard players operation <type> variable %= #100 constant
@@ -38,7 +38,7 @@ execute if score @s help.advancements matches 111 run function pandamium:trigger
 execute if score @s help.advancements matches 102 run function pandamium:triggers/help.advancements/break_down_progress/obtain_every_mob_head
 execute if score @s help.advancements matches 112 run function pandamium:triggers/help.advancements/break_down_progress/obtain_every_panda_head
 execute if score @s help.advancements matches 113 run function pandamium:triggers/help.advancements/break_down_progress/obtain_every_wolf_head
-execute if score @s help.advancements matches 114 run function pandamium:triggers/help.advancements/break_down_progress/obtain_every_panda_head
+execute if score @s help.advancements matches 114 run function pandamium:triggers/help.advancements/break_down_progress/obtain_every_cat_head
 execute if score @s help.advancements matches 103 run function pandamium:triggers/help.advancements/break_down_progress/adventuring_time
 execute if score @s help.advancements matches 104 run function pandamium:triggers/help.advancements/break_down_progress/kill_all_mobs
 execute if score @s help.advancements matches 105 run function pandamium:triggers/help.advancements/break_down_progress/balanced_diet

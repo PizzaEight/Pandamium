@@ -1,0 +1,131 @@
+{
+  "type": "minecraft:notice",
+  "title": "Towns",
+  "external_title": "Towns",
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "Towns",
+        "bold": true,
+        "color": "dark_green"
+      },
+      "width": 500
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "                                                      ",
+        "underlined": true,
+        "color": "gray"
+      },
+      "width": 500
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": [
+        {
+          "text": "",
+          "bold": false,
+          "color": "gold"
+        },
+        {
+          "text": "Joining a Town",
+          "bold": true,
+          "color": "gold"
+        },
+        "\n\n",
+        {
+          "text": "Each town decides who they allow to join.",
+          "color": "gray"
+        },
+        "\n\n",
+        {
+          "text": "Many towns accept applications through their own channels on the Pandamium Discord.",
+          "color": "gray"
+        },
+        "\n\n",
+        {
+          "text": "Check the town's Discord channel for information about how to apply.",
+          "color": "gray"
+        },
+        "\n\n",
+        {
+          "text": "Creating a Town",
+          "bold": true,
+          "color": "gold"
+        },
+        "\n\n",
+        {
+          "text": "Want to create your own town?",
+          "color": "gray"
+        },
+        "\n\n",
+        {
+          "text": "You must have at least 6 members.",
+          "color": "dark_aqua"
+        },
+        "\n\n",
+        {
+          "text": "Once you have enough members, open a ticket in ",
+          "color": "gray"
+        },
+        {
+          "text": "#help-tickets",
+          "color": "dark_aqua"
+        },
+        {
+          "text": " to let the staff know.",
+          "color": "gray"
+        },
+        "\n\n",
+        {
+          "text": "For more information, check ",
+          "color": "gray"
+        },
+        {
+          "text": "#town-applications ",
+          "color": "dark_aqua"
+        },
+        {
+          "text": "on Discord",
+          "bold": true,
+          "color": "#5865F2",
+          "underlined": true,
+          "hover_event": {
+          "action": "show_text",
+          "value": {
+            "text": "Click to join the Discord Server"
+          }
+        },
+          "click_event": {
+            "action": "open_url",
+            "url": "http://discord.pandamium.eu/"
+          }
+        }
+      ],
+      "width": 500
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "                                                      ",
+        "underlined": true,
+        "color": "gray"
+      },
+      "width": 500
+    }
+  ],
+  "can_close_with_escape": true,
+  "pause": false,
+  "after_action": "none",
+  "action": {
+    "label": {
+      "translate": "gui.back"
+    },
+    "action": {
+      "type": "minecraft:run_command",
+      "command": "trigger help set 3"
+    }
+  }
+}

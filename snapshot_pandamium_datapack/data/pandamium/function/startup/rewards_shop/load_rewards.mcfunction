@@ -1,4 +1,5 @@
 data modify storage pandamium:rewards_shop rewards set value []
+function pandamium:startup/rewards_shop/load_rewards/items {cost: 1, reward_id: "5_lapis_lazuli", properties: {}}
 function pandamium:startup/rewards_shop/load_rewards/items {cost: 1, reward_id: "golden_apple", properties: {}}
 function pandamium:startup/rewards_shop/load_rewards/items {cost: 1, reward_id: "name_tag", properties: {}}
 function pandamium:startup/rewards_shop/load_rewards/items {cost: 1, reward_id: "5_experience_bottles", properties: {}}
@@ -39,4 +40,4 @@ function pandamium:startup/rewards_shop/load_rewards/items {cost: 50, reward_id:
 #function pandamium:startup/rewards_shop/load_rewards/items {cost: 10, reward_id: "the_copper_age_loot_bundle", properties: {}}
 function pandamium:startup/rewards_shop/load_rewards/items {cost: 5, reward_id: "4_straw_beds", properties: {}}
 function pandamium:startup/rewards_shop/load_rewards/function {cost: 10, reward_id: "abandoned_camp_map", function: "pandamium:triggers/rewards_shop/rewards/abandoned_camp_map", properties: {name: {color:"white",text:"Random Abandoned Camp Map"}}}
-function pandamium:startup/rewards_shop/load_rewards/items {cost: 20, reward_id: "autumn_drop_2026_loot_bundle", properties: {name: {color: "gold", text: "Autumn Drop 2026 Loot Bundle"}}}
+function pandamium:startup/rewards_shop/load_rewards/items {cost: 20, reward_id: "autumn_drop_2026_loot_bundle", properties: {name: {color: "gold", text: "Wilderness Bound Loot Bundle"}}}

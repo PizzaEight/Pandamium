@@ -1,18 +1,12 @@
-scoreboard players operation <sidebar.player_count> sidebar = <player_count> global
-execute store result score <vanished_players> variable if entity @a[scores={vanished=1}]
-scoreboard players operation <sidebar.player_count> sidebar -= <vanished_players> variable
-scoreboard players operation <sidebar.mob_cap> sidebar = <mob_limit> global
-scoreboard players operation <sidebar.mob_count> sidebar = <mob_count> global
-execute store result score <sidebar.item_count> sidebar if entity @e[type=item]
-execute if score <mob_count> global >= <mob_limit> global run scoreboard players display name <sidebar.mob_count> sidebar {color:"dark_red",font:"minecraft:uniform",text:"Mobs:"}
-execute if score <mob_count> global < <mob_limit> global run scoreboard players display name <sidebar.mob_count> sidebar {color:"gray",font:"minecraft:uniform",text:"Mobs:"}
-# dev mode indicator
-execute unless score <dev_environment> global matches 1 run scoreboard players reset <sidebar.dev_mode> sidebar
-execute if score <dev_environment> global matches 1 run scoreboard players display name <sidebar.dev_mode> sidebar {color:"dark_purple",font:"minecraft:uniform",text:"In Dev Mode"}
-execute if score <dev_environment> global matches 1 run scoreboard players display numberformat <sidebar.dev_mode> sidebar fixed ""
-execute if score <dev_environment> global matches 1 run scoreboard players set <sidebar.dev_mode> sidebar -2147483647
-# restart countdown
-execute unless score <seconds_until_restart> global matches 1.. run return run scoreboard players reset <sidebar.restart_countdown> sidebar
+# The sidebar is only shown while a server restart is pending.
+# (Other information previously shown here has moved to /trigger world_info.)
+
+# Hide the sidebar entirely when no restart is scheduled
+execute unless score <seconds_until_restart> global matches 1.. run scoreboard players reset * sidebar
+execute unless score <seconds_until_restart> global matches 1.. run return run scoreboard objectives setdisplay sidebar
+
+# Restart countdown
+execute unless score <disable_force_sidebar> global matches 1 run scoreboard objectives setdisplay sidebar sidebar
 execute store result score <sidebar_minutes> variable run scoreboard players operation <sidebar_seconds> variable = <seconds_until_restart> global
 scoreboard players operation <sidebar_seconds> variable %= #seconds_per_minute constant
 scoreboard players operation <sidebar_minutes> variable /= #seconds_per_minute constant

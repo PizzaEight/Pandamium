@@ -1,0 +1,77 @@
+{
+  "type": "minecraft:notice",
+  "title": "Mini Blocks",
+  "external_title": "Mini Blocks",
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "Mini Blocks",
+        "bold": true,
+        "color": "dark_green"
+      },
+      "width": 500
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "                                                      ",
+        "underlined": true,
+        "color": "white"
+      },
+      "width": 500
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": [
+        {
+          "text": "",
+          "bold": false,
+          "color": "gold"
+        },
+        {
+          "text": "Mini Blocks",
+          "bold": true,
+          "color": "gold"
+        },
+        "\n\n",
+        {
+          "text": "Putting any block, and some items, in a stonecutter allows you to get Mini Blocks",
+          "color": "gray"
+        },
+         "\n\n",
+        {
+          "text": "These are basically Player Heads with the texture of blocks.",
+          "color": "gray"
+        },
+        "\n\n",
+        {
+          "text": "You can use them to add more detail to your builds",
+          "color": "gray"
+        }
+      ],
+      "width": 500
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "                                                      ",
+        "underlined": true,
+        "color": "white"
+      },
+      "width": 500
+    }
+  ],
+  "can_close_with_escape": true,
+  "pause": false,
+  "after_action": "none",
+  "action": {
+    "label": {
+      "translate": "gui.back"
+    },
+    "action": {
+      "type": "minecraft:run_command",
+      "command": "trigger help set 8"
+    }
+  }
+}

@@ -1,0 +1,164 @@
+{
+	"display": {
+		"icon": {
+			"id": "minecraft:note_block"
+		},
+		"title": "Headbanging Champion",
+		"description": "Get carpal tunnel by placing any mob head on a note block and playing it 50 times",
+		"frame": "goal",
+		"show_toast": true
+	},
+	"parent": "pandamium:pandamium/mob_heads/play_noteblock_with_head",
+	"criteria": {
+		"play_note_block_with_head_1_times": {
+			"trigger": "minecraft:impossible"
+		},
+		"play_note_block_with_head_2_times": {
+			"trigger": "minecraft:impossible"
+		},
+		"play_note_block_with_head_3_times": {
+			"trigger": "minecraft:impossible"
+		},
+		"play_note_block_with_head_4_times": {
+			"trigger": "minecraft:impossible"
+		},
+		"play_note_block_with_head_5_times": {
+			"trigger": "minecraft:impossible"
+		},
+		"play_note_block_with_head_6_times": {
+			"trigger": "minecraft:impossible"
+		},
+		"play_note_block_with_head_7_times": {
+			"trigger": "minecraft:impossible"
+		},
+		"play_note_block_with_head_8_times": {
+			"trigger": "minecraft:impossible"
+		},
+		"play_note_block_with_head_9_times": {
+			"trigger": "minecraft:impossible"
+		},
+		"play_note_block_with_head_10_times": {
+			"trigger": "minecraft:impossible"
+		},
+		"play_note_block_with_head_11_times": {
+			"trigger": "minecraft:impossible"
+		},
+		"play_note_block_with_head_12_times": {
+			"trigger": "minecraft:impossible"
+		},
+		"play_note_block_with_head_13_times": {
+			"trigger": "minecraft:impossible"
+		},
+		"play_note_block_with_head_14_times": {
+			"trigger": "minecraft:impossible"
+		},
+		"play_note_block_with_head_15_times": {
+			"trigger": "minecraft:impossible"
+		},
+		"play_note_block_with_head_16_times": {
+			"trigger": "minecraft:impossible"
+		},
+		"play_note_block_with_head_17_times": {
+			"trigger": "minecraft:impossible"
+		},
+		"play_note_block_with_head_18_times": {
+			"trigger": "minecraft:impossible"
+		},
+		"play_note_block_with_head_19_times": {
+			"trigger": "minecraft:impossible"
+		},
+		"play_note_block_with_head_20_times": {
+			"trigger": "minecraft:impossible"
+		},
+		"play_note_block_with_head_21_times": {
+			"trigger": "minecraft:impossible"
+		},
+		"play_note_block_with_head_22_times": {
+			"trigger": "minecraft:impossible"
+		},
+		"play_note_block_with_head_23_times": {
+			"trigger": "minecraft:impossible"
+		},
+		"play_note_block_with_head_24_times": {
+			"trigger": "minecraft:impossible"
+		},
+		"play_note_block_with_head_25_times": {
+			"trigger": "minecraft:impossible"
+		},
+		"play_note_block_with_head_26_times": {
+			"trigger": "minecraft:impossible"
+		},
+		"play_note_block_with_head_27_times": {
+			"trigger": "minecraft:impossible"
+		},
+		"play_note_block_with_head_28_times": {
+			"trigger": "minecraft:impossible"
+		},
+		"play_note_block_with_head_29_times": {
+			"trigger": "minecraft:impossible"
+		},
+		"play_note_block_with_head_30_times": {
+			"trigger": "minecraft:impossible"
+		},
+		"play_note_block_with_head_31_times": {
+			"trigger": "minecraft:impossible"
+		},
+		"play_note_block_with_head_32_times": {
+			"trigger": "minecraft:impossible"
+		},
+		"play_note_block_with_head_33_times": {
+			"trigger": "minecraft:impossible"
+		},
+		"play_note_block_with_head_34_times": {
+			"trigger": "minecraft:impossible"
+		},
+		"play_note_block_with_head_35_times": {
+			"trigger": "minecraft:impossible"
+		},
+		"play_note_block_with_head_36_times": {
+			"trigger": "minecraft:impossible"
+		},
+		"play_note_block_with_head_37_times": {
+			"trigger": "minecraft:impossible"
+		},
+		"play_note_block_with_head_38_times": {
+			"trigger": "minecraft:impossible"
+		},
+		"play_note_block_with_head_39_times": {
+			"trigger": "minecraft:impossible"
+		},
+		"play_note_block_with_head_40_times": {
+			"trigger": "minecraft:impossible"
+		},
+		"play_note_block_with_head_41_times": {
+			"trigger": "minecraft:impossible"
+		},
+		"play_note_block_with_head_42_times": {
+			"trigger": "minecraft:impossible"
+		},
+		"play_note_block_with_head_43_times": {
+			"trigger": "minecraft:impossible"
+		},
+		"play_note_block_with_head_44_times": {
+			"trigger": "minecraft:impossible"
+		},
+		"play_note_block_with_head_45_times": {
+			"trigger": "minecraft:impossible"
+		},
+		"play_note_block_with_head_46_times": {
+			"trigger": "minecraft:impossible"
+		},
+		"play_note_block_with_head_47_times": {
+			"trigger": "minecraft:impossible"
+		},
+		"play_note_block_with_head_48_times": {
+			"trigger": "minecraft:impossible"
+		},
+		"play_note_block_with_head_49_times": {
+			"trigger": "minecraft:impossible"
+		},
+		"play_note_block_with_head_50_times": {
+			"trigger": "minecraft:impossible"
+		}
+	}
+}

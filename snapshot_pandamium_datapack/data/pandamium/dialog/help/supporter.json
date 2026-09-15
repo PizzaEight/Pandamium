@@ -1,0 +1,326 @@
+
+    {
+  "type": "minecraft:notice",
+  "title": "Supporting Us",
+  "external_title": "Supporting Us",
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "Supporting Us",
+        "bold": true,
+        "color": "dark_green"
+      },
+      "width": 500
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "                                                      ",
+        "underlined": true,
+        "color": "white"
+      },
+      "width": 500
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": [
+        {
+          "text": "",
+          "bold": false,
+          "color": "white"
+        },
+        {
+          "text": "Rewards\n\n",
+          "color": "gold",
+          "bold": true
+        },
+        {
+          "text": "If you like this server and want to ",
+          "color": "white"
+        },
+        {
+          "text": "support us",
+          "color": "dark_aqua"
+        },
+        {
+          "text": ", you can help ",
+          "color": "white"
+        },
+        {
+          "text": "improve the hardware\n",
+          "color": "dark_aqua"
+        },
+        {
+          "text": " it is running on by supporting us financially!",
+          "color": "white"
+        },
+        {
+          "text": "\n\nIn return, you will get access to ",
+          "color": "gray"
+        },
+        {
+          "text": "many exclusive perks",
+          "color": "dark_aqua"
+        },
+        {
+          "text": " \nin Minecraft and on our Discord server as a thank you :)",
+          "color": "gray"
+        }
+      ],
+      "width": 500
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": [
+        {
+          "text": "",
+          "bold": false,
+          "color": "white"
+        },
+        {
+          "text": "How to Support Us\n\n",
+          "color": "gold",
+          "bold": true
+        },
+        {
+          "text": "You can support us on "
+        },
+        {
+          "text": "Patreon",
+          "color": "#FF424D",
+          "bold": true,
+          "underlined": true,
+          "hover_event": {
+            "action": "show_text",
+            "value": [
+              {
+                "text": "Click to visit our ",
+                "color": "#FF424D"
+              },
+              {
+                "text": "Patreon",
+                "bold": true
+              },
+              {
+                "text": " page"
+              }
+            ]
+          },
+          "click_event": {
+            "action": "open_url",
+            "url": "https://www.patreon.com/pandamium"
+          }
+        },
+        {
+          "text": ".\n\nYou will get ",
+          "color": "gray"
+        },
+        {
+          "text": "1 month",
+          "color": "dark_aqua"
+        },
+        {
+          "text": " of the Supporter rank with the ",
+          "color": "gray"
+        },
+        {
+          "text": "standard membership",
+          "color": "dark_green",
+          "underlined": true,
+          "hover_event": {
+            "action": "show_text",
+            "value": [
+              {
+                "text": "€5 EUR per month (or £5 GBP / $6 USD)",
+                "color": "dark_green"
+              },
+              {
+                "text": "\nVisit the website for other forcecasted exchange rates.",
+                "color": "gray"
+              },
+              {
+                "text": "\n\nYou can cancel your membership\nat any time and you will keep\nthe rank until the end of that\nmonth.\n\n",
+                "color": "gray"
+              },
+              [
+                {
+                  "text": "Click to visit our ",
+                  "color": "#FF424D"
+                },
+                {
+                  "text": "Patreon",
+                  "bold": true
+                },
+                {
+                  "text": " page"
+                }
+              ]
+            ]
+          },
+          "click_event": {
+            "action": "open_url",
+            "url": "https://www.patreon.com/pandamium"
+          }
+        },
+        {
+          "text": "!\n\nDoing so gives you a ",
+          "color": "gray"
+        },
+        {
+          "text": "dark purple",
+          "color": "dark_purple"
+        },
+        {
+          "text": " name, the ",
+          "color": "gray"
+        },
+        {
+          "text": "Supporter",
+          "bold": true,
+          "color": "dark_purple"
+        },
+        {
+          "text": " prefix, access to ",
+          "color": "gray"
+        },
+        {
+          "text": "all 25 home slots",
+          "color": "dark_aqua"
+        },
+        {
+          "text": " and a number of extra commands, too! ",
+          "color": "gray"
+        },
+        {
+          "text": "ℹ",
+          "color": "blue",
+          "hover_event": {
+            "action": "show_text",
+            "value": [
+              "Supporters can choose to use the\n\"Supporter\" prefix, or keep their\nrespective rank prefix with\n",
+              {
+                "text": "/trigger ",
+                "color": "gray"
+              },
+              {
+                "text": "options",
+                "color": "aqua"
+              },
+              "!"
+            ]
+          }
+        }
+      ],
+      "width": 500
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "Supporter Commands",
+        "bold": true,
+        "color": "gold"
+      }
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": [
+        {
+          "text": "/trigger dye\n",
+          "color": "white"
+        },
+        {
+          "text": "  Make worn leather armor more colorful.\n\n",
+          "color": "gray"
+        },
+        {
+          "text": "/trigger enderchest\n",
+          "color": "white"
+        },
+        {
+          "text": "\n  Swap between your inventory and enderchest.\n\n",
+          "color": "gray"
+        },
+        {
+          "text": "/trigger flair\n",
+          "color": "white"
+        },
+        {
+          "text": "\n  Add a little emoji or item next to your name.\n\n",
+          "color": "gray"
+        },
+        {
+          "text": "/trigger frame_visibility\n",
+          "color": "white"
+        },
+        {
+          "text": "\n  Make item frames invisible.\n\n",
+          "color": "gray"
+        },
+        {
+          "text": "/trigger hat\n",
+          "color": "white"
+        },
+        {
+          "text": "\n  Wear the item in your hand on your head.\n\n",
+          "color": "gray"
+        },
+        {
+          "text": "/trigger item_font\n",
+          "color": "white"
+        },
+        {
+          "text": "\n  Change the font and color of custom item names.\n\n",
+          "color": "gray"
+        },
+        {
+          "text": "/trigger trails\n",
+          "color": "white"
+        },
+        {
+          "text": "\n  Select from a list of custom trails and death effects.\n\n",
+          "color": "gray"
+        },
+        {
+          "text": "/trigger pose\n",
+          "color": "white"
+        },
+        {
+          "text": "\n  Customize armor stand poses while looking at them.\n\n",
+          "color": "gray"
+        },
+        {
+          "text": "/trigger sign_font\n",
+          "color": "white"
+        },
+        {
+          "text": "\n  Change the font and color of text on signs."
+          ,
+          "color": "gray"
+        }
+      ],
+      "width": 500
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "                                                      ",
+        "underlined": true,
+        "color": "white"
+      },
+      "width": 500
+    }
+  ],
+  "can_close_with_escape": true,
+  "pause": false,
+  "after_action": "none",
+  "action": {
+    "label": {
+      "translate": "gui.back"
+    },
+    "action": {
+      "type": "minecraft:run_command",
+      "command": "trigger help"
+    }
+  }
+}

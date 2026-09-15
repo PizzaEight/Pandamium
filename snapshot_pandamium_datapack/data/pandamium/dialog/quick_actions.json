@@ -3,6 +3,15 @@
 	"title": "Quick Actions",
 	"pause": false,
 	"after_action": "none",
+	"exit_action": {
+						"label": {
+							"translate": "gui.done"
+						},
+						"action": {
+							"type": "minecraft:run_command",
+							"command": "/trigger help set -1000"
+						}
+					},
 	"columns": 1,
 	"actions": [
 		{
@@ -126,7 +135,7 @@
 			"width": 20,
 			"action": {
 				"type": "minecraft:run_command",
-				"command": "trigger options set -100003"
+				"command": "trigger options set -100004"
 			}
 		}
 	]

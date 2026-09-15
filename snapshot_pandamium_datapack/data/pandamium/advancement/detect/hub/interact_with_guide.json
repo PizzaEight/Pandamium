@@ -1,0 +1,39 @@
+{
+  "criteria": {
+    "guide.interact": {
+      "trigger": "minecraft:player_interacted_with_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "minecraft:interaction",
+            "minecraft:nbt": "{Tags:['guide']}"
+          }
+        }
+      }
+    },
+    "guide.punch": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "minecraft:interaction",
+            "minecraft:nbt": "{Tags:['guide']}"
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "guide.interact",
+      "guide.punch"
+    ]
+  ],
+  "rewards": {
+    "function": "pandamium:impl/hub/guide/main"
+  }
+}

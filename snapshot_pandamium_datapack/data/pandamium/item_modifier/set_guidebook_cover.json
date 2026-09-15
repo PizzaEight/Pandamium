@@ -4,12 +4,6 @@
     {
       "type": "minecraft:set_components",
       "components": {
-        "minecraft:written_book_content": {
-          "title": "",
-          "author": "The Staff Team",
-          "generation": 1,
-          "resolved": true
-        },
         "minecraft:tooltip_display": {
           "hidden_components": [
             "minecraft:written_book_content"
