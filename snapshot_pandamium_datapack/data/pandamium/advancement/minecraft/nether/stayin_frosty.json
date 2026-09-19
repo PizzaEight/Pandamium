@@ -32,7 +32,7 @@
                 }
               }
             },
-            "pandamium:player/can_gain_advancements"
+            "pandamium:player/can_gain_advancements_locational"
           ]
         },
         "blocks": "minecraft:lava"
