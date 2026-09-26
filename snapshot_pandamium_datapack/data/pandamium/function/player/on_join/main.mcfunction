@@ -81,11 +81,15 @@ execute if score <month> global matches 1 if score <day> global matches 1 if sco
 # news feed
 execute unless score <first_join> variable matches 1 unless score <prevent_old_player_notices> variable matches 1 if data storage pandamium.db.mail:data news_feed_inbox[0] run function pandamium:player/on_join/check_news
 # update last_joined timestamp
-# skipped when this run was forced by a data pack reload, so the "last join" stats keep pointing
-# at the actual previous join instead of the moment the pack happened to be reloaded
+# Only real joins update the join stats. Runs forced by a data pack reload (load.mcfunction sets
+# on_join.reload to 1 for every online player) are skipped, so the stats keep pointing at the actual
+# previous join instead of the moment the pack happened to be reloaded.
+# A <datetime_id> that is not 1.. means the wall-clock time source (the RCON-fed command block in
+# pandamium:staff_world, see pandamium:dev/set_clock) has not provided a time yet: nothing is written
+# in that case, so a missing time source can never zero out the join stats.
 function pandamium:utils/datetime/get_current_datetime_id
-execute if score @s on_join.reload matches 0 if score @s last_joined.datetime matches 1.. run scoreboard players operation @s last_last_joined.datetime = @s last_joined.datetime
-execute if score @s on_join.reload matches 0 run scoreboard players operation @s last_joined.datetime = <datetime_id> variable
+execute unless score @s on_join.reload matches 1 if score <datetime_id> variable matches 1.. if score @s last_joined.datetime matches 1.. run scoreboard players operation @s last_last_joined.datetime = @s last_joined.datetime
+execute unless score @s on_join.reload matches 1 if score <datetime_id> variable matches 1.. run scoreboard players operation @s last_joined.datetime = <datetime_id> variable
 scoreboard players reset @s on_join.reload
 # on-join events
 execute if entity @s[gamemode=spectator,predicate=!pandamium:player/min_staff_perms/helper] run function pandamium:player/on_join/fix_trapped_spectators
