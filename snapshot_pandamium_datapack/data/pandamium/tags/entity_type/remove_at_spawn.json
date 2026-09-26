@@ -59,6 +59,9 @@
 		"minecraft:zoglin",
 		"minecraft:zombie",
 		"minecraft:zombie_villager",
-		"minecraft:zombified_piglin"
+		"minecraft:zombified_piglin",
+		"minecraft:zombie_horse",
+		"minecraft:nautilus",
+		"minecraft:zombie_nautilus"
 	]
 }

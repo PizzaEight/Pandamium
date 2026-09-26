@@ -36,7 +36,7 @@ data modify storage pandamium:local functions."pandamium:triggers/options/*".dia
 						}\
 					}\
 }
-execute if predicate pandamium:player/min_staff_perms/helper run data modify storage pandamium:local functions."pandamium:triggers/options/*".dialog.actions append value {label:{color:"gold",text:"Staff..."},action:{type:"minecraft:run_command",command:"trigger options set 3"}}
-execute if predicate pandamium:player/min_staff_perms/helper run data modify storage pandamium:local functions."pandamium:triggers/options/*".dialog.actions append value {label:{color:"gold",text:"Server..."},action:{type:"minecraft:run_command",command:"trigger options set 4"}}
-execute if predicate pandamium:player/min_staff_perms/helper if data storage pandamium.db.players:io selected.entry.data.alts[0] run data modify storage pandamium:local functions."pandamium:triggers/options/*".dialog.actions append value {label:{color:"gold",text:"Alts..."},action:{type:"minecraft:run_command",command:"trigger options set 5"}}
+execute if predicate pandamium:player/min_staff_perms/helper run data modify storage pandamium:local functions."pandamium:triggers/options/*".dialog.actions append value {label:{color:"gold",text:"Staff..."},action:{type:"minecraft:run_command",command:"trigger options set 4"}}
+execute if predicate pandamium:player/min_staff_perms/helper run data modify storage pandamium:local functions."pandamium:triggers/options/*".dialog.actions append value {label:{color:"gold",text:"Server..."},action:{type:"minecraft:run_command",command:"trigger options set 5"}}
+execute if predicate pandamium:player/min_staff_perms/helper if data storage pandamium.db.players:io selected.entry.data.alts[0] run data modify storage pandamium:local functions."pandamium:triggers/options/*".dialog.actions append value {label:{color:"gold",text:"Alts..."},action:{type:"minecraft:run_command",command:"trigger options set 6"}}
 function pandamium:triggers/options/dialog/show with storage pandamium:local functions."pandamium:triggers/options/*"

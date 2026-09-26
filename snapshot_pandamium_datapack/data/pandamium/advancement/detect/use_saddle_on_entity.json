@@ -1,0 +1,22 @@
+{
+  "parent": "pandamium:detect/root",
+  "criteria": {
+    "use_saddle_on_entity": {
+      "trigger": "minecraft:player_interacted_with_entity",
+      "conditions": {
+        "item": {
+          "items": "minecraft:saddle"
+        },
+        "entity": {
+          "type": "minecraft:all_of",
+          "terms": [
+            "pandamium:in_spawn"
+          ]
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "pandamium:detect/use_saddle_on_entity/main"
+  }
+}

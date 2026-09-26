@@ -5,20 +5,29 @@ execute store success score <do_replace> variable if score @s sethome matches ..
 scoreboard players operation <home> variable = @s sethome
 execute if score <home> variable matches ..-1 run scoreboard players operation <home> variable *= #-1 constant
 execute if score <home> variable matches 101..199 run scoreboard players remove <home> variable 100
+# dialog surface: suppress the automatic re-open of the homes menu on failures, so that
+# the warning dialog stays visible - it has its own button that returns to the homes menu.
+# sethome runs before homes in check_everyones_triggers, so clearing the score here stops
+# pandamium:triggers/homes/main from re-printing the menu afterwards.
+execute if score <surface> variable matches 1 if score @s jailed matches 1.. run scoreboard players reset @s homes
+execute if score <surface> variable matches 1 if score @s parkour.checkpoint matches 0.. run scoreboard players reset @s homes
+execute if score <surface> variable matches 1 unless score <home> variable matches 1..25 run scoreboard players reset @s homes
+execute if score <surface> variable matches 1 unless predicate pandamium:player/can_set_home_here run scoreboard players reset @s homes
+execute if score <surface> variable matches 1 unless predicate pandamium:can_access_home run scoreboard players reset @s homes
 # restrictions
-execute if score <surface> variable matches 1 if score @s jailed matches 1.. run dialog show @s {type:"minecraft:notice",title:"Homes",body:{type:"minecraft:plain_message",contents:"You cannot set a home in jail!",width:400}}
+execute if score <surface> variable matches 1 if score @s jailed matches 1.. run dialog show @s {type:"minecraft:notice",title:"Homes",body:{type:"minecraft:plain_message",contents:"You cannot set a home in jail!",width:400},action:{label:"OK",action:{type:"run_command",command:"trigger homes set 1"}}}
 execute if score <surface> variable matches 1 if score @s jailed matches 1.. run return 0
 execute if score <surface> variable matches 0 if score @s jailed matches 1.. run return run tellraw @s [{text:"[Homes]",color:"dark_red"},{text:" You cannot set a home in jail!",color:"red"}]
-execute if score <surface> variable matches 1 if score @s parkour.checkpoint matches 0.. run dialog show @s {type:"minecraft:notice",title:"Homes",body:{type:"minecraft:plain_message",contents:"You cannot set a home while in a parkour course!",width:400}}
+execute if score <surface> variable matches 1 if score @s parkour.checkpoint matches 0.. run dialog show @s {type:"minecraft:notice",title:"Homes",body:{type:"minecraft:plain_message",contents:"You cannot set a home while in a parkour course!",width:400},action:{label:"OK",action:{type:"run_command",command:"trigger homes set 1"}}}
 execute if score <surface> variable matches 1 if score @s parkour.checkpoint matches 0.. run return 0
 execute if score <surface> variable matches 0 if score @s parkour.checkpoint matches 0.. run return run tellraw @s [{text:"[Homes]",color:"dark_red"},{text:" You cannot set a home while in a parkour course!",color:"red"}]
-execute if score <surface> variable matches 1 unless score <home> variable matches 1..25 run dialog show @s {type:"minecraft:notice",title:"Homes",body:{type:"minecraft:plain_message",contents:"That is not a valid option!",width:400}}
+execute if score <surface> variable matches 1 unless score <home> variable matches 1..25 run dialog show @s {type:"minecraft:notice",title:"Homes",body:{type:"minecraft:plain_message",contents:"That is not a valid option!",width:400},action:{label:"OK",action:{type:"run_command",command:"trigger homes set 1"}}}
 execute if score <surface> variable matches 1 unless score <home> variable matches 1..25 run return 0
 execute if score <surface> variable matches 0 unless score <home> variable matches 1..25 run return run tellraw @s [{text:"[Homes]",color:"dark_red"},{text:" That is not a valid option!",color:"red"}]
-execute if score <surface> variable matches 1 unless predicate pandamium:player/can_set_home_here run dialog show @s {type:"minecraft:notice",title:"Homes",body:{type:"minecraft:plain_message",contents:"You cannot set a home here!",width:400}}
+execute if score <surface> variable matches 1 unless predicate pandamium:player/can_set_home_here run dialog show @s {type:"minecraft:notice",title:"Homes",body:{type:"minecraft:plain_message",contents:"You cannot set a home here!",width:400},action:{label:"OK",action:{type:"run_command",command:"trigger homes set 1"}}}
 execute if score <surface> variable matches 1 unless predicate pandamium:player/can_set_home_here run return 0
 execute if score <surface> variable matches 0 unless predicate pandamium:player/can_set_home_here run return run tellraw @s [{text:"[Homes]",color:"dark_red"},{text:" You cannot set a home here!",color:"red"}]
-execute if score <surface> variable matches 1 unless predicate pandamium:can_access_home run return run dialog show @s {type:"minecraft:notice",title:"Homes",body:{type:"minecraft:plain_message",contents:"You do not have access to this home! You can become a Patreon supporter or vote to increase your rank.",width:400}}
+execute if score <surface> variable matches 1 unless predicate pandamium:can_access_home run return run dialog show @s {type:"minecraft:notice",title:"Homes",body:{type:"minecraft:plain_message",contents:"You do not have access to this home! You can become a Patreon supporter or vote to increase your rank.",width:400},action:{label:"OK",action:{type:"run_command",command:"trigger homes set 1"}}}
 # check perms
 execute if score <surface> variable matches 0 unless predicate pandamium:can_access_home run return run tellraw @s [{text:"",color:"red"},{text:"[Homes]",color:"dark_red"}," You do not have access to ",{text:"Home ",bold:true,extra:[{score:{name:"<home>",objective:"variable"}}]},"! You can become a Patreon supporter or vote to increase your rank to get access to that home! Check our ",{text:"[Discord]",color:"aqua",hover_event:{action:"show_text",value:"Click to open!"},click_event:{action:"open_url",url:"http://discord.pandamium.eu"}}," for more information on how to support us!"]
 # run

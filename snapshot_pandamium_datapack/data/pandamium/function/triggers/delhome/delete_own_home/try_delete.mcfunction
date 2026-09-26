@@ -1,14 +1,18 @@
 # arguments: home, id
 function pandamium:utils/database/players/load/self
 # fail if home does not exist
+$execute if score <surface> variable matches 1 unless data storage pandamium.db.players:io selected.entry.data.homes.$(home) run scoreboard players reset @s homes
+$execute if score <surface> variable matches 1 unless data storage pandamium.db.players:io selected.entry.data.homes.$(home) run dialog show @s {type:"minecraft:notice",title:"Homes",body:{type:"minecraft:plain_message",contents:"Home $(home) has not been set!",width:400},action:{label:"OK",action:{type:"run_command",command:"trigger homes set 1"}}}
 $execute unless data storage pandamium.db.players:io selected.entry.data.homes.$(home) run tellraw @s [{text:"[Homes] ",color:"dark_red"},{text:"Home $(home)",color:"red",bold:true},{text:" has not been set!",color:"red"}]
 $execute unless data storage pandamium.db.players:io selected.entry.data.homes.$(home) run return 0
 # get home name
 $data modify storage pandamium:temp home_name set value {text:"Home $(home)",bold:true}
 $execute if data storage pandamium.db.players:io selected.entry.data.homes.$(home).name run data modify storage pandamium:temp home_name set value ["",[{text:"",color:"white",italic:true},{storage:"pandamium.db.players:io",nbt:"selected.entry.data.homes.$(home).name",interpret:true}]," (Home $(home))"]
-execute if score <surface> variable matches 1 if data storage pandamium:queue entries[{action:"database.datafixer"}] run dialog show @s {type:"minecraft:notice",title:"Homes",body:{type:"minecraft:plain_message",contents:"A database migration is currently in progress preventing homes from being modified. Try again in a few minutes.",width:400}}
+execute if data storage pandamium:queue entries[{action:"database.datafixer"}] if score <surface> variable matches 1 run scoreboard players reset @s homes
+execute if data storage pandamium:queue entries[{action:"database.datafixer"}] if score <surface> variable matches 1 run dialog show @s {type:"minecraft:notice",title:"Homes",body:{type:"minecraft:plain_message",contents:"A database migration is currently in progress preventing homes from being modified. Try again in a few minutes.",width:400},action:{label:"OK",action:{type:"run_command",command:"trigger homes set 1"}}}
 # check if datafixer is running
-execute if data storage pandamium:queue entries[{action:"database.datafixer"}] run return run tellraw @s [{text:"[Homes]",color:"dark_red"},{text:" A database migration is currently in progress preventing homes from being modified. Try again in a few minutes.",color:"red"}]
+execute if data storage pandamium:queue entries[{action:"database.datafixer"}] if score <surface> variable matches 1 run return 0
+execute if data storage pandamium:queue entries[{action:"database.datafixer"}] if score <surface> variable matches 0 run return run tellraw @s [{text:"[Homes]",color:"dark_red"},{text:" A database migration is currently in progress preventing homes from being modified. Try again in a few minutes.",color:"red"}]
 # ask to confirm delete
 $execute if score <confirm> variable matches 0 run tellraw @s [{text:"",color:"red"},{text:"[Homes]",color:"dark_red"}," Are you sure you want to delete ",{storage:"pandamium:temp",nbt:"home_name",interpret:true},"? ",{text:"[✔]",color:"dark_green",hover_event:{action:"show_text",value:[{text:"Click to delete ",color:"dark_green"},{storage:"pandamium:temp",nbt:"home_name",interpret:true}]},click_event:{action:"run_command",command:"trigger delhome set -$(home)"}}]
 execute if score <confirm> variable matches 0 run return 0

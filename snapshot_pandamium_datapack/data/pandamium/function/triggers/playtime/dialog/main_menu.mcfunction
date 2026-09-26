@@ -64,9 +64,9 @@ data modify storage pandamium:local functions."pandamium:triggers/playtime/dialo
 data modify storage pandamium:local functions."pandamium:triggers/playtime/dialog/*".dialog.body[-1].contents[9] set from storage pandamium:temp str_reward_credits
 
 
-# --- Last join date ---
+# --- First join date ---
 
-execute store result score <datetime_id> variable run scoreboard players get @s last_joined.datetime
+execute store result score <datetime_id> variable run scoreboard players get @s first_joined.datetime
 
 function pandamium:utils/datetime/decompose_datetime_id
 
@@ -78,9 +78,20 @@ data modify storage pandamium:temp month_name set string storage pandamium:temp 
 
 function pandamium:utils/datetime/get_datetime_text {args:_}
 
-execute store result storage pandamium:temp str_year int 1 run scoreboard players get <year> variable
+data modify storage pandamium:temp first_join_date set from storage pandamium:temp datetime_text.date_time
 
-data modify storage pandamium:temp str_year set string storage pandamium:temp str_year
+# --- Last join date ---
+
+scoreboard players reset <datetime_id> variable
+
+execute store result score <datetime_id> variable run scoreboard players get @s last_last_joined.datetime
+
+function pandamium:utils/datetime/decompose_datetime_id
+
+function pandamium:utils/datetime/get_datetime_text {args:_}
+
+data modify storage pandamium:temp last_last_join_date set from storage pandamium:temp datetime_text.date_time
+
 
 # ============================================================
 
@@ -88,13 +99,21 @@ data modify storage pandamium:temp str_year set string storage pandamium:temp st
 
 # ============================================================
 
-data modify storage pandamium:local functions."pandamium:triggers/playtime/dialog/*".dialog.body append value {"type":"minecraft:plain_message","contents":[{"text":"","color":"aqua","bold":false},{"text":"Playtime\n\n","color":"blue","bold":true},{"text":"Last Join Date: ","color":"blue"},{"text":"","color":"aqua"},{"text":" ","color":"gray"},{"text":"","color":"aqua"}],"width":500}
+data modify storage pandamium:local functions."pandamium:triggers/playtime/dialog/*".dialog.body append value {"type":"minecraft:plain_message","contents":[{"text":"","color":"aqua","bold":false},{"text":"Playtime\n\n","color":"blue","bold":true},{"text":"First Join Date: ","color":"blue"},{"text":"","color":"aqua"},{"text":" ","color":"gray"},{"text":"","color":"aqua"}],"width":500}
+
+# --- Insert first join date ---
+
+execute if score @s first_joined.datetime matches 1.. run data modify storage pandamium:local functions."pandamium:triggers/playtime/dialog/*".dialog.body[-1].contents[3] set from storage pandamium:temp first_join_date
+
+execute unless score @s first_joined.datetime matches 1.. run data modify storage pandamium:local functions."pandamium:triggers/playtime/dialog/*".dialog.body[-1].contents[3] set value {"text":"N/A","color":"gray"}
 
 # --- Insert last join date ---
 
-data modify storage pandamium:local functions."pandamium:triggers/playtime/dialog/*".dialog.body[-1].contents[3] set from storage pandamium:temp month_name
+data modify storage pandamium:local functions."pandamium:triggers/playtime/dialog/*".dialog.body[-1].contents[4] set value {"text":"\nLast Join Date: ","color":"blue"}
 
-data modify storage pandamium:local functions."pandamium:triggers/playtime/dialog/*".dialog.body[-1].contents[5] set from storage pandamium:temp str_year
+execute if score @s last_last_joined.datetime matches 1.. run data modify storage pandamium:local functions."pandamium:triggers/playtime/dialog/*".dialog.body[-1].contents[5] set from storage pandamium:temp last_last_join_date
+
+execute unless score @s last_last_joined.datetime matches 1.. run data modify storage pandamium:local functions."pandamium:triggers/playtime/dialog/*".dialog.body[-1].contents[5] set value {"text":"N/A","color":"gray"}
 
 # --- Total playtime ---
 

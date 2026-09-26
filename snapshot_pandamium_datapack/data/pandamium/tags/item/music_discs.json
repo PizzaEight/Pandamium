@@ -15,6 +15,11 @@
 		"minecraft:music_disc_stal",
 		"minecraft:music_disc_strad",
 		"minecraft:music_disc_wait",
-		"minecraft:music_disc_ward"
+		"minecraft:music_disc_creator",
+		"minecraft:music_disc_creator_music_box",
+		"minecraft:music_disc_precipice",
+		"minecraft:music_disc_tears",
+		"minecraft:music_disc_bounce",
+		"minecraft:music_disc_lava_chicken"
 	]
 }

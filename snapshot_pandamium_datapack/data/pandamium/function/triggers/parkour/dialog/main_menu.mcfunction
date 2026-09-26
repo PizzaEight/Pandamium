@@ -118,13 +118,13 @@ data modify storage pandamium:local functions."pandamium:triggers/parkour/*".dia
 
 # Options
 
-data modify storage pandamium:local functions."pandamium:triggers/parkour/*".dialog.actions append value {label:[{text:"Show Parkour Timer: ",color:"aqua"}],tooltip:[{text:"Controls whether the parkour timer is displayed while playing a course.",color:"white"}],action:{type:"run_command",command:"trigger options set -5"}}
+data modify storage pandamium:local functions."pandamium:triggers/parkour/*".dialog.actions append value {label:[{text:"Show Parkour Timer: ",color:"aqua"}],tooltip:[{text:"Controls whether the parkour timer is displayed while playing a course.",color:"white"}],action:{type:"run_command",command:"trigger parkour set -201"}}
 
 execute unless score @s hide_parkour_timer matches 1 run data modify storage pandamium:local functions."pandamium:triggers/parkour/*".dialog.actions[-1].label append value {text:"On",color:"yellow",bold:true}
 
 execute if score @s hide_parkour_timer matches 1 run data modify storage pandamium:local functions."pandamium:triggers/parkour/*".dialog.actions[-1].label append value {text:"Off",color:"yellow",bold:true}
 
-data modify storage pandamium:local functions."pandamium:triggers/parkour/*".dialog.actions append value {label:[{text:"New Attempt on Fall: ",color:"aqua"}],tooltip:[{text:"If On, falling on any course\nwill send you back to the\nbeginning and restart your timer,\nregardless of your checkpoint.",color:"white"},{text:"\n\nUseful for speedruns!",color:"gray"}],action:{type:"run_command",command:"trigger options set -15"}}
+data modify storage pandamium:local functions."pandamium:triggers/parkour/*".dialog.actions append value {label:[{text:"New Attempt on Fall: ",color:"aqua"}],tooltip:[{text:"If On, falling on any course\nwill send you back to the\nbeginning and restart your timer,\nregardless of your checkpoint.",color:"white"},{text:"\n\nUseful for speedruns!",color:"gray"}],action:{type:"run_command",command:"trigger parkour set -202"}}
 
 execute unless score @s optn.parkour.restart_on_fall matches 1 run data modify storage pandamium:local functions."pandamium:triggers/parkour/*".dialog.actions[-1].label append value {text:"Off",color:"yellow",bold:true}
 

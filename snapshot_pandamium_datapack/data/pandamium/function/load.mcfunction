@@ -115,6 +115,7 @@ scoreboard objectives add pre_jail_pos_d dummy
 scoreboard objectives add suspicious_ip dummy
 scoreboard objectives add first_joined.datetime dummy
 scoreboard objectives add last_joined.datetime dummy
+scoreboard objectives add last_last_joined.datetime dummy
 scoreboard objectives add last_jailed.datetime dummy
 scoreboard objectives add last_joined.year dummy
 scoreboard objectives add last_joined.month dummy
@@ -320,6 +321,7 @@ scoreboard objectives add custom_name dummy
 scoreboard objectives add on_join.take_items dummy
 scoreboard objectives add on_join.tp_to_spawn dummy
 scoreboard objectives add on_join.reset_spawnpoint dummy
+scoreboard objectives add on_join.reload dummy
 # Detection
 scoreboard objectives add detect.leave_game custom:leave_game
 scoreboard objectives add detect.die deathCount
@@ -405,6 +407,8 @@ execute in minecraft:overworld run data modify storage pandamium.dynamic_trigger
 execute in minecraft:overworld run data modify storage pandamium.dynamic_triggers:data macros.main.upper_bound set value 0
 execute in minecraft:overworld run data modify storage pandamium.dynamic_triggers:data macros.post.upper_bound set value 0
 execute as @a run scoreboard players set @s detect.leave_game 1
+# mark these forced re-runs as reloads, so on_join knows the players never actually re-joined
+execute as @a run scoreboard players set @s on_join.reload 1
 # Rebuild the player database index maps (id/username/lowercase) from the entries array.
 # Always enqueue (no dedup): the action is set-based/idempotent, so a stale interrupted entry
 # can never block a fresh rebuild, and the maps are never left empty across restarts.

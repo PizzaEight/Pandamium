@@ -26,5 +26,5 @@ execute if score @s available_homes matches 23.. unless data storage pandamium.d
 execute if score @s available_homes matches 24.. unless data storage pandamium.db.players:io selected.entry.data.homes.24 run return run scoreboard players set @s sethome 24
 execute if score @s available_homes matches 25.. unless data storage pandamium.db.players:io selected.entry.data.homes.25 run return run scoreboard players set @s sethome 25
 scoreboard players reset @s dialog_surface
-dialog show @s {type:"minecraft:notice",title:"Homes",body:{type:"minecraft:plain_message",contents:[{text:"You have no free home slots!",color:"red"}],width:400}}
+dialog show @s {type:"minecraft:notice",title:"Homes",body:{type:"minecraft:plain_message",contents:[{text:"You have no free home slots!",color:"red"}],width:400},action:{label:"OK",action:{type:"run_command",command:"trigger homes set 1"}}}
 scoreboard players reset @s homes

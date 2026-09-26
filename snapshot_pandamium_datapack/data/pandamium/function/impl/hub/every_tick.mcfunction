@@ -12,3 +12,8 @@ scoreboard players set @a[x=0,scores={advancement.on_a_rail=1..}] advancement.on
 execute as @a[x=0,predicate=pandamium:wearing_frost_walker_enchantment_on_feet] at @s run function pandamium:utils/unequip/feet
 # parkour timer ticking
 scoreboard players add @a[x=0,scores={parkour.checkpoint=0..}] parkour.timer_ticks 1
+# remember the block carried by each sulfur cube, so players cannot permanently change it
+execute as @e[type=minecraft:sulfur_cube] at @s unless data entity @s data.spawn_block_checked run function pandamium:impl/hub/sulfur_cube_protection/capture
+# spawn a marker on each bucketable mob, and remember the mob carried by each marker, so players cannot permanently change it
+execute as @e[type=#pandamium:bucketable,tag=spawn_protected] at @s unless data entity @s data.mob_checked run function pandamium:impl/hub/bucketable_mob_protected/spawn_marker
+execute as @e[type=marker,tag=saves_bucketable_mob] at @s unless data entity @s data.mob_checked run function pandamium:impl/hub/bucketable_mob_protected/remember_mob

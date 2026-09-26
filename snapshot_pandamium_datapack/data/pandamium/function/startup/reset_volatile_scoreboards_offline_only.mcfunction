@@ -97,6 +97,7 @@ scoreboard players reset * selected_block.y
 scoreboard players reset * selected_block.z
 scoreboard players reset * font.gradient.left_colour
 scoreboard players reset * detect.leave_game
+scoreboard players reset * on_join.reload
 scoreboard players reset * detect.time_since_death
 scoreboard players reset * detect.in_spectator_mode
 scoreboard players reset * advancement.on_a_rail

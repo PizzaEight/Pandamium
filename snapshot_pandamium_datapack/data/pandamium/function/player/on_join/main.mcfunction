@@ -81,8 +81,12 @@ execute if score <month> global matches 1 if score <day> global matches 1 if sco
 # news feed
 execute unless score <first_join> variable matches 1 unless score <prevent_old_player_notices> variable matches 1 if data storage pandamium.db.mail:data news_feed_inbox[0] run function pandamium:player/on_join/check_news
 # update last_joined timestamp
+# skipped when this run was forced by a data pack reload, so the "last join" stats keep pointing
+# at the actual previous join instead of the moment the pack happened to be reloaded
 function pandamium:utils/datetime/get_current_datetime_id
-scoreboard players operation @s last_joined.datetime = <datetime_id> variable
+execute if score @s on_join.reload matches 0 if score @s last_joined.datetime matches 1.. run scoreboard players operation @s last_last_joined.datetime = @s last_joined.datetime
+execute if score @s on_join.reload matches 0 run scoreboard players operation @s last_joined.datetime = <datetime_id> variable
+scoreboard players reset @s on_join.reload
 # on-join events
 execute if entity @s[gamemode=spectator,predicate=!pandamium:player/min_staff_perms/helper] run function pandamium:player/on_join/fix_trapped_spectators
 execute if score @s on_join.take_items matches 1 run function pandamium:impl/auto_actions/actions/take_items/main

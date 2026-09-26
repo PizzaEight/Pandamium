@@ -1,0 +1,26 @@
+{
+  "parent": "pandamium:detect/root",
+  "criteria": {
+    "use_block_on_sulfur_cube": {
+      "trigger": "minecraft:player_interacted_with_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:all_of",
+          "terms": [
+            {
+              "type": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "minecraft:entity_type": "minecraft:sulfur_cube"
+              }
+            },
+            "pandamium:in_spawn"
+          ]
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "pandamium:detect/use_block_on_sulfur_cube/main"
+  }
+}

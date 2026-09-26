@@ -1,7 +1,7 @@
 # arguments: home
 function pandamium:utils/database/players/load/self
 # fail if home does not exist
-$execute if score <surface> variable matches 1 unless data storage pandamium.db.players:io selected.entry.data.homes.$(home) run return run dialog show @s {type:"minecraft:notice",title:"Homes",body:{type:"minecraft:plain_message",contents:[{text:"Home $(home)",color:"red",bold:true},{text:" has not been set!",color:"red"}],width:400}}
+$execute if score <surface> variable matches 1 unless data storage pandamium.db.players:io selected.entry.data.homes.$(home) run return run dialog show @s {type:"minecraft:notice",title:"Homes",body:{type:"minecraft:plain_message",contents:[{text:"Home $(home)",color:"red",bold:true},{text:" has not been set!",color:"red"}],width:400},action:{label:"OK",action:{type:"run_command",command:"trigger homes set 1"}}}
 $execute if score <surface> variable matches 0 unless data storage pandamium.db.players:io selected.entry.data.homes.$(home) run return run tellraw @s [{text:"[Homes] ",color:"dark_red"},{text:"Home $(home)",color:"red",bold:true},{text:" has not been set!",color:"red"}]
 # extract location
 $data modify storage pandamium:temp xyzd set from storage pandamium.db.players:io selected.entry.data.homes.$(home).xyzd
@@ -14,7 +14,7 @@ function pandamium:utils/get/dimension_string_id/from_score
 data modify storage pandamium:local functions."pandamium:triggers/home/*".dimension set from storage pandamium:temp dimension_string_id
 scoreboard players set <can_teleport_here> variable 0
 function pandamium:triggers/home/check_destination with storage pandamium:local functions."pandamium:triggers/home/*"
-execute if score <surface> variable matches 1 if score <can_teleport_here> variable matches 0 run return run dialog show @s {type:"minecraft:notice",title:"Homes",body:{type:"minecraft:plain_message",contents:"You cannot teleport here!",width:400}}
+execute if score <surface> variable matches 1 if score <can_teleport_here> variable matches 0 run return run dialog show @s {type:"minecraft:notice",title:"Homes",body:{type:"minecraft:plain_message",contents:"You cannot teleport here!",width:400},action:{label:"OK",action:{type:"run_command",command:"trigger homes set 1"}}}
 execute if score <surface> variable matches 0 if score <can_teleport_here> variable matches 0 run return run tellraw @s [{text:"[Homes] ",color:"dark_red"},{text:" You cannot teleport here!",color:"red"}]
 # teleport
 $function pandamium:utils/teleport/to_scores/from_source {source:"home teleport_to_home $(home)"}

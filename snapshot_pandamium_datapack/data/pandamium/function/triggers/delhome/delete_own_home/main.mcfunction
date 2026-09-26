@@ -1,11 +1,14 @@
 scoreboard players operation <home> variable = @s delhome
 execute unless score <home> variable matches 1..25 run tellraw @s [{text:"[Homes]",color:"dark_red"},{text:" That is not a valid option!",color:"red"}]
 execute unless score <home> variable matches 1..25 run return 0
+# dialog surface: keep the warning dialog visible instead of the homes menu auto-reopening
+execute if score <surface> variable matches 1 if score @s jailed matches 1.. run scoreboard players reset @s homes
+execute if score <surface> variable matches 1 if score @s parkour.checkpoint matches 0.. run scoreboard players reset @s homes
 # restrictions
-execute if score <surface> variable matches 1 if score @s jailed matches 1.. run dialog show @s {type:"minecraft:notice",title:"Homes",body:{type:"minecraft:plain_message",contents:"You cannot use this trigger in jail!",width:400}}
+execute if score <surface> variable matches 1 if score @s jailed matches 1.. run dialog show @s {type:"minecraft:notice",title:"Homes",body:{type:"minecraft:plain_message",contents:"You cannot use this trigger in jail!",width:400},action:{label:"OK",action:{type:"run_command",command:"trigger homes set 1"}}}
 execute if score <surface> variable matches 0 if score @s jailed matches 1.. run tellraw @s [{text:"[Homes]",color:"dark_red"},{text:" You cannot use this trigger in jail!",color:"red"}]
 execute if score @s jailed matches 1.. run return 0
-execute if score <surface> variable matches 1 if score @s parkour.checkpoint matches 0.. run dialog show @s {type:"minecraft:notice",title:"Homes",body:{type:"minecraft:plain_message",contents:"You cannot use this trigger currently!",width:400}}
+execute if score <surface> variable matches 1 if score @s parkour.checkpoint matches 0.. run dialog show @s {type:"minecraft:notice",title:"Homes",body:{type:"minecraft:plain_message",contents:"You cannot use this trigger currently!",width:400},action:{label:"OK",action:{type:"run_command",command:"trigger homes set 1"}}}
 execute if score <surface> variable matches 0 if score @s parkour.checkpoint matches 0.. run tellraw @s [{text:"[Homes]",color:"dark_red"},{text:" You cannot use this trigger currently!",color:"red"}]
 execute if score @s parkour.checkpoint matches 0.. run return 0
 # run

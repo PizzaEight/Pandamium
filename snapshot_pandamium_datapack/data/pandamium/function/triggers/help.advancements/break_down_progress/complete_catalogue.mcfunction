@@ -14,7 +14,7 @@ data modify storage pandamium:local functions."pandamium:triggers/help.advanceme
       "width": 500\
     }\
   ],\
-	"exit_action": { \
+	"action": { \
 		"label": "Done", \
 		"action": { \
 			"type": "minecraft:run_command", \

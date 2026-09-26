@@ -23,6 +23,7 @@ $tellraw @s [\
     "monthly_votes = ",{score:{name:"$(old)",objective:"monthly_votes"}},"\n",\
     "first_joined.datetime = ",{score:{name:"$(old)",objective:"first_joined.datetime"}},"\n",\
     "last_joined.datetime = ",{score:{name:"$(old)",objective:"last_joined.datetime"}},"\n",\
+    "last_last_joined.datetime = ",{score:{name:"$(old)",objective:"last_last_joined.datetime"}},"\n",\
     "last_joined.year = ",{score:{name:"$(old)",objective:"last_joined.year"}},"\n",\
     "last_joined.month = ",{score:{name:"$(old)",objective:"last_joined.month"}},"\n",\
     "last_joined.day = ",{score:{name:"$(old)",objective:"last_joined.day"}},"\n",\

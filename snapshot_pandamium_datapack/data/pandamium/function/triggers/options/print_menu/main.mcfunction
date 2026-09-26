@@ -1,5 +1,5 @@
 #> Pre
-execute if score @s options matches 3..6 unless predicate pandamium:player/min_staff_perms/helper run scoreboard players set @s options 1
+execute if score @s options matches 4..6 unless predicate pandamium:player/min_staff_perms/helper run scoreboard players set @s options 1
 execute if score @s options matches 6 unless score <has_alts> variable matches 1 run scoreboard players set @s options 1
 execute if score @s options matches 7.. run scoreboard players set @s options 1
 #> Main
