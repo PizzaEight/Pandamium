@@ -6,13 +6,15 @@ execute if score @s options matches -100004 run return run function pandamium:tr
 execute if score @s options matches -100005 run return run function pandamium:triggers/world_info/dialog
 execute if score @s options matches -100006 run return run function pandamium:triggers/playtime/dialog/main_menu
 execute if score @s options matches -100007 run return run function pandamium:triggers/options/toggle_show_playtime_days
+execute if score @s options matches -100008 if score <month> global matches 10 run return run function pandamium:triggers/options/dialog/halloween
+execute if score @s options matches -100009 if score <month> global matches 12 run return run function pandamium:triggers/options/dialog/christmas
 
 
 
 execute if score @s options matches -1999999999..-1000000000 run return run function pandamium:triggers/options/read_dialog_inputs/main
 
 scoreboard players set <valid_option> variable 0
-execute if score @s options matches -17..-1 unless score @s options matches -11 run scoreboard players set <valid_option> variable 1
+execute if score @s options matches -19..-1 unless score @s options matches -11 run scoreboard players set <valid_option> variable 1
 execute if score @s options matches -1002..-1001 run scoreboard players set <valid_option> variable 1
 execute if score @s options matches -102..-101 if predicate pandamium:player/min_gameplay_perms/elder run scoreboard players set <valid_option> variable 1
 execute if score @s options matches -201..-201 if predicate pandamium:player/can_display_supporter_rank run scoreboard players set <valid_option> variable 1
@@ -20,7 +22,7 @@ execute if score @s options matches -304..-301 if predicate pandamium:player/min
 execute if score @s options matches -403..-401 if predicate pandamium:player/min_staff_perms/moderator run scoreboard players set <valid_option> variable 1
 execute if score @s options matches -503..-501 if predicate pandamium:player/min_staff_perms/senior_moderator run scoreboard players set <valid_option> variable 1
 execute if score @s options matches -601 if predicate pandamium:player/min_staff_perms/helper run scoreboard players set <valid_option> variable 1
-execute if score @s options matches -604..-602 if predicate pandamium:player/min_staff_perms/senior_moderator run scoreboard players set <valid_option> variable 1
+execute if score @s options matches -605..-602 if predicate pandamium:player/min_staff_perms/senior_moderator run scoreboard players set <valid_option> variable 1
 execute if score @s options matches -702..-701 if predicate pandamium:player/min_gameplay_perms/supporter run scoreboard players set <valid_option> variable 1
 execute if score @s options matches -10001..-10001 if score @s donator_migration_notice matches 1 run scoreboard players set <valid_option> variable 1
 

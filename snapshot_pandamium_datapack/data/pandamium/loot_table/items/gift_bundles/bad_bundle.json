@@ -1,0 +1,279 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "bonus_rolls": 0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:red_bundle",
+          "modifier": [
+			{
+				"type": "minecraft:set_name",
+				"entity": "this",
+				"target": "item_name",
+				"name": [
+					"",
+					{
+						"text": "Bad Gift Bundle",
+						"bold": true,
+						"color": "dark_red"
+					}
+				]
+			},
+            {
+              "type": "minecraft:set_components",
+              "components": {
+				"minecraft:enchantment_glint_override": true,
+                "minecraft:rarity": "uncommon",
+                "minecraft:lore": [
+                  {
+                    "text": "You've been bad! :(",
+                    "color": "red",
+                    "italic": false
+                  }
+                ]
+              }
+            },
+			{
+              "type": "minecraft:set_contents",
+              "component": "minecraft:bundle_contents",
+              "entries": [
+                {
+                  "type": "minecraft:item",
+                  "modifier": {
+                    "type": "minecraft:set_count",
+                    "count": {
+                      "type": "minecraft:uniform",
+                      "max": 16.0,
+                      "min": 12.0
+                    }
+                  },
+                  "name": "minecraft:coal"
+                },
+                {
+                  "type": "minecraft:item",
+                  "modifier": {
+                    "type": "minecraft:set_count",
+                    "count": {
+                      "type": "minecraft:uniform",
+                      "max": 1.0,
+                      "min": 0.0
+                    }
+                  },
+                  "name": "minecraft:ominous_bottle"
+                },
+                {
+                  "type": "minecraft:item",
+                  "modifier": {
+                    "type": "minecraft:set_count",
+                    "count": {
+                      "type": "minecraft:uniform",
+                      "max": 12.0,
+                      "min": -1.0
+                    }
+                  },
+                  "name": "minecraft:wither_rose"
+                },
+                {
+                  "type": "minecraft:item",
+                  "modifier": {
+                    "type": "minecraft:set_count",
+                    "count": {
+                      "type": "minecraft:uniform",
+                      "max": 12.0,
+                      "min": -1.0
+                    }
+                  },
+                  "name": "minecraft:dead_bush"
+                },
+                {
+                  "type": "minecraft:item",
+                  "modifier": {
+                    "type": "minecraft:set_count",
+                    "count": {
+                      "type": "minecraft:uniform",
+                      "max": 12.0,
+                      "min": -1.0
+                    }
+                  },
+                  "name": "minecraft:cobweb"
+                },
+                {
+                  "type": "minecraft:item",
+                  "modifier": {
+                    "type": "minecraft:set_count",
+                    "count": {
+                      "type": "minecraft:uniform",
+                      "max": 12.0,
+                      "min": -1.0
+                    }
+                  },
+                  "name": "minecraft:stick"
+                },
+                {
+                  "type": "minecraft:item",
+                  "modifier": {
+                    "type": "minecraft:set_count",
+                    "count": {
+                      "type": "minecraft:uniform",
+                      "max": 12.0,
+                      "min": -1.0
+                    }
+                  },
+                  "name": "minecraft:rotten_flesh"
+                },
+                 {
+                  "type": "minecraft:item",
+                  "modifier": {
+                    "type": "minecraft:set_count",
+                    "count": {
+                      "type": "minecraft:uniform",
+                      "max": 12.0,
+                      "min": -1.0
+                    }
+                  },
+                  "name": "minecraft:dirt"
+                },
+                {
+                  "type": "minecraft:item",
+                  "modifier": {
+                    "type": "minecraft:set_count",
+                    "count": {
+                      "type": "minecraft:uniform",
+                      "max": 12.0,
+                      "min": -1.0
+                    }
+                  },
+                  "name": "minecraft:bone"
+                },
+                 {
+                  "type": "minecraft:item",
+                  "modifier": {
+                    "type": "minecraft:set_count",
+                    "count": {
+                      "type": "minecraft:uniform",
+                      "max": 12.0,
+                      "min": -1.0
+                    }
+                  },
+                  "name": "minecraft:gunpowder"
+                },
+                {
+                  "type": "minecraft:loot_table",
+                  "weight": 1,
+                  "value": "pandamium:items/heads/christmas/gray_ornament",
+                  "modifier": {
+                    "type": "minecraft:set_count",
+                    "count": {
+                      "type": "minecraft:uniform",
+                      "max": 8.0,
+                      "min": -1.0
+                    }
+                  }
+                },
+                {
+                  "type": "minecraft:item",
+                  "modifier": {
+                    "type": "minecraft:set_count",
+                    "count": {
+                      "type": "minecraft:uniform",
+                      "max": 12.0,
+                      "min": -1.0
+                    }
+                  },
+                  "name": "minecraft:poisonous_potato"
+                },
+                {
+                  "type": "minecraft:item",
+                  "modifier": {
+                    "type": "minecraft:set_count",
+                    "count": {
+                      "type": "minecraft:uniform",
+                      "max": 12.0,
+                      "min": -1.0
+                    }
+                  },
+                  "name": "minecraft:phantom_membrane"
+                },
+                 {
+                  "type": "minecraft:item",
+                  "modifier": {
+                    "type": "minecraft:set_count",
+                    "count": {
+                      "type": "minecraft:uniform",
+                      "max": 12.0,
+                      "min": -1.0
+                    }
+                  },
+                  "name": "minecraft:tnt"
+                },
+                {
+                  "type": "minecraft:item",
+                  "modifier": {
+                    "type": "minecraft:set_count",
+                    "count": {
+                      "type": "minecraft:uniform",
+                      "max": 12.0,
+                      "min": -1.0
+                    }
+                  },
+                  "name": "minecraft:charcoal"
+                },
+                {
+                  "type": "minecraft:item",
+                  "modifier": {
+                    "type": "minecraft:set_count",
+                    "count": {
+                      "type": "minecraft:uniform",
+                      "max": 12.0,
+                      "min": -1.0
+                    }
+                  },
+                  "name": "minecraft:spider_eye"
+                },
+                 {
+                  "type": "minecraft:item",
+                  "modifier": {
+                    "type": "minecraft:set_count",
+                    "count": {
+                      "type": "minecraft:uniform",
+                      "max": 12.0,
+                      "min": -1.0
+                    }
+                  },
+                  "name": "minecraft:dried_kelp"
+                },
+                                {
+                  "type": "minecraft:loot_table",
+                  "weight": 1,
+                  "value": "pandamium:items/heads/christmas/gray_present",
+                  "modifier": {
+                    "type": "minecraft:set_count",
+                    "count": {
+                      "type": "minecraft:uniform",
+                      "max": 8.0,
+                      "min": -1.0
+                    }
+                  }
+                },
+                {
+                  "type": "minecraft:item",
+                  "modifier": {
+                    "type": "minecraft:set_count",
+                    "count": {
+                      "type": "minecraft:uniform",
+                      "max": 12.0,
+                      "min": -1.0
+                    }
+                  },
+                  "name": "minecraft:slime_ball"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,6 +1,9 @@
 {
-	"type": "minecraft:crafting_shaped",
-	"group": "universal_dyeing_concrete_powder",
+	"result": {
+		"id": "minecraft:black_concrete_powder",
+		"count": 8
+	},
+	"type": "crafting_shaped",
 	"pattern": [
 		"###",
 		"#O#",
@@ -24,10 +27,7 @@
 			"minecraft:green_concrete_powder",
 			"minecraft:red_concrete_powder"
 		],
-		"O": "minecraft:black_dye"
+		"O": "#universal_dyeing:dyes/black_dye"
 	},
-	"result": {
-		"id": "minecraft:black_concrete_powder",
-		"count": 8
-	}
+	"group": "universal_dyeing_concrete_powder"
 }

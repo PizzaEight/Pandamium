@@ -25,3 +25,6 @@ execute unless score <dev_environment> global matches 1 if score <command_feedba
 execute unless score <dev_environment> global matches 1 if score <command_feedback_disabled_seconds> global matches 300.. run gamerule send_command_feedback false
 # Prevent the ender dragon from exceeding the million block limit
 execute in minecraft:the_end if entity @a[limit=1,x=0] as @e[limit=1,x=0,type=ender_dragon] positioned 0.0 0.0 0.0 if entity @s[distance=999000..] run kill @s
+# show which gifting christmas mobs are carrying a present (see pandamium:impl/christmas_mobs/spawn_attempt)
+execute in minecraft:overworld at @e[tag=christmas_mob,tag=gifting] run particle minecraft:snowflake ~ ~0.9 ~ 0.25 0.35 0.25 0 8
+execute in minecraft:the_nether at @e[tag=christmas_mob,tag=gifting] run particle minecraft:snowflake ~ ~0.9 ~ 0.25 0.35 0.25 0 8

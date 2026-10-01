@@ -1,5 +1,6 @@
 {
-	"values": [
+    "values": [
+		"minecraft:bone_meal",
 		"minecraft:orange_dye",
 		"minecraft:magenta_dye",
 		"minecraft:light_blue_dye",
@@ -10,6 +11,8 @@
 		"minecraft:light_gray_dye",
 		"minecraft:cyan_dye",
 		"minecraft:purple_dye",
+		"minecraft:lapis_lazuli",
+		"minecraft:cocoa_beans",
 		"minecraft:green_dye",
 		"minecraft:red_dye",
 		"minecraft:ink_sac",
@@ -17,5 +20,5 @@
 		"minecraft:brown_dye",
 		"minecraft:blue_dye",
 		"minecraft:white_dye"
-	]
+    ]
 }

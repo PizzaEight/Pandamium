@@ -72,6 +72,10 @@ execute if score <month> global matches 10 if score <day> global matches 31 if s
 execute if score <month> global matches 11 if score <day> global matches 11 if score <last_joined_relative_datetime> variable matches ..27647999 run function pandamium:player/on_join/equip_item_to_head {item:'poppy[item_name="Remembrance Day Poppy",equippable={slot:"head"},rarity="uncommon"]'}
 execute if score <month> global matches 12 if score <day> global matches 25 run advancement grant @s only pandamium:pandamium/events/christmas
 execute if score <month> global matches 12 if score <day> global matches 25 if score <last_joined_relative_datetime> variable matches ..31535999 run tellraw @s [{text:"[Pandamium] ",color:"blue"},{text:"Merry Christmas!",color:"dark_green",shadow_color:[0.75f,0.0f,0.0f,1.0f]},{text:" 🎁",color:"#FF7FFF"},{text:" 🎄",color:"dark_green"}]
+# Christmas mobs spawn all December, so let players know on their first join of the month (they can
+# opt out of them with the "Christmas Mobs" gameplay option)
+execute if score <month> global matches 12 if score <last_joined_relative_datetime> variable matches ..29462399 run tellraw @s [{text:"[Pandamium] ",color:"blue"},{text:"Christmas Mobs",color:"aqua",bold:true},{text:" have begun spawning! You can disable them in the Christmas menu found by typing ",color:"green"},{text:"/trigger options",color:"aqua"}]
+execute if score <month> global matches 10 if score <last_joined_relative_datetime> variable matches ..24105599 run tellraw @s [{text:"[Pandamium] ",color:"blue"},{text:"Flying Eyeballs",color:"aqua",bold:true},{text:" have begun spawning! You can disable them in the Halloween menu found by typing ",color:"green"},{text:"/trigger options",color:"aqua"}]
 execute if score <month> global matches 12 if score <day> global matches 25..26 if score <last_joined_relative_datetime> variable matches ..31535999 run loot give @s loot pandamium:items/heads/presents/christmas
 execute if score <month> global matches 12 if score <day> global matches 31 run advancement grant @s only pandamium:pandamium/events/new_years
 execute if score <month> global matches 1 if score <day> global matches 1 run advancement grant @s only pandamium:pandamium/events/new_years
@@ -135,6 +139,8 @@ scoreboard players add @s optn.experimental.speed_hack_indicator 0
 scoreboard players add @s optn.disable_spectator_portals 0
 scoreboard players add @s optn.trail_particles_when_stationary 0
 scoreboard players add @s optn.do_projectile_trails 0
+scoreboard players add @s optn.disable_christmas_mobs 0
+scoreboard players add @s optn.disable_flying_eyeballs 0
 scoreboard players add @s optn.disable_locator_bar 0
 scoreboard players set @s mail_data.inbox_tab 0
 # update spawnpoint (in case the player changed their name)

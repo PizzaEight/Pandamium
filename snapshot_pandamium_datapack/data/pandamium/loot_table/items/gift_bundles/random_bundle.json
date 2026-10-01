@@ -1,0 +1,25 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "bonus_rolls": 0,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "weight": 1,
+          "value": "pandamium:items/gift_bundles/bad_bundle"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 2,
+          "value": "pandamium:items/gift_bundles/good_bundle"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 1,
+          "value": "pandamium:items/gift_bundles/amazing_bundle"
+        }
+      ]
+    }
+  ]
+}

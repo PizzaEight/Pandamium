@@ -1,8 +1,16 @@
 {
-	"type": "minecraft:crafting_shapeless",
-	"group": "universal_dyeing_candle",
-	"ingredients": [
-		[
+	"result": {
+		"id": "minecraft:candle",
+		"count": 8
+	},
+	"type": "crafting_shaped",
+	"pattern": [
+		"###",
+		"#O#",
+		"###"
+	],
+	"key": {
+		"#": [
 			"minecraft:white_candle",
 			"minecraft:orange_candle",
 			"minecraft:magenta_candle",
@@ -11,18 +19,16 @@
 			"minecraft:lime_candle",
 			"minecraft:pink_candle",
 			"minecraft:gray_candle",
-			"minecraft:green_candle",
 			"minecraft:light_gray_candle",
 			"minecraft:cyan_candle",
 			"minecraft:purple_candle",
 			"minecraft:blue_candle",
 			"minecraft:brown_candle",
+			"minecraft:green_candle",
 			"minecraft:red_candle",
 			"minecraft:black_candle"
 		],
-		"minecraft:ice"
-	],
-	"result": {
-		"id": "minecraft:candle"
-	}
+		"O": "minecraft:ice"
+	},
+	"group": ""
 }

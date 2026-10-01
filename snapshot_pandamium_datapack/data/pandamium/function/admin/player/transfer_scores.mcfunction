@@ -35,6 +35,8 @@ $tellraw @s [\
     "disable_attack_indicator = ",{score:{name:"$(old)",objective:"disable_attack_indicator"}},"\n",\
     "spectator_night_vision = ",{score:{name:"$(old)",objective:"spectator_night_vision"}},"\n",\
     "optn.disable_phantom_spawning = ",{score:{name:"$(old)",objective:"optn.disable_phantom_spawning"}},"\n",\
+    "optn.disable_christmas_mobs = ",{score:{name:"$(old)",objective:"optn.disable_christmas_mobs"}},"\n",\
+    "optn.disable_flying_eyeballs = ",{score:{name:"$(old)",objective:"optn.disable_flying_eyeballs"}},"\n",\
     "optn.disable_spectator_portals = ",{score:{name:"$(old)",objective:"optn.disable_spectator_portals"}},"\n",\
     "optn.disable_locator_bar = ",{score:{name:"$(old)",objective:"optn.disable_locator_bar"}},"\n",\
     "sneak_to_sit = ",{score:{name:"$(old)",objective:"sneak_to_sit"}},"\n",\

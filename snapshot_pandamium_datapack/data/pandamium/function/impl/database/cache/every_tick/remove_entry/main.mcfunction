@@ -21,6 +21,8 @@ $execute if score $(username) optn.experimental.speed_hack_indicator matches 0 r
 $execute if score $(username) optn.disable_spectator_portals matches 0 run scoreboard players reset $(username) optn.disable_spectator_portals
 $execute if score $(username) optn.trail_particles_when_stationary matches 0 run scoreboard players reset $(username) optn.trail_particles_when_stationary
 $execute if score $(username) optn.do_projectile_trails matches 0 run scoreboard players reset $(username) optn.do_projectile_trails
+$execute if score $(username) optn.disable_christmas_mobs matches 0 run scoreboard players reset $(username) optn.disable_christmas_mobs
+$execute if score $(username) optn.disable_flying_eyeballs matches 0 run scoreboard players reset $(username) optn.disable_flying_eyeballs
 $execute if score $(username) optn.disable_locator_bar matches 0 run scoreboard players reset $(username) optn.disable_locator_bar
 # manage tpa requests
 function pandamium:utils/get/display_name/from_id with storage pandamium:temp entries[-1]

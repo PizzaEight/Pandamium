@@ -1,6 +1,9 @@
 {
-	"type": "minecraft:crafting_shaped",
-	"group": "universal_dyeing_stained_glass_pane",
+	"result": {
+		"id": "minecraft:glass_pane",
+		"count": 8
+	},
+	"type": "crafting_shaped",
 	"pattern": [
 		"###",
 		"#O#",
@@ -27,8 +30,5 @@
 		],
 		"O": "minecraft:ice"
 	},
-	"result": {
-		"id": "minecraft:glass_pane",
-		"count": 8
-	}
+	"group": ""
 }

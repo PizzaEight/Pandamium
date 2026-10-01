@@ -1,6 +1,9 @@
 {
-	"type": "minecraft:crafting_shaped",
-	"group": "universal_dyeing_stained_glass",
+	"result": {
+		"id": "minecraft:white_stained_glass",
+		"count": 8
+	},
+	"type": "crafting_shaped",
 	"pattern": [
 		"###",
 		"#O#",
@@ -8,7 +11,6 @@
 	],
 	"key": {
 		"#": [
-			"minecraft:glass",
 			"minecraft:orange_stained_glass",
 			"minecraft:magenta_stained_glass",
 			"minecraft:light_blue_stained_glass",
@@ -25,10 +27,7 @@
 			"minecraft:red_stained_glass",
 			"minecraft:black_stained_glass"
 		],
-		"O": "minecraft:white_dye"
+		"O": "#universal_dyeing:dyes/white_dye"
 	},
-	"result": {
-		"id": "minecraft:white_stained_glass",
-		"count": 8
-	}
+	"group": "universal_dyeing_stained_glass"
 }
