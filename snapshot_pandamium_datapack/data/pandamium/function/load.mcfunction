@@ -223,6 +223,9 @@ scoreboard objectives add trigger_data.mail.cooldown_length dummy
 scoreboard objectives add disable_tpa_requests dummy
 scoreboard objectives add disable_keep_inventory dummy
 scoreboard objectives add optn.disable_phantom_spawning dummy
+scoreboard objectives add optn.disable_christmas_mobs dummy
+scoreboard objectives add optn.disable_flying_eyeballs dummy
+scoreboard objectives add disable_christmas_mobs dummy
 scoreboard objectives add disable_attack_indicator dummy
 scoreboard objectives add hide_parkour_timer dummy
 scoreboard objectives add show_playtime_days dummy
@@ -460,5 +463,6 @@ schedule function pandamium:impl/leader_boards/update_holograms 60s
 execute unless score <disable_auto_messages> global matches 1 run schedule function pandamium:impl/auto_messages_loop 480s
 schedule function pandamium:impl/item_clear/regular/loop 1s
 schedule function pandamium:impl/phantoms/spawn_attempt 120s
+schedule function pandamium:impl/christmas_mobs/spawn_attempt 120s
 schedule function pandamium:impl/item_clear/netherrack_and_ender_pearls 10s
 schedule function pandamium:impl/custom_entities/custom_entity_types/defused_wither_skull/infinite_motion 3s

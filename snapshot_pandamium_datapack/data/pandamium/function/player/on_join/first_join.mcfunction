@@ -27,4 +27,6 @@ scoreboard players set <prevent_old_player_notices> variable 1
 scoreboard players add @s playtime_ticks 1
 # set first join
 function pandamium:utils/datetime/get_current_datetime_id
-scoreboard players operation @s first_joined.datetime = <datetime_id> variable
+# only store it once the wall-clock time source has provided a real datetime: a missing time source
+# (<datetime_id> = 0) would otherwise be stored as 0 and shown as a bogus 01/01/2000 date or as N/A
+execute if score <datetime_id> variable matches 1.. run scoreboard players operation @s first_joined.datetime = <datetime_id> variable

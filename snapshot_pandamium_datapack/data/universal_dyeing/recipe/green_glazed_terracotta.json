@@ -1,6 +1,9 @@
 {
-	"type": "minecraft:crafting_shaped",
-	"group": "universal_dyeing_glazed_terracotta",
+	"result": {
+		"id": "minecraft:green_glazed_terracotta",
+		"count": 8
+	},
+	"type": "crafting_shaped",
 	"pattern": [
 		"###",
 		"#O#",
@@ -26,8 +29,5 @@
 		],
 		"O": "minecraft:green_dye"
 	},
-	"result": {
-		"id": "minecraft:green_glazed_terracotta",
-		"count": 8
-	}
+	"group": "universal_dyeing_glazed_terracotta"
 }

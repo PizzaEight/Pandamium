@@ -1,6 +1,9 @@
 {
-	"type": "minecraft:crafting_shaped",
-	"group": "universal_dyeing_glazed_terracotta",
+	"result": {
+		"id": "minecraft:blue_glazed_terracotta",
+		"count": 8
+	},
+	"type": "crafting_shaped",
 	"pattern": [
 		"###",
 		"#O#",
@@ -24,10 +27,7 @@
 			"minecraft:red_glazed_terracotta",
 			"minecraft:black_glazed_terracotta"
 		],
-		"O": "minecraft:blue_dye"
+		"O": "#universal_dyeing:dyes/blue_dye"
 	},
-	"result": {
-		"id": "minecraft:blue_glazed_terracotta",
-		"count": 8
-	}
+	"group": "universal_dyeing_glazed_terracotta"
 }

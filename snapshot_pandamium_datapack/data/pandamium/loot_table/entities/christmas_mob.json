@@ -1,0 +1,183 @@
+{
+    "type": "minecraft:entity",
+    "pools": [
+        {
+    "rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:gold_ingot"
+				},
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:coal"
+				}
+			],
+			"modifier": {
+                    "type": "minecraft:set_count",
+                    "count": {
+                      "type": "minecraft:uniform",
+                      "max": 5.0,
+                      "min": 1.0
+                    }
+                  },
+			"condition": {
+				"type": "minecraft:all_of",
+				"terms": {
+				"type": "minecraft:entity_properties",
+				"entity": "this",
+				"predicate": {
+					"minecraft:entity_tags": {
+					"none_of": [
+						"gifting"
+					]
+					}
+				}
+			}
+		}
+		},
+        {
+    "rolls": 1,
+			"entries": [
+				{
+          "type": "minecraft:loot_table",
+          "value": "pandamium:items/gift_bundles/random_bundle"
+        }
+			],
+			"condition": {
+				"type": "minecraft:all_of",
+				"terms": {
+				"type": "minecraft:entity_properties",
+				"entity": "this",
+				"predicate": {
+					"minecraft:entity_tags": {
+					"all_of": [
+						"gifting"
+					]
+					}
+				}
+			}
+		}
+		},
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:alternatives",
+                    "children": [
+                        {
+                            "type": "minecraft:loot_table",
+                            "value": "pandamium:items/heads/mobs/christmas_mobs/christmas_zombie",
+                            "condition": {
+                                "type": "minecraft:entity_properties",
+                                "entity": "this",
+                                "predicate": {
+									"minecraft:entity_type": "minecraft:zombie"
+								}
+                            }
+                        },
+                        {
+                            "type": "minecraft:loot_table",
+                            "value": "pandamium:items/heads/mobs/christmas_mobs/christmas_husk",
+                            "condition": {
+                                "type": "minecraft:entity_properties",
+                                "entity": "this",
+                                "predicate": {
+									"minecraft:entity_type": "minecraft:husk"
+								}
+                            }
+                        },
+						{
+                            "type": "minecraft:loot_table",
+                            "value": "pandamium:items/heads/mobs/christmas_mobs/christmas_drowned",
+                            "condition": {
+                                "type": "minecraft:entity_properties",
+                                "entity": "this",
+                                "predicate": {
+									"minecraft:entity_type": "minecraft:drowned"
+								}
+                            }
+                        },
+						{
+                            "type": "minecraft:loot_table",
+                            "value": "pandamium:items/heads/mobs/christmas_mobs/christmas_skeleton",
+                            "condition": {
+                                "type": "minecraft:entity_properties",
+                                "entity": "this",
+                                "predicate": {
+									"minecraft:entity_type": "minecraft:skeleton"
+								}
+                            }
+                        },
+						{
+                            "type": "minecraft:loot_table",
+                            "value": "pandamium:items/heads/mobs/christmas_mobs/christmas_stray",
+                            "condition": {
+                                "type": "minecraft:entity_properties",
+                                "entity": "this",
+                                "predicate": {
+									"minecraft:entity_type": "minecraft:stray"
+								}
+                            }
+                        },
+						{
+                            "type": "minecraft:loot_table",
+                            "value": "pandamium:items/heads/mobs/christmas_mobs/christmas_parched",
+                            "condition": {
+                                "type": "minecraft:entity_properties",
+                                "entity": "this",
+                                "predicate": {
+									"minecraft:entity_type": "minecraft:parched"
+								}
+                            }
+                        },
+						{
+                            "type": "minecraft:loot_table",
+                            "value": "pandamium:items/heads/mobs/christmas_mobs/christmas_bogged",
+                            "condition": {
+                                "type": "minecraft:entity_properties",
+                                "entity": "this",
+                                "predicate": {
+									"minecraft:entity_type": "minecraft:bogged"
+								}
+                            }
+                        },
+						{
+                            "type": "minecraft:loot_table",
+                            "value": "pandamium:items/heads/mobs/christmas_mobs/christmas_wither_skeleton",
+                            "condition": {
+                                "type": "minecraft:entity_properties",
+                                "entity": "this",
+                                "predicate": {
+									"minecraft:entity_type": "minecraft:wither_skeleton"
+								}
+                            }
+                        }
+                    ],
+                    "condition": {
+                        "type": "minecraft:all_of",
+                        "terms": [
+                            {
+                                "type": "minecraft:damage_source_properties",
+                                "predicate": {
+                                    "tags": [
+                                        {
+                                            "id": "#minecraft:is_explosion",
+                                            "expected": true
+                                        }
+                                    ],
+                                    "source_entity": {
+                                        "minecraft:entity_type": "minecraft:creeper",
+                                        "nbt": {
+                                            "powered": true
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

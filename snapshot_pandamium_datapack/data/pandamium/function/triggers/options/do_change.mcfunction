@@ -30,6 +30,16 @@ execute if score @s options matches -6 run function pandamium:triggers/options/p
 execute if score @s options matches -6 if score @s sneak_to_sit matches 0 run tellraw @s [{text:"",color:"green"},{text:"[Options]",color:"dark_green"}," Set option ",{text:"Crouch Twice to Sit",color:"aqua"}," to ",{text:"Off",bold:true,color:"yellow"},"!"]
 execute if score @s options matches -6 if score @s sneak_to_sit matches 1 run tellraw @s [{text:"",color:"green"},{text:"[Options]",color:"dark_green"}," Set option ",{text:"Crouch Twice to Sit",color:"aqua"}," to ",{text:"On",bold:true,color:"yellow"},"!"]
 scoreboard players reset @s[scores={sneak_to_sit=0}] sneak_to_sit
+execute if score @s options matches -18 store success score @s optn.disable_christmas_mobs unless score @s optn.disable_christmas_mobs matches 1
+execute if score @s options matches -18 run function pandamium:triggers/options/print_menu/gameplay
+execute if score @s options matches -18 if score @s optn.disable_christmas_mobs matches 0 run tellraw @s [{text:"",color:"green"},{text:"[Options]",color:"dark_green"}," Set option ",{text:"Christmas Mobs",color:"aqua"}," to ",{text:"On",bold:true,color:"yellow"},"!"]
+execute if score @s options matches -18 if score @s optn.disable_christmas_mobs matches 1 run tellraw @s [{text:"",color:"green"},{text:"[Options]",color:"dark_green"}," Set option ",{text:"Christmas Mobs",color:"aqua"}," to ",{text:"Off",bold:true,color:"yellow"},"!"]
+scoreboard players reset @s[scores={optn.disable_christmas_mobs=0}] optn.disable_christmas_mobs
+execute if score @s options matches -19 store success score @s optn.disable_flying_eyeballs unless score @s optn.disable_flying_eyeballs matches 1
+execute if score @s options matches -19 run function pandamium:triggers/options/print_menu/gameplay
+execute if score @s options matches -19 if score @s optn.disable_flying_eyeballs matches 0 run tellraw @s [{text:"",color:"green"},{text:"[Options]",color:"dark_green"}," Set option ",{text:"Flying Eyeballs",color:"aqua"}," to ",{text:"On",bold:true,color:"yellow"},"!"]
+execute if score @s options matches -19 if score @s optn.disable_flying_eyeballs matches 1 run tellraw @s [{text:"",color:"green"},{text:"[Options]",color:"dark_green"}," Set option ",{text:"Flying Eyeballs",color:"aqua"}," to ",{text:"Off",bold:true,color:"yellow"},"!"]
+scoreboard players reset @s[scores={optn.disable_flying_eyeballs=0}] optn.disable_flying_eyeballs
 execute if score @s options matches -7 if score @s pronouns_type matches 3.. run scoreboard players set @s pronouns_type -1
 execute if score @s options matches -7 store result storage pandamium.db.players:io selected.entry.data.pronouns_type byte 1 run scoreboard players add @s pronouns_type 1
 execute if score @s options matches -7 if score @s pronouns_type matches 0 run data remove storage pandamium.db.players:io selected.entry.data.pronouns_type
@@ -183,6 +193,13 @@ execute if score @s options matches -604 if score <server_optn.carpet_mod_enable
 execute if score @s options matches -604 if score <server_optn.carpet_mod_enabled> global matches 0 run tellraw @a[predicate=pandamium:player/min_staff_perms/helper] [{text:"",color:"gray"},{text:"[Staff Info] ",color:"dark_gray"},{selector:"@s",color:"gray"}," disabled ",{text:"Carpet Mod",bold:true},"!"]
 execute if score @s options matches -604 if score <server_optn.carpet_mod_enabled> global matches 1 run tellraw @s [{text:"",color:"green"},{text:"[Options]",color:"dark_green"}," Set option ",{text:"Carpet Mod",color:"aqua"}," to ",{text:"On",bold:true,color:"yellow"},"!"]
 execute if score @s options matches -604 if score <server_optn.carpet_mod_enabled> global matches 1 run tellraw @a[predicate=pandamium:player/min_staff_perms/helper] [{text:"",color:"gray"},{text:"[Staff Info] ",color:"dark_gray"},{selector:"@s",color:"gray"}," enabled ",{text:"Carpet Mod",bold:true},"!"]
+execute if score @s options matches -605 store success score <disable_christmas_mobs> global unless score <disable_christmas_mobs> global matches 1
+execute if score @s options matches -605 run function pandamium:triggers/options/print_menu/server
+execute if score @s options matches -605 if score <disable_christmas_mobs> global matches 0 run tellraw @s [{text:"",color:"green"},{text:"[Options]",color:"dark_green"}," Set option ",{text:"Christmas Mobs",color:"aqua"}," to ",{text:"On",bold:true,color:"yellow"},"!"]
+execute if score @s options matches -605 if score <disable_christmas_mobs> global matches 0 run tellraw @a[predicate=pandamium:player/min_staff_perms/helper] [{text:"",color:"gray"},{text:"[Staff Info] ",color:"dark_gray"},{selector:"@s",color:"gray"}," enabled ",{text:"Christmas Mobs",bold:true},"!"]
+execute if score @s options matches -605 if score <disable_christmas_mobs> global matches 1 run tellraw @s [{text:"",color:"green"},{text:"[Options]",color:"dark_green"}," Set option ",{text:"Christmas Mobs",color:"aqua"}," to ",{text:"Off",bold:true,color:"yellow"},"!"]
+execute if score @s options matches -605 if score <disable_christmas_mobs> global matches 1 run tellraw @a[predicate=pandamium:player/min_staff_perms/helper] [{text:"",color:"gray"},{text:"[Staff Info] ",color:"dark_gray"},{selector:"@s",color:"gray"}," disabled ",{text:"Christmas Mobs",bold:true},"!"]
+execute if score @s options matches -605 if score <disable_christmas_mobs> global matches 0 run scoreboard players reset <disable_christmas_mobs> global
 # Supporter (or equivalent permissions) Options 
 execute if score @s options matches -701 store success score @s optn.trail_particles_when_stationary unless score @s optn.trail_particles_when_stationary matches 1
 execute if score @s options matches -701 run trigger particles

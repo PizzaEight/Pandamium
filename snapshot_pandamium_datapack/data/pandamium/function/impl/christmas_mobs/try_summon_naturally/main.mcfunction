@@ -4,7 +4,7 @@ execute if data storage pandamium.db.regions:io selected.chunk.entry.has_summone
 #
 data modify storage pandamium:templates macro.entity_type.entity_type set value "minecraft:none"
 scoreboard players set <has_summoned_christmas_mob> variable 0
-execute store result score <rng> variable run random value 1..100
+execute store result score <rng> variable run random value 1..15
 execute if score <rng> variable matches 1..12 run data modify storage pandamium:templates macro.entity_type.entity_type set value "minecraft:zombie"
 execute if score <rng> variable matches 13..15 run data modify storage pandamium:templates macro.entity_type.entity_type set value "minecraft:skeleton"
 scoreboard players set <i> variable 0

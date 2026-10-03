@@ -14,7 +14,7 @@
 						{
 							"type": "minecraft:set_components",
 							"components": {
-								"minecraft:note_block_sound": "minecraft:music_disc.precipice",
+								"minecraft:note_block_sound": "minecraft:entity.player.hurt_freeze",
 								"minecraft:mob_visibility": {
 									"targeting_entity_types": "minecraft:wither_skeleton",
 									"visibility": 0.5

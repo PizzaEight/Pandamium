@@ -72,6 +72,10 @@ execute if score <month> global matches 10 if score <day> global matches 31 if s
 execute if score <month> global matches 11 if score <day> global matches 11 if score <last_joined_relative_datetime> variable matches ..27647999 run function pandamium:player/on_join/equip_item_to_head {item:'poppy[item_name="Remembrance Day Poppy",equippable={slot:"head"},rarity="uncommon"]'}
 execute if score <month> global matches 12 if score <day> global matches 25 run advancement grant @s only pandamium:pandamium/events/christmas
 execute if score <month> global matches 12 if score <day> global matches 25 if score <last_joined_relative_datetime> variable matches ..31535999 run tellraw @s [{text:"[Pandamium] ",color:"blue"},{text:"Merry Christmas!",color:"dark_green",shadow_color:[0.75f,0.0f,0.0f,1.0f]},{text:" 🎁",color:"#FF7FFF"},{text:" 🎄",color:"dark_green"}]
+# Christmas mobs spawn all December, so let players know on their first join of the month (they can
+# opt out of them with the "Christmas Mobs" gameplay option)
+execute if score <month> global matches 12 if score <last_joined_relative_datetime> variable matches ..29462399 run tellraw @s [{text:"[Pandamium] ",color:"blue"},{text:"Christmas Mobs",color:"aqua",bold:true},{text:" have begun spawning! You can disable them in the Christmas menu found by typing ",color:"green"},{text:"/trigger options",color:"aqua"}]
+execute if score <month> global matches 10 if score <last_joined_relative_datetime> variable matches ..24105599 run tellraw @s [{text:"[Pandamium] ",color:"blue"},{text:"Flying Eyeballs",color:"aqua",bold:true},{text:" have begun spawning! You can disable them in the Halloween menu found by typing ",color:"green"},{text:"/trigger options",color:"aqua"}]
 execute if score <month> global matches 12 if score <day> global matches 25..26 if score <last_joined_relative_datetime> variable matches ..31535999 run loot give @s loot pandamium:items/heads/presents/christmas
 execute if score <month> global matches 12 if score <day> global matches 31 run advancement grant @s only pandamium:pandamium/events/new_years
 execute if score <month> global matches 1 if score <day> global matches 1 run advancement grant @s only pandamium:pandamium/events/new_years
@@ -81,11 +85,15 @@ execute if score <month> global matches 1 if score <day> global matches 1 if sco
 # news feed
 execute unless score <first_join> variable matches 1 unless score <prevent_old_player_notices> variable matches 1 if data storage pandamium.db.mail:data news_feed_inbox[0] run function pandamium:player/on_join/check_news
 # update last_joined timestamp
-# skipped when this run was forced by a data pack reload, so the "last join" stats keep pointing
-# at the actual previous join instead of the moment the pack happened to be reloaded
+# Only real joins update the join stats. Runs forced by a data pack reload (load.mcfunction sets
+# on_join.reload to 1 for every online player) are skipped, so the stats keep pointing at the actual
+# previous join instead of the moment the pack happened to be reloaded.
+# A <datetime_id> that is not 1.. means the wall-clock time source (the RCON-fed command block in
+# pandamium:staff_world, see pandamium:dev/set_clock) has not provided a time yet: nothing is written
+# in that case, so a missing time source can never zero out the join stats.
 function pandamium:utils/datetime/get_current_datetime_id
-execute if score @s on_join.reload matches 0 if score @s last_joined.datetime matches 1.. run scoreboard players operation @s last_last_joined.datetime = @s last_joined.datetime
-execute if score @s on_join.reload matches 0 run scoreboard players operation @s last_joined.datetime = <datetime_id> variable
+execute unless score @s on_join.reload matches 1 if score <datetime_id> variable matches 1.. if score @s last_joined.datetime matches 1.. run scoreboard players operation @s last_last_joined.datetime = @s last_joined.datetime
+execute unless score @s on_join.reload matches 1 if score <datetime_id> variable matches 1.. run scoreboard players operation @s last_joined.datetime = <datetime_id> variable
 scoreboard players reset @s on_join.reload
 # on-join events
 execute if entity @s[gamemode=spectator,predicate=!pandamium:player/min_staff_perms/helper] run function pandamium:player/on_join/fix_trapped_spectators
@@ -131,6 +139,8 @@ scoreboard players add @s optn.experimental.speed_hack_indicator 0
 scoreboard players add @s optn.disable_spectator_portals 0
 scoreboard players add @s optn.trail_particles_when_stationary 0
 scoreboard players add @s optn.do_projectile_trails 0
+scoreboard players add @s optn.disable_christmas_mobs 0
+scoreboard players add @s optn.disable_flying_eyeballs 0
 scoreboard players add @s optn.disable_locator_bar 0
 scoreboard players set @s mail_data.inbox_tab 0
 # update spawnpoint (in case the player changed their name)

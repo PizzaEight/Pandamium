@@ -1,0 +1,55 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:player_head",
+					"modifier": [
+						{
+							"type": "minecraft:set_custom_data",
+							"tag": "{pandamium:{id:\"christmas\",christmas:{item:\"fruitcake\",type:\"fruitcake\",version:0},version:1}}"
+						},
+						{
+							"type": "minecraft:set_components",
+							"components": {
+								"minecraft:consumable": {},
+								"minecraft:food": {
+									"nutrition": 4,
+									"saturation": 2.4
+								},
+								"minecraft:profile": {
+									"id": [
+										-1066432250,
+										1284131089,
+										-1674974691,
+										-1122325630
+									],
+									"properties": [
+										{
+											"name": "textures",
+											"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjA3MmEzZTNjZWVkYjY4ZGQ3NDNjN2YwMjJlNTRjMzhmOGRiNGQ2MjY4N2NjZTA3YTI0Y2IyOTQ1OGE1ZjI4OSJ9fX0="
+										}
+									]
+								}
+							}
+						},
+						{
+							"type": "minecraft:set_name",
+							"entity": "this",
+							"target": "item_name",
+							"name": [
+								"",
+								{
+									"text": "Fruitcake",
+									"bold": true
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}
